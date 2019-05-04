@@ -1,0 +1,42 @@
+.team {
+	&__title {
+		margin-top: 90px;
+		margin-bottom: 70px;
+	}
+	&-block {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		&__item {
+			margin-bottom: 100px;
+		}
+		&__image {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 290px;
+			width: 290px;
+			border-radius: 50%;
+			&-img {
+				max-width: 290px;
+				max-height: 290px;
+			}
+		}
+		&__name {
+			@include medium;
+			font-size: 24px;
+			text-align: center;
+			color: #000;
+			margin-bottom: 28px;
+		}
+		&__phone {
+			font-size: 24px;
+			text-align: center;
+			@include light;
+			display: block;
+			text-decoration: none;
+			color: #000;
+		}
+	}
+	
+}

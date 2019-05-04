@@ -1,0 +1,72 @@
+.construction {
+	background: url("../img/constraction-image.jpg") right no-repeat;
+	background-position-y: 130px;
+	padding-top: 70px;
+	padding-bottom: 30px;
+	&__title {
+		margin-bottom: 45px;
+	}
+	&-block {
+		&__span {
+			background-color: $ellipse;
+		}
+	}
+
+}
+
+.block {
+	&-info {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		margin-bottom: 30px;
+		&__span {
+			background-color: $ellipse;
+			border-radius: 50%;
+			color: #fff;
+			width: 25px;
+			height: 25px;
+			text-align: center;
+			padding-top: 1px;
+			font-size: 20px;
+			margin-right: 40px;
+		}
+		&__text {
+			padding-left: 4px;
+			color: #000;
+			max-width: 450px;
+			&-title {
+				font-size: 24px;
+				font-weight: normal;
+				margin-bottom: 4px;
+			}
+		}
+	}
+	
+}
+
+.comprison-img	{
+	width: 1140px;
+	height: 1000px;
+	background: url("../img/92.png");
+	background-size: cover;
+}
+
+@media (max-width: 991px) {
+	.construction {
+		background: transparent;
+	}
+}
+
+@media (max-width: 991px) {
+	.construction {
+		background: transparent;
+	}
+	.block {
+		&-info {
+			&__text {
+				max-width: 210px;
+			}
+		}
+	}
+}

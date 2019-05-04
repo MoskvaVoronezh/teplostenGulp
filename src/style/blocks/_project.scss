@@ -1,0 +1,113 @@
+.project {
+	&__title {
+		padding-top: 90px;
+		margin-bottom: 70px;
+	}
+	&-slider {
+		width: 100%;
+		position: relative;
+		&__title {
+			font-size: 36px;
+			margin-bottom: 60px;
+			text-align: center;
+		}
+		&__wrap {
+			display: flex;
+		}
+	}
+	&__wrap {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+	}
+}
+
+.slider {
+	&-wrap {
+		&__list {
+			padding: 0;
+			margin: 0;
+		}
+		&__image {
+			flex-basis: 50%;
+
+			&-img {
+				object-fit: cover;
+				width: 100%;
+				height: 100%;
+			}
+		}
+		&__text {
+			flex-basis: 50%;
+			padding-left: 50px;
+		}
+		&__item {
+			font-size: 24px;
+			margin-bottom: 8px;
+		}
+	}
+}
+
+.arrow-right {
+	background: url("../img/slider/right-line.png") center no-repeat;
+	background-size: cover;
+	position: absolute;
+	width: 50px;
+	height: 120px;
+	right: -65px;
+	top: 50%;
+	border: none;
+}
+
+.arrow-left {
+	background: url("../img/slider/left-line.png") center no-repeat;
+	background-size: cover;
+	position: absolute;
+	width: 50px;
+	height: 120px;
+	left: -65px;
+	top: 50%;
+	border: none;
+}
+
+.arrow-left, .arrow-right {
+	&:focus {
+		outline: none;
+	}
+}
+
+@media (max-width: 1199px) {
+	.project {
+		&-slider {
+			width: 80%;
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	.project {
+		&-slider {
+			width: 80%;
+			&__wrap {
+				flex-direction: column;
+			}
+		}
+	}
+	.arrow-right {
+		top: calc(52%);
+	}
+	
+	.arrow-left {
+		top: calc(52%);
+	}
+}
+
+@media (max-width: 768px) {
+	.slider {
+		&-wrap {
+			&__text {
+				display: none;
+			}
+		}
+	}
+}

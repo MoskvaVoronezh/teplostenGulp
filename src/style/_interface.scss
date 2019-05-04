@@ -1,0 +1,9 @@
+.section {
+	&__title {
+		text-align: center;
+		@include medium;
+		font-size: 36px;
+		text-transform: uppercase;
+		color: $primary;
+	}
+}

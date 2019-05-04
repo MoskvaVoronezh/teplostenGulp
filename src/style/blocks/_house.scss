@@ -1,0 +1,19 @@
+.house {
+	background: url("../img/house/house-bg.png") center no-repeat;
+	background-size: cover;
+	&__wrap {
+		padding-top: 63px;
+		padding-bottom: 87px;
+		padding-left: 12px;
+	}
+	&__text {
+		max-width: 460px;
+		@include light;
+		text-align: center;
+		font-size: 30px;
+		color: #000;
+		padding: 30px 10px;
+		background: linear-gradient(90deg, rgba(255, 255, 255, 0) 3.79%, rgba(255, 255, 255, 0.8) 22.11%, rgba(255, 255, 255, 0.79) 71.58%, rgba(255, 255, 255, 0) 95.16%);
+
+	}
+}

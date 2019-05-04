@@ -1,0 +1,161 @@
+.header {
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 10px 0;
+	}
+	&__menu {
+		background-color: $primary;
+	}
+	
+}
+
+.info {
+	&-block {
+		display: flex;
+		&__number {
+			padding-top: 12px;
+			position: relative;
+		}
+		&__phone {
+			text-decoration: none;
+			color: #000;
+			@include regular;
+			font-size: 24px;
+			position: relative;
+			max-width: 263px;
+			margin-left: 15px;
+			&-current {
+				position: absolute;
+				right: -30px;
+				top: 50%;
+				margin-top: -3px;
+				&:hover {
+					cursor: pointer;
+				}
+			}
+		}
+		&__btn {
+			margin-left: 58px;
+		}
+		&__button {
+			border: none;
+			padding: 12px 12px 12px 9px;
+			color: #fff;
+			@include regular;
+			text-align: center;
+			font-size: 24px;
+			background-color: $primary;
+			border-radius: 5px;
+			text-transform: uppercase;
+			&:hover {
+				cursor: pointer;
+			}
+			&-img {
+				height: 23px;
+				width: 23px;
+				margin-right: 12px;
+				margin-top: -4px;
+				vertical-align: middle;
+			}
+		}
+	}
+	&-list {
+		list-style: none;
+		position: absolute;
+		top: 52px;
+		left: 0px;
+		background-color: #fff;
+		z-index: 10;
+		text-align: center;
+		width: 270px;
+		display: none;
+		transition: .5s ease-out;
+		&_active {
+			display: block;
+		}
+		&__item {
+			margin-bottom: 10px;
+			&-link {
+				font-size: 24px;
+				text-decoration: none;
+				color: #000;
+				background-color: #fff;
+			}
+		}
+	}
+}
+
+.menu {
+	&-list {
+		&__link {
+			color: #fff;
+			@include regular; 
+			font-size: 24px;
+			text-decoration: none;
+			text-transform: uppercase;
+			&:visited {
+				text-decoration: underline;
+			}
+		}
+		&__item {
+			padding: 17px 0;
+		}
+	}
+	&__list {
+		list-style: none;
+		display: flex;
+		justify-content: space-around;
+		margin: 0;
+	}
+}
+
+@media (max-width: 991px) {
+	.info {
+		&-block {
+			&__number {
+				display: none;
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.info {
+		&-block {
+			&__button {
+				&-img {
+					display: none;
+				}
+			}
+		}
+	}
+	.menu {
+		&__list {
+			flex-direction: column;
+			justify-content: center;
+			text-align: center;
+		}
+	}
+}
+
+@media (max-width: 575px) {
+	.header {
+		&__img {
+			width: 120px;
+		}
+	}
+	.info {
+		&-block {
+			&__button {
+				font-size: 14px;
+			}
+		}
+	}
+	.house {
+		&__text {
+			font-size: 18px;
+		}
+	}
+}

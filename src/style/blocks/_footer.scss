@@ -1,0 +1,46 @@
+.footer {
+	background-color: $primary;
+	&__menu {
+		padding-top: 13px;
+		padding-bottom: 13px;
+		position: relative;
+		&-link {
+			font-size: 18px;
+		}
+		&-list {
+			justify-content: center;
+		}
+		&-item {
+			margin-right: 40px;
+		}
+	}
+	&__copy {
+		display: flex;
+		justify-content: center;
+		padding-bottom: 30px;
+		padding-top: 20px;
+		&-text {
+			text-align: center;
+			color: #fff;
+			font-size: 18px;
+		}
+	}
+}
+
+.footer-top__btn {
+	position: absolute;
+	right: 0;
+	top: calc(50%-22px);
+}
+
+.btn-top {
+	display: block;
+	background: url("../img/btn-top.png")center no-repeat;
+	width: 40px;
+	height: 45px;
+	outline: none;
+	border: none;
+	&:hover {
+		cursor: pointer;
+	}
+}

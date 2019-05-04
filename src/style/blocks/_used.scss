@@ -1,0 +1,70 @@
+.used {
+	background: 
+	linear-gradient(rgba(255, 255, 255, 0.7)),
+	url("../img/used-bg.jpg");
+	background-size: cover;
+	&__title {
+		padding-top: 70px;
+		margin-bottom: 90px;
+	}
+	&-block {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		&__item {
+			max-width: 487px;
+			background: rgba(0, 0, 0, 0.82);
+			color: #fff;
+			text-align: center;
+			margin-right: 80px;
+			padding: 20px;
+			margin-bottom: 75px;
+		}
+		&__text {
+			font-size: 36px;
+		}
+	}
+}
+
+.text_center {
+	padding-top: 15px;
+}
+
+@media (max-width: 1199px) {
+	.used {
+		&-block {
+			&__item {
+				margin-right: 20px;
+				max-width: 460px;
+			}
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	.used {
+		&-block {
+			justify-content: center;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.used {
+		&-block {
+			&__item {
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+@media (max-width: 575px) {
+	.used {
+		&-block {
+			&__text {
+				font-size: 30px;
+			}
+		}
+	}
+}
