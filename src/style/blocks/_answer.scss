@@ -1,15 +1,56 @@
 .answer {
-	position: relative;
-	&-list {
-		display: none;
-		position: absolute;
-		top: 0;
-		left: 0;
-		list-style: none;
+	&:first-child {
+		padding-top: 90px;
+		padding-bottom: 40px;
 	}
-	&-input {
-		&:checked ~ ul.answer-list{
+	&__input {
+		height: 1px;
+		width: 1px;
+		position: absolute;
+		overflow: hidden;
+		clip: rect(0,0,0,0);
+		&:checked + .answer__checkbox 	{
+			background-color: $primary;
+		}
+		&:checked + .answer__checkbox + .answer__title {
+			text-decoration: underline;
+		}
+		&:checked ~ .answer-content {
 			display: block;
 		}
+	}
+	&__title {
+		padding-left: 90px;
+		font-size: 24px;
+		color: $primary;
+	}
+	&-wrap {
+		position: relative;
+	}
+	&-label {
+		margin-bottom: 25px;
+	}
+	&__checkbox {
+		position: absolute;
+		left: 50px;
+		top: 6px;
+		border: 2px solid $primary;
+		border-radius: 50%;
+		width: 20px;
+		height: 20px;
+	}
+	&-content {
+		display: none;
+		padding-left: 90px;
+		margin-top: 30px;
+	}
+}
+
+
+.content {
+	&__text {
+		font-weight: 300;
+		font-size: 18px;
+		margin-bottom: 25px;
 	}
 }
