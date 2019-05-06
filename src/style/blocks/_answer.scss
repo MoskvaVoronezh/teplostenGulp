@@ -43,7 +43,6 @@
 		display: none;
 		padding-left: 90px;
 		margin-top: 20px;
-		padding-bottom: 40px;
 		&__title {
 			font-size: 18px;
 			margin-bottom: 30px;
@@ -103,5 +102,47 @@
 			max-width: 360px;
 			max-height: 220px;
 		}
+	}
+	&-img {
+		&__wrapper {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.answer {
+		&-window {
+			&__item {
+				flex-basis: 100%;
+			}
+		}
+	}
+	.content {
+		&-img {
+			&__wrapper {
+				img {
+					max-width: 350px;
+					max-height: 350px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 575px) {
+	.answer {
+		&__title {
+			padding-left: 30px;
+		}
+		&__checkbox {
+			left: 0;
+		}
+		&-content {
+			padding-left: 0;
+		}
+
 	}
 }
