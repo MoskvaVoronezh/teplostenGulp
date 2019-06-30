@@ -1,0 +1,91 @@
+.modal {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	position: relative;
+	display: none;
+
+	&__title {
+		padding-top: 32px;
+		margin-bottom: 40px;
+		font-size: 18px;
+		text-transform: uppercase;
+		color: $primary;
+	}
+	&-form {
+		&-wrap {
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+		}
+	}
+	&__input, &__submit {
+		max-width: 360px;
+		text-align: center;
+	}
+	&__input {
+		padding: 20px;
+		margin-bottom: 14px;
+		border-radius: 10px;
+		outline: none;
+		border: none;
+		background-color: rgba(#000, 0.2);
+		&::placeholder {
+			color: #000;
+		}
+	}
+	&__span {
+		margin-top: 6px;
+		margin-bottom: 20px;
+		@include light;
+	}
+	&__submit {
+		background-color: $primary;
+		color: #fff;
+		text-transform: uppercase;
+		font-size: 22px;
+		border-radius: 10px;
+	}
+	&__close {
+		display: block;
+		position: absolute;
+		top: -30px;
+		border-radius: 50%;
+		width: 60px;
+		height: 60px;
+		&-wrap {
+			position: relative;
+			width: 100%;
+			height: 100%;
+		}
+	}
+	&-span {
+		&__btn {
+			position: absolute;
+			top: 50%;
+			margin-top: -3px;
+			left: 50%;
+			margin-left: -15px;
+			height: 3px;
+			background-color: $primary;
+			width: 30px;
+			display: block;
+			transform: rotate(45deg);
+			&:after {
+				content: '';
+				height: 3px;
+				width: 30px;
+				display: block;
+				position: absolute;
+				top: 50%;
+				margin-top: -3px;
+				left: 50%;
+				margin-left: -15px;
+				transform: rotate(90deg);
+				background-color: $primary;
+			}
+		}
+	}
+
+}
