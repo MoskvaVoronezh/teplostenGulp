@@ -93,7 +93,13 @@ var gulp = require('gulp'),
             baseDir: path.clean
           },
           reloadOnRestart: true,
-          tunnel: 'remote'
+        //   tunnel: 'remote'
+          tunnel: false,
+          host: 'localhost',
+          port: 8080,
+          open: true,
+          notify: false,
+          logLevel: "info"
         });
         gulp.watch(path.watch.html, gulp.parallel('html'));
         gulp.watch(path.watch.style, gulp.parallel('style'));
