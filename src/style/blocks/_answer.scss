@@ -80,6 +80,9 @@
 			
 		}
 	}
+	&:last-child {
+		margin-bottom: 50px;
+	}
 }
 
 
@@ -143,6 +146,5 @@
 		&-content {
 			padding-left: 0;
 		}
-
 	}
 }

@@ -1,0 +1,23 @@
+.calculator {
+	&-text {
+		&-primary {
+			@include regular;
+			font-weight: normal;
+			text-align: center;
+			margin-top: 50px;
+			margin-bottom: 30px;
+			font-size: 30px;
+		}
+		&-subtitle {
+			@include light;
+			font-size: 14px;
+			text-align: center;
+			margin-bottom: 50px;
+		}
+		
+	}
+	&__title {
+		margin-bottom: 80px;
+	}
+	
+}
