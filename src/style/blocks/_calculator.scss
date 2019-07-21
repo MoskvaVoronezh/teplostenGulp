@@ -1,5 +1,16 @@
 .calculator {
+	&-wrap {
+		display: flex;
+		flex-wrap: wrap; 
+		width: 100%;
+		&__left {
+			flex-basis: 70%;
+		}
+	}
 	&-text {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 		&-primary {
 			@include regular;
 			font-weight: normal;
@@ -7,6 +18,7 @@
 			margin-top: 50px;
 			margin-bottom: 30px;
 			font-size: 30px;
+			max-width: 800px;
 		}
 		&-subtitle {
 			@include light;
@@ -26,6 +38,41 @@
 			margin-bottom: 100px;
 		}
 	}
+	&-block {
+		&__title {
+			font-size: 24px;
+			position: relative;
+			color: $primary;
+			@include regular;
+			&:after {
+				position: absolute;
+				content: '';
+				display: block;
+				width: 600px;
+				bottom: -10px;
+				left: 0;
+				right: 0;
+				background-color: $primary;
+				height: 2px;
+			}
+		}
+		&__input {
+			margin-top: 30px;
+			font-size: 14px;
+			text-align: center;
+			&-input {
+				max-width: 67px;
+				border-radius: 5px;
+				height: 22px;
+				background-color: rgba($primary, 0.27);
+				border-color: rgba($primary, 0.27);
+			}
+		}
+	}
+
+	&__table {
+		margin-bottom: 50px;
+	}
 	&_btn {
 		background-color: $primary;
 		color: #fff;
@@ -43,4 +90,103 @@
 			right: 0;
 		}
 	}
+	&__link {
+		&-stamp {
+			@include medium;
+			font-size: 24px;
+			color: $primary;
+			text-decoration: none;
+			margin-right: 20px;
+			position: relative;
+			margin-bottom: 100px;
+			&:before {
+				position: absolute;
+				content: '';
+				right: -50px;
+				top: 6px;
+				display: block;
+				width: 25px;
+				height: 25px;
+				background: url("../img/calculator/arrow-up-circle.svg");
+			}
+			&:after {
+				content: '';
+				position: absolute;
+				top: 50px;
+				right: 0;
+				left: -40px;
+				display: block;
+				background-color: $primary;
+				width: 360px;
+				height: 2px;
+			}
+		}
+	}
+	&-text {
+		&-wrap {
+			display: flex;
+			flex-wrap: wrap;
+			margin-bottom: 100px;
+		}
+	}
+	&-item__text {
+		text-align: center;
+		flex: 30%;
+		margin-right: 30px;
+		font-size: 18px;
+		@include regular;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+	&-more {
+		display: block;
+		margin-top: 20px;
+		font-size: 14px;
+		text-decoration: none;
+		@include light;
+		color: #000;
+	}
+	&-input {
+		&__label {
+			&-label {
+				display: block;
+			}
+		}
+	}
+	&-wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+		&__item {
+			position: relative;
+			flex-basis: 50%;	
+			&-img {
+				width: 171px;
+				height: 178px;
+			}
+		}
+	}
+}
+
+.absolute-1 {
+	position: absolute;
+	top: 30px;
+	right: 30px;
+}
+
+.absolute-2 {
+	position: absolute;
+	right: 75px;
+	top: 100px;
+}
+
+.absolute-3 {
+	position: absolute;
+	bottom: -15px;
+	left: 40px;
+}
+
+._notmb {
+	margin-bottom: 0;
 }

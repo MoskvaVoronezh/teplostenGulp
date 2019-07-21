@@ -99,208 +99,261 @@
 								<label for="#" class="calculator-block__label">Количество этажeй:</label>
 								<input class="calculator-block__input-input" type="number">
 							</div>
+							<div class="calculator-wrapper">
+								<div class="calculator-wrapper__item">
+									<input type="checkbox"><span class="calculator__checbox"></span>
+									<img class="calculator-wrapper__item-img" src="./img/calculator/home1.png" alt="дом">
+									<div class="absolute-1">
+										<label for="#" class="calculator-input__label-label">
+											Высота этажа:
+										</label>
+										<input type="number" class="calculator-block__input-input input-1">
+									</div>
+									<div class="absolute-2">
+										<label for="#" class="calculator-input__label-label">
+											Ширина:
+										</label>
+										<input type="number" class="calculator-block__input-input input-2">
+									</div>
+									<div class="absolute-3">
+										<label for="#" class="calculator-input__label-label">
+											Длина:
+										</label>
+										<input type="number" class="calculator-block__input-input input-3">
+									</div>
+								</div>
+								<div class="calculator-wrapper__item">
+									<input type="checkbox"><span class="calculator__checbox"></span>
+									<img class="calculator-wrapper__item-img" src="./img/calculator/home2.png" alt="дом">
+									<input type="number" class="calculator-block__input-input input-4">
+									<input type="number" class="calculator-block__input-input input-5">
+									<input type="number" class="calculator-block__input-input input-6">
+								</div>
+							</div>
 						</div>
 					</div>
+
 				</div>
 				<div class="calculator-btn-wrap">
 					<button class="calculator_btn button_red">Рассчитать стоимость</button>
 				</div>
-				<div class="calculator-table">
+				<div class="calculator-table calculator__table">
 					<h2 class="section__title calculator__title">Результат расчета</h2>
 					<div class="price-table price__table">
-							<table class="table-price">
-								<tr class="table-row">
-									<th class="table__cell-title">Номенклатура</th>
-									<th class="table__cell-title">Наименование</th>
-									<th class="table__cell-title">Размеры</th>
-									<th class="table__cell-title">Кол-во шт.</th>
-									<th class="table__cell-title">Кол-во м<sup>3</sup></th>
-									<th class="table__cell-title">Цена руб./шт</th>
-									<th class="table__cell-title">Стоимость без скидки</th>
-									<th class="table__cell-title">Скидка</th>
-									<th class="table__cell-title">С учетом скидки 3%</th>
-									<th class="table__cell-title">Стоимость партии</th>
-								</tr>
-		
-								<tr class="table-row">
-									<td class="table__cell-img">
-										<div class="table-wrap-img">
-											<img src="img/table-price/poyasnoy.png" alt="блок рядовой">
-										</div>
-									</td>
-									<td class="table__cell">Блок рядовой</td>
-									<td class="table__cell">400х200х300 мм</td>
-									<td class="table__cell">24 кг</td>
-									<td class="table__cell">229,00 руб.</td>
-									<td class="table__cell">9534,00 руб.</td>
-									<td class="table__cell">54шт./1,3 м3</td>
-									<td class="table__cell"></td>
-									<td class="table__cell"></td>
-									<td class="table__cell"></td>
-								</tr>
-		
-								<tr class="table-row">
-									<td class="table__cell-img">
-										<div class="table-wrap-img">
-											<img src="img/table-price/second-block.png" alt="блок половинчатый">
-										</div>
-									</td>
-									<td class="table__cell">Блок рядовой половинчатый</td>
-									<td class="table__cell">200х200х300 мм</td>
-									<td class="table__cell">13 кг</td>
-									<td class="table__cell">151,00 руб.</td>
-									<td class="table__cell">12566,00 руб.</td>
-									<td class="table__cell">90шт./1,08 м3</td>
-									<td class="table__cell"></td>
-									<td class="table__cell"></td>
-									<td class="table__cell"></td>
-								</tr> 
-		
-								<tr class="table-row">
-									<td class="table__cell-img">
-										<div class="table-wrap-img">
-											<img src="img/table-price/block-yglovoy.png" alt="блок угловой наружный">
-										</div>
-									</td>
-									<td class="table__cell-img">Блок угловой наружный</td>
-									<td class="table__cell">500х200х300 мм</td>
-									<td class="table__cell">30 кг</td>
-									<td class="table__cell">447,00 руб.</td>
-									<td class="table__cell">14905,00 руб.</td>
-									<td class="table__cell">30шт./0,9 м3</td>
-									<td class="table__cell"></td>
-									<td class="table__cell"></td>
-									<td class="table__cell"></td>
-								</tr> 
-		
-								<tr class="table-row">
-									<td class="table__cell-img">
-										<div class="table-wrap-img">
-											<img src="img/table-price/block-vnetrenny.png" alt="блок угловой внутренний">
-										</div>
-									</td>
-									<td class="table__cell">Блок угловой внутренний</td>
-									<td class="table__cell">500х200х300 мм</td>
-									<td class="table__cell">33 кг</td>
-									<td class="table__cell">447,00 руб.</td>
-									<td class="table__cell">14905,00 руб.</td>
-									<td class="table__cell">30шт./0,9 м3</td>
-									<td class="table__cell"></td>
-									<td class="table__cell"></td>
-									<td class="table__cell"></td>
-								</tr>
-		
-								<tr class="table-row">
-									<td class="table__cell-img">
-										<div class="table-wrap-img">
-											<img src="img/table-price/five-block.png" alt="блок поясной">
-										</div>
-									</td>
-									<td class="table__cell">Блок поясной</td>
-									<td class="table__cell">400х200х120 мм</td>
-									<td class="table__cell">17 кг</td>
-									<td class="table__cell">141,00 руб.</td>
-									<td class="table__cell">14905,00 руб.</td>
-									<td class="table__cell">72шт./0,7 м3</td>
-									<td class="table__cell"></td>
-									<td class="table__cell"></td>
-									<td class="table__cell"></td>
-								</tr>
-		
-								<tr class="table-row">
-									<td class="table__cell-img">
-										<div class="table-wrap-img">
-											
-										</div>
-									</td>
-									<td class="table__cell">Блок поясной 5 см со стержнями</td>
-									<td class="table__cell">400х200х50 мм</td>
-									<td class="table__cell">7 кг</td>
-									<td class="table__cell">99,00 руб.</td>
-									<td class="table__cell"></td>
-									<td class="table__cell">Индивидуально</td>
-									<td class="table__cell"></td>
-									<td class="table__cell"></td>
-									<td class="table__cell"></td>
-								</tr>
-		
-								<tr class="table-row">
-									<td class="table__cell-img">
+						<table class="table-price">
+							<tr class="table-row">
+								<th class="table__cell-title">Номенклатура</th>
+								<th class="table__cell-title">Наименование</th>
+								<th class="table__cell-title">Размеры</th>
+								<th class="table__cell-title">Кол-во шт.</th>
+								<th class="table__cell-title">Кол-во м<sup>3</sup></th>
+								<th class="table__cell-title">Цена руб./шт</th>
+								<th class="table__cell-title">Стоимость без скидки</th>
+								<th class="table__cell-title">Скидка</th>
+								<th class="table__cell-title">С учетом скидки 3%</th>
+								<th class="table__cell-title">Стоимость партии</th>
+							</tr>
+	
+							<tr class="table-row">
+								<td class="table__cell-img">
+									<div class="table-wrap-img">
+										<img src="img/table-price/poyasnoy.png" alt="блок рядовой">
+									</div>
+								</td>
+								<td class="table__cell">Блок рядовой</td>
+								<td class="table__cell">400х200х300 мм</td>
+								<td class="table__cell">24 кг</td>
+								<td class="table__cell">229,00 руб.</td>
+								<td class="table__cell">9534,00 руб.</td>
+								<td class="table__cell">54шт./1,3 м3</td>
+								<td class="table__cell"></td>
+								<td class="table__cell"></td>
+								<td class="table__cell"></td>
+							</tr>
+	
+							<tr class="table-row">
+								<td class="table__cell-img">
+									<div class="table-wrap-img">
+										<img src="img/table-price/second-block.png" alt="блок половинчатый">
+									</div>
+								</td>
+								<td class="table__cell">Блок рядовой половинчатый</td>
+								<td class="table__cell">200х200х300 мм</td>
+								<td class="table__cell">13 кг</td>
+								<td class="table__cell">151,00 руб.</td>
+								<td class="table__cell">12566,00 руб.</td>
+								<td class="table__cell">90шт./1,08 м3</td>
+								<td class="table__cell"></td>
+								<td class="table__cell"></td>
+								<td class="table__cell"></td>
+							</tr> 
+	
+							<tr class="table-row">
+								<td class="table__cell-img">
+									<div class="table-wrap-img">
+										<img src="img/table-price/block-yglovoy.png" alt="блок угловой наружный">
+									</div>
+								</td>
+								<td class="table__cell-img">Блок угловой наружный</td>
+								<td class="table__cell">500х200х300 мм</td>
+								<td class="table__cell">30 кг</td>
+								<td class="table__cell">447,00 руб.</td>
+								<td class="table__cell">14905,00 руб.</td>
+								<td class="table__cell">30шт./0,9 м3</td>
+								<td class="table__cell"></td>
+								<td class="table__cell"></td>
+								<td class="table__cell"></td>
+							</tr> 
+	
+							<tr class="table-row">
+								<td class="table__cell-img">
+									<div class="table-wrap-img">
+										<img src="img/table-price/block-vnetrenny.png" alt="блок угловой внутренний">
+									</div>
+								</td>
+								<td class="table__cell">Блок угловой внутренний</td>
+								<td class="table__cell">500х200х300 мм</td>
+								<td class="table__cell">33 кг</td>
+								<td class="table__cell">447,00 руб.</td>
+								<td class="table__cell">14905,00 руб.</td>
+								<td class="table__cell">30шт./0,9 м3</td>
+								<td class="table__cell"></td>
+								<td class="table__cell"></td>
+								<td class="table__cell"></td>
+							</tr>
+	
+							<tr class="table-row">
+								<td class="table__cell-img">
+									<div class="table-wrap-img">
+										<img src="img/table-price/five-block.png" alt="блок поясной">
+									</div>
+								</td>
+								<td class="table__cell">Блок поясной</td>
+								<td class="table__cell">400х200х120 мм</td>
+								<td class="table__cell">17 кг</td>
+								<td class="table__cell">141,00 руб.</td>
+								<td class="table__cell">14905,00 руб.</td>
+								<td class="table__cell">72шт./0,7 м3</td>
+								<td class="table__cell"></td>
+								<td class="table__cell"></td>
+								<td class="table__cell"></td>
+							</tr>
+	
+							<tr class="table-row">
+								<td class="table__cell-img">
+									<div class="table-wrap-img">
 										
-									</td>
-									<td class="table__cell">Блок поясной 5 см со стержнями + 5 см
-									ПСБ</td>
-									<td class="table__cell">400х200х100 мм</td>
-									<td class="table__cell">7,1 кг</td>
-									<td class="table__cell">182,00 руб.</td>
-									<td class="table__cell"></td>
-									<td class="table__cell">Индивидуально</td>
-									<td class="table__cell"></td>
-									<td class="table__cell"></td>
-									<td class="table__cell"></td>
-								</tr>
-		
-								<tr class="table-row">
-									<td class="table__cell-img">
-										
-									</td>
-									<td class="table__cell">Блок поясной 5 см со стержнями + 7,5 см ПСБ</td>
-									<td class="table__cell">400х200х125 мм</td>
-									<td class="table__cell">7,15 кг</td>
-									<td class="table__cell">182,00 руб.</td>
-									<td class="table__cell"></td>
-									<td class="table__cell">Индивидуально</td>
-									<td class="table__cell"></td>
-									<td class="table__cell"></td>
-									<td class="table__cell"></td>
-								</tr>
-		
-								<tr class="table-row">
-									<td class="table__cell-img">
-										
-									</td>
-									<td class="table__cell">Блок поясной 5 см со стержнями + 10 см ПСБ</td>
-									<td class="table__cell">400х200х150 мм</td>
-									<td class="table__cell">7,2 кг</td>
-									<td class="table__cell">187,00 руб.</td>
-									<td class="table__cell"></td>
-									<td class="table__cell">Индивидуально</td>
-									<td class="table__cell"></td>
-									<td class="table__cell"></td>
-									<td class="table__cell"></td>
-								</tr>
-		
-								<tr class="table-row">
-									<td class="table__cell-img">
-										
-									</td>
-									<td class="table__cell">Блок поясной 5 см со стержнями + 15 см ПСБ</td>
-									<td class="table__cell">400х200х150 мм</td>
-									<td class="table__cell">7,3 кг</td>
-									<td class="table__cell">191,00 руб.</td>
-									<td class="table__cell"></td>
-									<td class="table__cell">Индивидуально</td>
-									<td class="table__cell"></td>
-									<td class="table__cell"></td>
-									<td class="table__cell"></td>
-								</tr>
-		
-								<tr class="table-row">
-									<td class="table__cell-img">
-										
-									</td>
-									<td class="table__cell">Блок эркерный</td>
-									<td class="table__cell">400+200х200х300 мм</td>
-									<td class="table__cell">30 кг</td>
-									<td class="table__cell">541,00 руб.</td>
-									<td class="table__cell"></td>
-									<td class="table__cell">Индивидуально</td>
-									<td class="table__cell"></td>
-									<td class="table__cell"></td>
-									<td class="table__cell"></td>
-								</tr>
-							</table>
-						</div>
+									</div>
+								</td>
+								<td class="table__cell">Блок поясной 5 см со стержнями</td>
+								<td class="table__cell">400х200х50 мм</td>
+								<td class="table__cell">7 кг</td>
+								<td class="table__cell">99,00 руб.</td>
+								<td class="table__cell"></td>
+								<td class="table__cell">Индивидуально</td>
+								<td class="table__cell"></td>
+								<td class="table__cell"></td>
+								<td class="table__cell"></td>
+							</tr>
+	
+							<tr class="table-row">
+								<td class="table__cell-img">
+									
+								</td>
+								<td class="table__cell">Блок поясной 5 см со стержнями + 5 см
+								ПСБ</td>
+								<td class="table__cell">400х200х100 мм</td>
+								<td class="table__cell">7,1 кг</td>
+								<td class="table__cell">182,00 руб.</td>
+								<td class="table__cell"></td>
+								<td class="table__cell">Индивидуально</td>
+								<td class="table__cell"></td>
+								<td class="table__cell"></td>
+								<td class="table__cell"></td>
+							</tr>
+	
+							<tr class="table-row">
+								<td class="table__cell-img">
+									
+								</td>
+								<td class="table__cell">Блок поясной 5 см со стержнями + 7,5 см ПСБ</td>
+								<td class="table__cell">400х200х125 мм</td>
+								<td class="table__cell">7,15 кг</td>
+								<td class="table__cell">182,00 руб.</td>
+								<td class="table__cell"></td>
+								<td class="table__cell">Индивидуально</td>
+								<td class="table__cell"></td>
+								<td class="table__cell"></td>
+								<td class="table__cell"></td>
+							</tr>
+	
+							<tr class="table-row">
+								<td class="table__cell-img">
+									
+								</td>
+								<td class="table__cell">Блок поясной 5 см со стержнями + 10 см ПСБ</td>
+								<td class="table__cell">400х200х150 мм</td>
+								<td class="table__cell">7,2 кг</td>
+								<td class="table__cell">187,00 руб.</td>
+								<td class="table__cell"></td>
+								<td class="table__cell">Индивидуально</td>
+								<td class="table__cell"></td>
+								<td class="table__cell"></td>
+								<td class="table__cell"></td>
+							</tr>
+	
+							<tr class="table-row">
+								<td class="table__cell-img">
+									
+								</td>
+								<td class="table__cell">Блок поясной 5 см со стержнями + 15 см ПСБ</td>
+								<td class="table__cell">400х200х150 мм</td>
+								<td class="table__cell">7,3 кг</td>
+								<td class="table__cell">191,00 руб.</td>
+								<td class="table__cell"></td>
+								<td class="table__cell">Индивидуально</td>
+								<td class="table__cell"></td>
+								<td class="table__cell"></td>
+								<td class="table__cell"></td>
+							</tr>
+	
+							<tr class="table-row">
+								<td class="table__cell-img">
+									
+								</td>
+								<td class="table__cell">Блок эркерный</td>
+								<td class="table__cell">400+200х200х300 мм</td>
+								<td class="table__cell">30 кг</td>
+								<td class="table__cell">541,00 руб.</td>
+								<td class="table__cell"></td>
+								<td class="table__cell">Индивидуально</td>
+								<td class="table__cell"></td>
+								<td class="table__cell"></td>
+								<td class="table__cell"></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<div class="calculator-btn-wrap _notmb">
+					<a href="#" class="calculator__link-stamp">Распечатать расчет</a>
+				</div>
+				<div class="calculator-text-wrap">
+					<div class="calculator-item__text">
+						Специалисты "Теплостен-Сибирь" помогут бесплатно рассчитать (пересчитать) необходимое количество блоков Теплостен, если
+						проект вашего дома сделан из другого строительного материала. Обязательным условием нашей работы мы считаем полную
+						проверку количества необходимых блоков - что позволяет избежать вам ненужных трат на лишние блоки.
+				</div>
+					<div class="calculator-item__text">
+						Для вашего удобства имеются типовые бесплатные эскизные проекты домов из строительного теплоэффективного блока
+						Теплостен. Вся эскизная проектная документация является уникальной - была создана специально по заказу Теплостен-Сибирь
+						у известной проектной организации Новосибирска - предоставлется вам при покупке строительных блоков.
+					</div>
+					<div class="calculator-item__text">
+						Также имеются несколько смет по строительным расходам, любезно предоставленные нашими партнерами, осуществляющими
+						строительство из блока Теплостен в Новосибирске.
+						
+						<a class="calculator-more" href="">Посмотреть подробнее...</a>
+					</div>
 				</div>
 			</div>
 		</div>
