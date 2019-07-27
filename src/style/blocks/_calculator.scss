@@ -6,6 +6,9 @@
 		&__left {
 			flex-basis: 70%;
 		}
+		&__right {
+			flex-basis: 30%;
+		}
 	}
 	&-text {
 		display: flex;
@@ -60,12 +63,26 @@
 			margin-top: 30px;
 			font-size: 14px;
 			text-align: center;
+			margin-bottom: 40px;
 			&-input {
 				max-width: 67px;
 				border-radius: 5px;
 				height: 22px;
 				background-color: rgba($primary, 0.27);
 				border-color: rgba($primary, 0.27);
+			}
+		}
+		&__checkboxs {
+			position: relative;
+			margin-bottom: 90px;
+		}
+		&__wrap {
+			position: relative;
+			display: flex;
+			justify-content: center;
+			&-img {
+				width: 181px;
+				height: 99px;
 			}
 		}
 	}
@@ -158,6 +175,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		width: 100%;
+		margin-bottom: 110px;
 		&__item {
 			position: relative;
 			flex-basis: 50%;	
@@ -167,26 +185,115 @@
 			}
 		}
 	}
+	&-checkbox {
+		&-position {
+			position: absolute;
+			left: 0;
+			top: -20px;
+		}
+	}
 }
 
 .absolute-1 {
 	position: absolute;
 	top: 30px;
-	right: 30px;
+	right: 100px;
 }
 
 .absolute-2 {
 	position: absolute;
-	right: 75px;
+	right: 145px;
 	top: 100px;
 }
 
 .absolute-3 {
 	position: absolute;
-	bottom: -15px;
-	left: 40px;
+	bottom: -37px;
+	left: 23px;
+}
+
+.absolute-4 {
+	position: absolute;
+	bottom: -37px;
+	left: 18px;
+}
+
+.absolute-5 {
+	position: absolute;
+	bottom: -37px;
+	left: 130px;
+}
+
+.absolute-6 {
+	position: absolute;
+	right: 10px;
+	top: 30px;
+}
+
+.absolute-7 {
+	position: absolute;
+	right: 54px;
+	top: 80px;
+}
+
+.absolute-8 {
+	position: absolute;
+	right: 54px;
+	top: 130px;
+}
+
+.absolute-9 {
+	position: absolute;
+	right: 0px;
+	top: 10px;
+}
+
+.absolute-10 {
+	position: absolute;
+	left: 130px;
+	top: 100px;
+}
+
+.img-size {
+	width: 270px;
+	height: 178px;
 }
 
 ._notmb {
 	margin-bottom: 0;
+}
+
+._size-after {
+	&:after {
+		content: "";
+		position: absolute;
+		display: block;
+		height: 2px;
+		background-color: $primary;
+		width: 100%;
+	}
+	
+}
+
+._position-left {
+	position: absolute;
+	left: 0;
+	top: 30px;
+}
+._position-right {
+	position: absolute;
+	left: 120px;
+	top: 30px;
+}
+
+._span-1 {
+	position: absolute;
+	top: 30px;
+	left: 30px;
+}
+
+._span-2 {
+	position: absolute;
+	top: 30px;
+	left: 150px;
 }

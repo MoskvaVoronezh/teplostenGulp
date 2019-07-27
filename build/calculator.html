@@ -101,7 +101,9 @@
 							</div>
 							<div class="calculator-wrapper">
 								<div class="calculator-wrapper__item">
-									<input type="checkbox"><span class="calculator__checbox"></span>
+									<label class="answer-label">
+										<input type="checkbox" class="answer__input"> <span class="answer__checkbox calculator-checkbox-position"></span>
+									</label>
 									<img class="calculator-wrapper__item-img" src="./img/calculator/home1.png" alt="дом">
 									<div class="absolute-1">
 										<label for="#" class="calculator-input__label-label">
@@ -123,16 +125,74 @@
 									</div>
 								</div>
 								<div class="calculator-wrapper__item">
-									<input type="checkbox"><span class="calculator__checbox"></span>
-									<img class="calculator-wrapper__item-img" src="./img/calculator/home2.png" alt="дом">
-									<input type="number" class="calculator-block__input-input input-4">
-									<input type="number" class="calculator-block__input-input input-5">
-									<input type="number" class="calculator-block__input-input input-6">
+									<label class="answer-label">
+										<input type="checkbox" class="answer__input"> <span class="answer__checkbox calculator-checkbox-position"></span>
+									</label>
+									<img class="calculator-wrapper__item-img img-size" src="./img/calculator/home2.png" alt="дом">
+									<div class="absolute-4">
+										<label for="#" class="calculator-input__label-label">
+											Длина:
+										</label>
+										<input type="number" class="calculator-block__input-input input-4">
+									</div>
+									<div class="absolute-5">
+										<label for="#" class="calculator-input__label-label">
+											Длина:
+										</label>
+										<input type="number" class="calculator-block__input-input input-5">
+									</div>
+									<div class="absolute-6">
+										<label for="#" class="calculator-input__label-label">
+											Высота этажа:
+										</label>
+										<input type="number" class="calculator-block__input-input input-6">
+									</div>
+									<div class="absolute-7">
+										<label for="#" class="calculator-input__label-label">
+											Ширина:
+										</label>
+										<input type="number" class="calculator-block__input-input input-8">
+									</div>
+									<div class="absolute-8">
+										<label for="#" class="calculator-input__label-label">
+											
+										</label>
+										<input type="number" class="calculator-block__input-input input-8">
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-
+					<div class="calculator-wrap__right">
+						<div class="calculator-block">
+							<h2 class="calculator-block__title _size-after">Размеры крыши:</h2>
+							<div class="calculator-block__checkboxs">
+								<label class="answer-label">
+									<input type="checkbox" class="answer__input"> <span class="answer__checkbox _position-left"></span> 
+								</label>
+								<span class="_span-1">Учитывать</span>
+								<label class="answer-label">
+									<input type="checkbox" class="answer__input"> <span class="answer__checkbox _position-right"></span> 
+								</label><span class="_span-2">Не учитывать</span>
+							</div>
+							<div class="calculator-block__wrap">
+								<img src="img/calculator/roof.png" alt="Крыша" class="calculator-block__wrap-img">
+								<div class="absolute-9">
+									<label for="#" class="calculator-input__label-label">
+										Высота:
+									</label>
+									<input type="number" class="calculator-block__input-input input-8">
+								</div>
+								<div class="absolute-10">
+									<label for="#" class="calculator-input__label-label">
+										Длина:
+									</label>
+									<input type="number" class="calculator-block__input-input input-8">
+								</div>
+							</div>
+						</div>
+						
+					</div>
 				</div>
 				<div class="calculator-btn-wrap">
 					<button class="calculator_btn button_red">Рассчитать стоимость</button>
