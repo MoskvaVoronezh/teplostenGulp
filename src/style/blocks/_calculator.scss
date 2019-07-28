@@ -21,13 +21,19 @@
 			margin-top: 50px;
 			margin-bottom: 30px;
 			font-size: 30px;
-			max-width: 800px;
+			display: block;
 		}
 		&-subtitle {
 			@include light;
 			font-size: 14px;
 			text-align: center;
 			margin-bottom: 50px;
+			max-width: 550px;
+			align-self: center;
+		}
+		&__wrap {
+			align-self: center;
+			max-width: 800px;
 		}
 		
 	}
@@ -39,6 +45,23 @@
 			display: flex;
 			justify-content: center;
 			margin-bottom: 100px;
+			margin-top: 120px;
+			position: relative;
+			&:after {
+				position: absolute;
+				content: "";
+				display: block;
+				height: 2px;
+				width: 60%;
+				left: 20%;
+				right: 20%;
+				bottom: -30px;
+				background-color: $primary;
+			}
+		}
+		&-wrapper {
+			display: flex;
+			justify-content: center;
 		}
 	}
 	&-block {
@@ -95,17 +118,6 @@
 		color: #fff;
 		font-size: 24px;
 		position: relative;
-		&:after {
-			content: '';
-			display: block;
-			position: absolute;
-			width: 200%;
-			height: 2px;
-			background-color: $primary;
-			bottom: -34px;
-			left: 0;
-			right: 0;
-		}
 	}
 	&__link {
 		&-stamp {
@@ -192,6 +204,32 @@
 			top: -20px;
 		}
 	}
+	&__door {
+		margin-top: 30px;
+		padding-left: 30px;
+	}
+	&-door {
+		position: relative;
+		&-img {
+			width: 120px;
+			height: 178px;
+		}
+	}
+	&__window {
+		margin-top: 30px;
+	}
+	&-window {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		&__item {
+			position: relative;
+			&-img {
+				width: 154px;
+				height: 147px;
+			}
+		}
+	}
 }
 
 .absolute-1 {
@@ -254,6 +292,54 @@
 	top: 100px;
 }
 
+.absolute-11 {
+	position: absolute;
+	left: 50px;
+	bottom: -40px;
+}
+
+.absolute-12 {
+	position: absolute;
+	left:  160px;
+	top: 50px;
+}
+
+.absolute-13 {
+	position: absolute;
+	left:  160px;
+	top: 30px;
+}
+
+.absolute-14 {
+	position: absolute;
+	left: 30px;
+	bottom: -40px;
+}
+
+.absolute-15 {
+	position: absolute;
+	left:  160px;
+	top: 30px;
+}
+
+.absolute-16 {
+	position: absolute;
+	left: 30px;
+	bottom: -40px;
+}
+
+.absolute-17 {
+	position: absolute;
+	left:  160px;
+	top: 30px;
+}
+
+.absolute-18 {
+	position: absolute;
+	left: 30px;
+	bottom: -40px;
+}
+
 .img-size {
 	width: 270px;
 	height: 178px;
@@ -296,4 +382,13 @@
 	position: absolute;
 	top: 30px;
 	left: 150px;
+}
+
+._margin-left {
+	margin-left: 5%;
+	flex-basis: 65%;
+}
+
+._mb {
+	margin-bottom: 100px;
 }
