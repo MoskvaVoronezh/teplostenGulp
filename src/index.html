@@ -6,7 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Теплостен-Сибирь</title>
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-	<link rel="stylesheet" href="../css/main.css">
+	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 <header class="header" id="top">
@@ -41,6 +41,11 @@
 							<img class="info-block__button-img" src="img/header/phoneActive.svg" alt="phone">
 							Обратный звонок
 						</button>
+					</div>
+					<div class="burger">
+						<a class="burger-link" href="#">
+							<span class="burger-span"></span>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -640,6 +645,11 @@
 			});
 			$(".info-block__phone-current").on("click", function () {
 				$(".info-list").toggleClass("info-list_active");
+			});
+			$(".burger").on("click", function(e) {
+				e.preventDefault();
+				$(".burger-link").toggleClass("burger-link_active");
+				$(".header__menu").toggleClass("header__menu_active");
 			});
 	  });
   </script>

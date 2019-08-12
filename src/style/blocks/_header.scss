@@ -7,6 +7,9 @@
 	}
 	&__menu {
 		background-color: $primary;
+		&_active {
+			display: flex!important;
+		}
 	}
 	
 }
@@ -14,6 +17,7 @@
 .info {
 	&-block {
 		display: flex;
+		align-items: center;
 		&__number {
 			padding-top: 12px;
 			position: relative;
@@ -89,6 +93,7 @@
 
 .menu {
 	&-list {
+		position: relative;
 		&__link {
 			color: #fff;
 			@include regular; 
@@ -111,6 +116,62 @@
 	}
 }
 
+.burger {
+	width: 40px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	&-link {
+		display: block;
+		&_active {
+			span {
+				height: 0;
+				transition: 0.2s;
+				&:after {
+					transform: rotate(45deg);
+					transition: 0.2s
+				}
+				&:before {
+					transform: rotate(-45deg);
+					transition: 0.2s
+				}
+			}
+		}
+	}
+	&-span {
+		display: block;
+		height: 3px;
+		width: 40px;
+		background-color: $primary;
+		position: relative;
+		transition: 0.2s;
+		&_active {
+			height: 0;
+			&:after {
+				transform: rotate(45deg);
+			}
+			&:before {
+				transform: rotate(-45deg);
+			}
+		}
+		&:before, &:after {
+			content: "";
+			height: 3px;
+			width: 40px;
+			position: absolute;
+			display: block;
+			background-color: $primary;
+		}
+		&:before {
+			transform: translateY(-10px);
+		}
+		&:after {
+			transform: translateY(10px);
+		}
+	}
+}
+
 @media (max-width: 991px) {
 	.info {
 		&-block {
@@ -122,12 +183,21 @@
 }
 
 @media (max-width: 768px) {
+	.header {
+		&__menu {
+			display: none;
+		}
+	}
 	.info {
 		&-block {
 			&__button {
 				&-img {
 					display: none;
 				}
+			}
+			&__btn {
+				margin-left: 0;
+				margin-right: 20px;
 			}
 		}
 	}
@@ -137,6 +207,12 @@
 			justify-content: center;
 			text-align: center;
 		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.burger {
+		display: none;
 	}
 }
 
@@ -151,6 +227,9 @@
 			&__button {
 				font-size: 14px;
 			}
+			&__btn {
+				display: none;
+			}
 		}
 	}
 	.house {
@@ -158,4 +237,5 @@
 			font-size: 18px;
 		}
 	}
+
 }
