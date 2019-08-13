@@ -18,5 +18,10 @@
 				"imagemin-pngquant": "^7.0.0",
 				"node-sass": "^4.11.0",
 				"rimraf": "^2.6.3"
+		},
+		"devDependencies": {
+				"fancybox": "^3.0.1",
+				"jquery": "^3.4.1",
+				"slick-carousel": "^1.8.1"
 		}
 }
