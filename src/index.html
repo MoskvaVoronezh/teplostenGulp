@@ -5,7 +5,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Теплостен-Сибирь</title>
-	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -24,8 +23,8 @@
 						</a>
 						<ul class="info-list">
 							<li class="info-list__item">
-								<a class="info-list__item-link" href="tel:8-383-41-5-83-22">
-									8-383-41-5-83-22
+								<a class="info-list__item-link" href="tel:8-383-304-83-22">
+									8-383-304-83-22
 								</a>
 							</li>
 							<li class="info-list__item">
@@ -631,27 +630,7 @@
 		</div>
 	</div>
 </footer>
- <script
-  src="https://code.jquery.com/jquery-3.4.0.slim.min.js"></script>
-  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  <script>
-	  $(document).ready(function () {
-			$(".project-slider").slick({
-				slideToShow: 1,
-				slideToScroll: 1,
-				infinite: true,
-				prevArrow: '<button class="arrow-left"></button>',
-				nextArrow: '<button class="arrow-right"></button>'
-			});
-			$(".info-block__phone-current").on("click", function () {
-				$(".info-list").toggleClass("info-list_active");
-			});
-			$(".burger").on("click", function(e) {
-				e.preventDefault();
-				$(".burger-link").toggleClass("burger-link_active");
-				$(".header__menu").toggleClass("header__menu_active");
-			});
-	  });
-  </script>
+	<script src="js/main.js"></script>
+
 </body>
 </html>
