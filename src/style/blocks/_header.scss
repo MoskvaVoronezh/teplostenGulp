@@ -106,6 +106,35 @@
 		}
 		&__item {
 			padding: 17px 0;
+			position: relative;
+			&:hover {
+				.menu-list__item-dropdown {
+					display: block;
+					left: 0px;
+					@media screen and (max-width: 768px) {
+						display: none;
+					}
+				}
+			}
+			&-dropdown {
+				position: absolute;
+				left: -9999px;
+				padding: 0;
+				margin: 0;
+				list-style: none;
+				min-width: 250px;
+				&__item {
+					padding: 7px 0;
+					background-color: $primary;
+					border-bottom: 1px solid #fff;
+					&:first-child {
+						border-top: 1px solid #fff;
+					}
+					.menu-list__link {
+						font-size: 14px;
+					}
+				}
+			}
 		}
 	}
 	&__list {
@@ -206,6 +235,13 @@
 			flex-direction: column;
 			justify-content: center;
 			text-align: center;
+		}
+		&-list {
+			&__item {
+				&-dropdown {
+					display: none;
+				}
+			}
 		}
 	}
 }
