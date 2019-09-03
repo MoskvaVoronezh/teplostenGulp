@@ -13,6 +13,17 @@ $(document).ready(function () {
 		prevArrow: '<button class="arrow-left"></button>',
 		nextArrow: '<button class="arrow-right"></button>'
 	});
+
+	// modal-sliders
+
+	// var instance = $.fancybox.open(
+	// 	$('.modal-slider-1').slick({
+	// 		slideToShow: 1,
+	// 		slideToScroll: 1,
+	// 		infinite: true
+	// 	})
+	// );
+
 	// header list-phone
 	$(".info-block__phone-current").on("click", function () {
 		$(".info-list").toggleClass("info-list_active");
@@ -29,7 +40,8 @@ $(document).ready(function () {
 		slideShow  : true,
 		fullScreen : true,
 		thumbs     : true,
-		closeBtn   : true
+		closeBtn   : true,
+		loop       : true
 	});
 	
 	$('[data-fancybox="gallery-1"]').fancybox({
@@ -37,7 +49,8 @@ $(document).ready(function () {
 		slideShow  : true,
 		fullScreen : true,
 		thumbs     : true,
-		closeBtn   : true
+		closeBtn   : true,
+		loop       : true
 	});
 
 	$('[data-fancybox="gallery-2"]').fancybox({
@@ -45,7 +58,8 @@ $(document).ready(function () {
 		slideShow  : true,
 		fullScreen : true,
 		thumbs     : true,
-		closeBtn   : true
+		closeBtn   : true,
+		loop       : true
 	});
 
 	
@@ -54,7 +68,8 @@ $(document).ready(function () {
 		slideShow  : true,
 		fullScreen : true,
 		thumbs     : true,
-		closeBtn   : true
+		closeBtn   : true,
+		loop       : true
 	});
 
 	$('[data-fancybox="gallery-4"]').fancybox({
@@ -62,7 +77,8 @@ $(document).ready(function () {
 		slideShow  : true,
 		fullScreen : true,
 		thumbs     : true,
-		closeBtn   : true
+		closeBtn   : true,
+		loop       : true
 	});
 
 	$('[data-fancybox="gallery-5"]').fancybox({
@@ -70,7 +86,8 @@ $(document).ready(function () {
 		slideShow  : true,
 		fullScreen : true,
 		thumbs     : true,
-		closeBtn   : true
+		closeBtn   : true,
+		loop       : true
 	});
 
 	$('[data-fancybox="gallery-6"]').fancybox({
@@ -78,7 +95,8 @@ $(document).ready(function () {
 		slideShow  : true,
 		fullScreen : true,
 		thumbs     : true,
-		closeBtn   : true
+		closeBtn   : true,
+		loop       : true
 	});
 
 	$('[data-fancybox="gallery-7"]').fancybox({
@@ -86,7 +104,8 @@ $(document).ready(function () {
 		slideShow  : true,
 		fullScreen : true,
 		thumbs     : true,
-		closeBtn   : true
+		closeBtn   : true,
+		loop       : true
 	});
 
 	$('[data-fancybox="gallery-8"]').fancybox({
@@ -94,7 +113,8 @@ $(document).ready(function () {
 		slideShow  : true,
 		fullScreen : true,
 		thumbs     : true,
-		closeBtn   : true
+		closeBtn   : true,
+		loop       : true
 	});
 
 });
