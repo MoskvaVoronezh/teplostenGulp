@@ -87,5 +87,77 @@
 			}
 		}
 	}
+	&-forms {
+		max-width: 490px;
+		border-radius: 15px;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		&-title {	
+			@include medium;
+			font-size: 24px;
+			color: $primary;
+			text-align: center;
+			text-transform: uppercase;
+			margin-bottom: 30px;
+		}
+		&__input {
+			// background-color: lighten(#484747, 0.76);	
+			// background-color: rgba(#484747, 24);
+			background-color: rgba(72,71,71, 0.24);
+			max-width: 400px;
+			width: 100%;
+			text-align: center;
+			padding: 20px 0;
+			margin-bottom: 20px;
+			border: none;
+			border-radius: 15px;
+			outline: none;
+			&::placeholder {
+				color: rgba(0,0,0,0.7);
+				font-size: 18px;
+				@include light;
+			}
+		}
+		&__subtitle {
+			color: #000;
+			@include light;
+			font-size: 18px;
+			text-align: center;
+			display: block;
+			margin-bottom: 20px;
+		}
+		&__submit {
+			text-transform: uppercase;
+			color: #fff;
+			background-color: $primary;
+			padding: 15px 12px;
+			width: 100%;
+			max-width: 169px;
+			text-align: center;
+			border-radius: 15px;
+			border: none;
+			font-size: 24px;
+		}
+	}
+}
 
+.modal-sliders {
+  visibility: hidden;  
+}
+
+.fancybox-opened .modal-sliders {
+   visibility: visible; 
+}
+
+.slick-slide img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
+.modal-wrap {
+  max-height: 200px;
+  border-bottom: 2px solid #fff;
+  overflow: hidden;
 }

@@ -14,15 +14,43 @@ $(document).ready(function () {
 		nextArrow: '<button class="arrow-right"></button>'
 	});
 
-	// modal-sliders
+	$("#modal-content-1").fancybox({
+		fitToView: false,
+		autoWidth: false,
+		autoSize: false,
+		helpers: {
+			title: {
+				type: 'inside',
+				position: 'top'
+			},
+			css: {
+				'background': 'rgba(0, 0, 0, 0.58)'
+			}
+		},
+		// tpl: {
+		// 	next: '<a title="Next" class="fancybox-nav fancybox-next" href="javascript:;"></a>',
+		// 	prev: '<a title="Previous" class="fancybox-nav fancybox-prev" href="javascript:;"></a>'
+		// },
+		beforeLoad: function () {
+			this.title = $(this.element).find('span').html();
+		},
+		afterShow: function () {
 
-	// var instance = $.fancybox.open(
-	// 	$('.modal-slider-1').slick({
-	// 		slideToShow: 1,
-	// 		slideToScroll: 1,
-	// 		infinite: true
-	// 	})
-	// );
+			// $('.h__slider-win').refresh();
+			// $('.h__slider-control').refresh();
+
+			$('#modal-slider-1').not('.slick-initialized').slick({
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				arrows: true,
+				dots: false,
+				infinite: true,
+				centerMode: false,
+				prevArrow: '<button class="slick-prev"></button>',
+				nextArrow: '<button class="slick-next"></button>'
+			});
+		}
+	});
 
 	// header list-phone
 	$(".info-block__phone-current").on("click", function () {
