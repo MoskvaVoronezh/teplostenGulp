@@ -1,46 +1,31 @@
-
-
-
 $(document).ready(function () {
 
-   var checkboxHouseFirst = $('#type-house-first');
-   var checkboxHouseSecond = $('#type-house-second');
+	var absouluteFloor1 = $(".absoulute-floor-1");
+	var absouluteFloor2 = $(".absoulute-floor-2");
+	var absouluteFloor3 = $(".absoulute-floor-3");
 
-   checkboxHouseFirst.on('click', function () {
-      $(this).addClass('type-house-first-active');
-      if (checkboxHouseSecond.hasClass('type-house-second-active')) {
-         checkboxHouseSecond.removeClass('type-house-second-active');
-      }
-      if (checkboxHouseSecond.prop('checked') == true) {
-         console.log('2 зачекан');
-         checkboxHouseSecond.prop('checked', false);
-      }
-      $('.input-4').attr('disabled', true);
-      $('.input-5').attr('disabled', true);
-      $('.input-6').attr('disabled', true);
-      $('.input-7').attr('disabled', true);
-      $('.input-8').attr('disabled', true);
-      $('.input-1').attr('disabled', false);
-      $('.input-2').attr('disabled', false);
-      $('.input-3').attr('disabled', false);
-   });
+	var floorCount = $(".floor-count");
 
-   checkboxHouseSecond.on('click', function () {
-      $(this).addClass('type-house-second-active');
-      if (checkboxHouseFirst.hasClass('type-house-first-active')) {
-         checkboxHouseFirst.removeClass('type-house-fitst-active');
-      }
-      if (checkboxHouseFirst.prop('checked') == true) {
-         console.log('зачекан 1');
-         checkboxHouseFirst.prop('checked', false);
-      }
-      $('.input-1').attr('disabled', true);
-      $('.input-2').attr('disabled', true);
-      $('.input-3').attr('disabled', true);
-      $('.input-4').attr('disabled', false);
-      $('.input-5').attr('disabled', false);
-      $('.input-6').attr('disabled', false);
-      $('.input-7').attr('disabled', false);
-      $('.input-8').attr('disabled', false);
-   });
+		resultValue = floorCount.on('change', function() {
+			var result = $(this).val();
+			if(result == 1) {
+				absouluteFloor2.css('display', 'none');
+				absouluteFloor3.css('display', 'none');
+			}
+			else if(result == 2) {
+				absouluteFloor2.css('display', 'block');
+			}
+			else if(result == 3) {
+				absouluteFloor2.css('display', 'block');
+				absouluteFloor3.css('display', 'block');
+			}
+		});
+	
+		$(".calculator_btn").on("click", function (){
+			var res = $('input[name="type"]:checked').val();
+			console.log(res);
+		});
+
+	
+
 });

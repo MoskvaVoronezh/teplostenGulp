@@ -106,19 +106,31 @@
 							<h2 class="calculator-block__title">Тип дома:</h2>
 							<div class="calculator-block__input">
 								<label for="#" class="calculator-block__label">Количество этажeй:</label>
-								<input class="calculator-block__input-input" type="number">
+								<input class="calculator-block__input-input floor-count" type="number" min="1" value="1" max="3">
 							</div>
 							<div class="calculator-wrapper">
 								<div class="calculator-wrapper__item">
 									<label class="answer-label" id="type-house-first">
-										<input type="checkbox" class="answer__input"> <span class="answer__checkbox calculator-checkbox-position"></span>
+										<input type="radio" name="type" value="type-1" class="answer__input"> <span class="answer__checkbox calculator-checkbox-position"></span>
 									</label>
 									<img class="calculator-wrapper__item-img" src="./img/calculator/home1.png" alt="дом">
-									<div class="absolute-1">
+									<div class="absoulute-floor-1">
 										<label for="#" class="calculator-input__label-label">
-											Высота этажа:
+											Высота этажа 1:
 										</label>
-										<input type="number" class="calculator-block__input-input input-1">
+										<input type="number" class="calculator-block__input-input floor-height-first">
+									</div>
+									<div class="absoulute-floor-2">
+										<label for="#" class="calculator-input__label-label">
+											Высота этажа 2:
+										</label>
+										<input type="number" class="calculator-block__input-input floor-height_second">
+									</div>
+									<div class="absoulute-floor-3">
+										<label for="#" class="calculator-input__label-label">
+											Высота этажа 3:
+										</label>
+										<input type="number" class="calculator-block__input-input floor-height_third">
 									</div>
 									<div class="absolute-2">
 										<label for="#" class="calculator-input__label-label">
@@ -135,7 +147,7 @@
 								</div>
 								<div class="calculator-wrapper__item">
 									<label class="answer-label">
-										<input type="checkbox" class="answer__input" id="type-house-second"> <span class="answer__checkbox calculator-checkbox-position"></span>
+										<input type="radio" name="type" value="type-2" class="answer__input" id="type-house-second"> <span class="answer__checkbox calculator-checkbox-position"></span>
 									</label>
 									<img class="calculator-wrapper__item-img img-size" src="./img/calculator/home2.png" alt="дом">
 									<div class="absolute-4">

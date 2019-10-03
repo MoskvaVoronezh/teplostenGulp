@@ -232,16 +232,31 @@
 	}
 }
 
-.absolute-1 {
+.absoulute-floor-1 {
 	position: absolute;
-	top: 30px;
+	top: -15px;
 	right: 100px;
 }
 
+.absoulute-floor-2 {
+	position: absolute;
+	top: 30px;
+	right: 100px;
+	display: none;
+}
+
+.absoulute-floor-3 {
+	position: absolute;
+	top: 73px;
+	right: 100px;
+	display: none;	
+}
+
+
 .absolute-2 {
 	position: absolute;
-	right: 145px;
-	top: 100px;
+	right: 153px;
+	top: 120px;
 }
 
 .absolute-3 {
