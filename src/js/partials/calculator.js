@@ -6,7 +6,8 @@ $(document).ready(function () {
 
 	var floorCount = $(".floor-count");
 
-		resultValue = floorCount.on('change', function() {
+
+		floorCount.on('change', function() {
 			var result = $(this).val();
 			if(result == 1) {
 				absouluteFloor2.css('display', 'none');
@@ -22,10 +23,22 @@ $(document).ready(function () {
 		});
 	
 		$(".calculator_btn").on("click", function (){
-			var res = $('input[name="type"]:checked').val();
-			console.log(res);
+			var houseType = $('input[name="type"]:checked').val();
+			if(houseType == 'type-1') {
+				var floorHeightFirst = +($('.floor-height-first').val());
+				var floorHeightSecond = +($('.floor-height_second').val());
+				var floorHeightThird = +($('.floor-height_third').val());
+				var lenght = +($('.input-3').val());
+				var width = +($('.input-2').val());
+
+				var blockAngular = ((floorHeightFirst + floorHeightSecond + floorHeightThird)/0.2) * 4;
+				console.log(blockAngular);
+
+			}
+			else if (houseType == 'type-2') {
+			}
 		});
 
-	
+		
 
 });
