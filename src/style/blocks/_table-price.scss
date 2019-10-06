@@ -47,12 +47,13 @@
       font-size: 14px;
       color: #000;
       font-weight: normal;
-      padding: 20px 0;
+      padding: 20px 10px;
+      text-align: center;
       &-title {
          background-color: $primary;
          font-size: 18px;
-         padding: 20px 0;
-         text-align: left;
+         padding: 20px 10px;
+         text-align: center;
          padding-left: 10px;
          font-weight: normal;
          color: #fff;
@@ -83,4 +84,8 @@
          background-color: rgba(#A0211E, 0.27);
       }
    }
+}
+
+._mw {
+   min-width: 130px;
 }

@@ -93,6 +93,11 @@
 				height: 22px;
 				background-color: rgba($primary, 0.27);
 				border-color: rgba($primary, 0.27);
+				outline: none;
+				&:active, &:focus {
+					border-radius: 5px;
+					border: 2px solid $primary;
+				}
 			}
 		}
 		&__checkboxs {
@@ -280,19 +285,32 @@
 .absolute-6 {
 	position: absolute;
 	right: 10px;
-	top: 30px;
+	top: -30px;
 }
 
+.second-floor-type-2 {
+	position: absolute;
+	right: 10px;
+	top: 15px;
+	display: none;
+}
+
+.fhird-floor-type-2 {
+	position: absolute;
+	right: 10px;
+	top: 60px;
+	display: none;
+}
 .absolute-7 {
 	position: absolute;
 	right: 54px;
-	top: 80px;
+	top: 120px;
 }
 
 .absolute-8 {
 	position: absolute;
 	right: 54px;
-	top: 130px;
+	top: 170px;
 }
 
 .absolute-9 {
@@ -313,16 +331,28 @@
 	bottom: -40px;
 }
 
+.position-count-door {
+	position: absolute;
+	left: 160px;
+	top: 0px;
+}
+
 .absolute-12 {
 	position: absolute;
 	left:  160px;
 	top: 50px;
 }
 
+.position-count-window {
+	top: 0;
+	position: absolute;
+	left: 160px;
+}
+
 .absolute-13 {
 	position: absolute;
 	left:  160px;
-	top: 30px;
+	top: 70px;
 }
 
 .absolute-14 {
@@ -331,29 +361,29 @@
 	bottom: -40px;
 }
 
-.absolute-15 {
-	position: absolute;
-	left:  160px;
-	top: 30px;
-}
+// .absolute-15 {
+// 	position: absolute;
+// 	left:  160px;
+// 	top: 30px;
+// }
 
-.absolute-16 {
-	position: absolute;
-	left: 30px;
-	bottom: -40px;
-}
+// .absolute-16 {
+// 	position: absolute;
+// 	left: 30px;
+// 	bottom: -40px;
+// }
 
-.absolute-17 {
-	position: absolute;
-	left:  160px;
-	top: 30px;
-}
+// .absolute-17 {
+// 	position: absolute;
+// 	left:  160px;
+// 	top: 30px;
+// }
 
-.absolute-18 {
-	position: absolute;
-	left: 30px;
-	bottom: -40px;
-}
+// .absolute-18 {
+// 	position: absolute;
+// 	left: 30px;
+// 	bottom: -40px;
+// }
 
 .img-size {
 	width: 270px;

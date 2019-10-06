@@ -111,7 +111,7 @@
 							<div class="calculator-wrapper">
 								<div class="calculator-wrapper__item">
 									<label class="answer-label" id="type-house-first">
-										<input type="radio" name="type" value="type-1" class="answer__input"> <span class="answer__checkbox calculator-checkbox-position"></span>
+										<input type="radio" name="type" value="type-1" class="answer__input type" required> <span class="answer__checkbox calculator-checkbox-position"></span>
 									</label>
 									<img class="calculator-wrapper__item-img" src="./img/calculator/home1.png" alt="дом">
 									<div class="absoulute-floor-1">
@@ -147,38 +147,50 @@
 								</div>
 								<div class="calculator-wrapper__item">
 									<label class="answer-label">
-										<input type="radio" name="type" value="type-2" class="answer__input" id="type-house-second"> <span class="answer__checkbox calculator-checkbox-position"></span>
+										<input type="radio" name="type" value="type-2" class="answer__input type" id="type-house-second" required> <span class="answer__checkbox calculator-checkbox-position"></span>
 									</label>
 									<img class="calculator-wrapper__item-img img-size" src="./img/calculator/home2.png" alt="дом">
 									<div class="absolute-4">
 										<label for="#" class="calculator-input__label-label">
 											Длина:
 										</label>
-										<input type="number" class="calculator-block__input-input input-4">
+										<input type="number" class="calculator-block__input-input lenght-type-2-first">
 									</div>
 									<div class="absolute-5">
 										<label for="#" class="calculator-input__label-label">
 											Длина:
 										</label>
-										<input type="number" class="calculator-block__input-input input-5">
+										<input type="number" class="calculator-block__input-input lenght-type-2-second">
 									</div>
-									<div class="absolute-6">
+									<div class="absolute-6 first-floor-type-2">
 										<label for="#" class="calculator-input__label-label">
-											Высота этажа:
+											Высота этажа 1:
 										</label>
-										<input type="number" class="calculator-block__input-input input-6">
+										<input type="number" class="calculator-block__input-input input-6 type-second-first-floor">
+									</div>
+									<div class="second-floor-type-2">
+										<label for="#" class="calculator-input__label-label">
+											Высота этажа 2:
+										</label>
+										<input type="number" class="calculator-block__input-input input-6 type-second-second-floor">
+									</div>
+									<div class="fhird-floor-type-2">
+										<label for="#" class="calculator-input__label-label">
+											Высота этажа 3:
+										</label>
+										<input type="number" class="calculator-block__input-input input-6 type-second-fhird-floor">
 									</div>
 									<div class="absolute-7">
 										<label for="#" class="calculator-input__label-label">
 											Ширина:
 										</label>
-										<input type="number" class="calculator-block__input-input input-7">
+										<input type="number" class="calculator-block__input-input width-type-second-1">
 									</div>
 									<div class="absolute-8">
 										<label for="#" class="calculator-input__label-label">
 											
 										</label>
-										<input type="number" class="calculator-block__input-input input-8">
+										<input type="number" class="calculator-block__input-input width-type-second-2">
 									</div>
 								</div>
 							</div>
@@ -189,12 +201,15 @@
 							<h2 class="calculator-block__title _size-after">Размеры крыши:</h2>
 							<div class="calculator-block__checkboxs">
 								<label class="answer-label">
-									<input type="checkbox" class="answer__input"> <span class="answer__checkbox _position-left"></span> 
+									<input type="radio" name="roof" class="answer__input roof" value="roof-1" required> 
+									<span class="answer__checkbox _position-left"></span> 
 								</label>
 								<span class="_span-1">Учитывать</span>
 								<label class="answer-label">
-									<input type="checkbox" class="answer__input"> <span class="answer__checkbox _position-right"></span> 
-								</label><span class="_span-2">Не учитывать</span>
+									<input type="radio" name="roof" class="answer__input roof" value="roof-2" required> 
+									<span class="answer__checkbox _position-right"></span> 
+								</label>
+								<span class="_span-2">Не учитывать</span>
 							</div>
 							<div class="calculator-block__wrap">
 								<img src="img/calculator/roof.png" alt="Крыша" class="calculator-block__wrap-img">
@@ -202,13 +217,13 @@
 									<label for="#" class="calculator-input__label-label">
 										Высота:
 									</label>
-									<input type="number" class="calculator-block__input-input input-8">
+									<input type="number" class="calculator-block__input-input roof-height">
 								</div>
 								<div class="absolute-10">
 									<label for="#" class="calculator-input__label-label">
 										Длина:
 									</label>
-									<input type="number" class="calculator-block__input-input input-8">
+									<input type="number" class="calculator-block__input-input roof-lenght">
 								</div>
 							</div>
 						</div>
@@ -225,13 +240,19 @@
 									<label for="#" class="calculator-input__label-label">
 										Длина:
 									</label>
-									<input type="number" class="calculator-block__input-input input-8">
+									<input type="number" class="calculator-block__input-input lenght-door">
+								</div>
+								<div class="position-count-door">
+									<label for="#" class="calculator-input__label-label">
+										Количество дверей:
+									</label>
+									<input type="number" class="calculator-block__input-input count-door" min="1" max="100">
 								</div>
 								<div class="absolute-12">
 									<label for="#" class="calculator-input__label-label">
 										Высота:
 									</label>
-									<input type="number" class="calculator-block__input-input input-8">
+									<input type="number" class="calculator-block__input-input height-door">
 								</div>
 							</div>
 						</div>
@@ -242,20 +263,26 @@
 							<div class="calculator-window calculator__window">
 								<div class="calculator-window__item">
 									<img src="img/calculator/window1.png" alt="Окно" class="calculator-window__item-img">
+									<div class="position-count-window">
+										<label for="#" class="calculator-input__label-label">
+											Количество окон:
+										</label>
+										<input type="number" class="calculator-block__input-input count-window" min="1" max="100">
+									</div>
 									<div class="absolute-13">
 										<label for="#" class="calculator-input__label-label">
 											Высота:
 										</label>
-										<input type="number" class="calculator-block__input-input input-8">
+										<input type="number" class="calculator-block__input-input height-window">
 									</div>
 									<div class="absolute-14">
 										<label for="#" class="calculator-input__label-label">
 											Длина:
 										</label>
-										<input type="number" class="calculator-block__input-input input-8">
+										<input type="number" class="calculator-block__input-input lenght-window">
 									</div>
 								</div>
-								<div class="calculator-window__item">
+								<!-- <div class="calculator-window__item">
 									<img src="img/calculator/window2.png" alt="Окно" class="calculator-window__item-img">
 									<div class="absolute-15">
 										<label for="#" class="calculator-input__label-label">
@@ -284,7 +311,7 @@
 										</label>
 										<input type="number" class="calculator-block__input-input input-8">
 									</div>
-								</div>
+								</div> -->
 							</div>
 						</div>
 					</div>
@@ -316,11 +343,11 @@
 									</div>
 								</td>
 								<td class="table__cell">Блок рядовой</td>
-								<td class="table__cell">400х200х300 мм</td>
-								<td class="table__cell">1028</td>
-								<td class="table__cell">24,67</td>
-								<td class="table__cell">229</td>
-								<td class="table__cell">235 412</td>
+								<td class="table__cell _mw">400х200х300 мм</td>
+								<td class="table__cell" id="count-private"></td>
+								<td class="table__cell" id="metres-private"></td>
+								<td class="table__cell" id="price-private">229</td>
+								<td class="table__cell" id="total-private"></td>
 								<td class="table__cell">3%</td>
 								<td class="table__cell">9 542</td>
 								<td class="table__cell">28 626</td>
@@ -333,11 +360,11 @@
 									</div>
 								</td>
 								<td class="table__cell">Блок рядовой половинчатый</td>
-								<td class="table__cell">400х200х300 мм</td>
-								<td class="table__cell">1028</td>
-								<td class="table__cell">24,67</td>
-								<td class="table__cell">229</td>
-								<td class="table__cell">235 412</td>
+								<td class="table__cell _mw">400х200х300 мм</td>
+								<td class="table__cell" id="count-blockHalf"></td>
+								<td class="table__cell" id="metres-blockHalf"></td>
+								<td class="table__cell" id="price-blockHalf">229</td>
+								<td class="table__cell" id="total-blockHalf"></td>
 								<td class="table__cell">3%</td>
 								<td class="table__cell">9 542</td>
 								<td class="table__cell">28 626</td>
@@ -350,11 +377,11 @@
 									</div>
 								</td>
 								<td class="table__cell-img">Блок угловой наружный</td>
-								<td class="table__cell">400х200х300 мм</td>
-								<td class="table__cell">1028</td>
-								<td class="table__cell">24,67</td>
-								<td class="table__cell">229</td>
-								<td class="table__cell">235 412</td>
+								<td class="table__cell _mw">400х200х300 мм</td>
+								<td class="table__cell" id="count-blockAngular"></td>
+								<td class="table__cell" id="metres-blockAngular"></td>
+								<td class="table__cell" id="price-blockAngular">229</td>
+								<td class="table__cell" id="total-blockAngular"></td>
 								<td class="table__cell">3%</td>
 								<td class="table__cell">9 542</td>
 								<td class="table__cell">28 626</td>
@@ -367,14 +394,14 @@
 									</div>
 								</td>
 								<td class="table__cell">Блок угловой внутренний</td>
-								<td class="table__cell">400х200х300 мм</td>
-								<td class="table__cell">1028</td>
-								<td class="table__cell">24,67</td>
-								<td class="table__cell">229</td>
-								<td class="table__cell">235 412</td>
-								<td class="table__cell">3%</td>
-								<td class="table__cell">9 542</td>
-								<td class="table__cell">28 626</td>
+								<td class="table__cell _mw">400х200х300 мм</td>
+								<td class="table__cell _block-interior" id="count-blockInterior"></td>
+								<td class="table__cell _block-interior" id="metres-blockInterior"></td>
+								<td class="table__cell _block-interior" id="price-blockInterior">229</td>
+								<td class="table__cell _block-interior" id="total-blockInterior"></td>
+								<td class="table__cell _block-interior">3%</td>
+								<td class="table__cell _block-interior">9 542</td>
+								<td class="table__cell _block-interior">28 626</td>
 							</tr>
 	
 							<tr class="table-row">
@@ -384,11 +411,11 @@
 									</div>
 								</td>
 								<td class="table__cell">Блок поясной</td>
-								<td class="table__cell">400х200х120 мм</td>
-								<td class="table__cell">1028</td>
-								<td class="table__cell">24,67</td>
-								<td class="table__cell">229</td>
-								<td class="table__cell">235 412</td>
+								<td class="table__cell _mw">400х200х120 мм</td>
+								<td class="table__cell" id="count-blockWaist"></td>
+								<td class="table__cell" id="metres-blockWaist"></td>
+								<td class="table__cell" id="price-blockWaist">229</td>
+								<td class="table__cell" id="total-blockWaist"></td>
 								<td class="table__cell">3%</td>
 								<td class="table__cell">9 542</td>
 								<td class="table__cell">28 626</td>
@@ -396,11 +423,12 @@
 	
 	
 							<tr class="table-row">
-								<td class="table__cell-title"></td>
+								<td class="table__cell-title" style="color: transparent">22</td>
 								<td class="table__cell-title">Итого блок теплостен</td>
-								<td class="table__cell-title">1422 шт.</td>
-								<td class="table__cell-title">30,08 m3</td>
-								<td class="table__cell-title"></td>
+								<td class="table__cell-title" style="color: transparent">11</td>
+								<td class="table__cell-title" id="total-counts"></td>
+								<td class="table__cell-title" id="total-metres"></td>
+								
 								<td class="table__cell-title"></td>
 								<td class="table__cell-title">322 200</td>
 								<td class="table__cell-title"></td>
