@@ -59,35 +59,59 @@ $(document).ready(function () {
 			$('._block-interior').text('-');
 			console.log(roofChecked);
 
+
+
 			//угловой блок
 			var blockAngular = Math.round(((floorHeightFirst + floorHeightSecond + floorHeightThird)/0.2) * 4);
 			$('#count-blockAngular').html(blockAngular);
+
+			//расчет метров
 			var blockAngularMetr = +((blockAngular * 0.03).toFixed(2));
 			console.log("blockAngularMetr: " + blockAngularMetr);
+
 			$('#metres-blockAngular').html(blockAngularMetr);
-			
-			$('#total-blockAngular').html(+$('#price-blockAngular').text() * blockAngular);
+			//расчет без скидки
+			var priceBlockAngular = +(+$('#price-blockAngular').text() * blockAngular)
+
+			$('#total-blockAngular').html( priceBlockAngular);
+			// расчет скидки
 			if(blockAngularMetr > 0.45 && blockAngularMetr <= 10.44) {
-				$('#sale-blockAngular').html('1%');
+				var one = 1;
+				$('#sale-blockAngular').html(one + '%');
+				var blockAngularWithSale = priceBlockAngular - (+$('#price-blockAngular').text() * one/100 * blockAngular);
+				$('#with-sale-blockAngular').html(blockAngularWithSale);
 			}
 			else if(blockAngularMetr >= 10.45 && blockAngularMetr < 20.45) {
-				$('#sale-blockAngular').html('2%');
+				var two = 2;
+				var blockAngularWithSale = priceBlockAngular - (+$('#price-blockAngular').text() * two/100 * blockAngular);
+				$('#sale-blockAngular').html(two + '%');
 			}
 			else if(blockAngularMetr >= 20.45 && blockAngularMetr < 30.44)	{
-				$('#sale-blockAngular').html('3%');
+				var three = 3;
+				var blockAngularWithSale = priceBlockAngular - (+$('#price-blockAngular').text() * three/100 * blockAngular);
+				$('#sale-blockAngular').html(three + '%');
 			}
 			else if(blockAngularMetr >= 30.45 && blockAngularMetr < 40.44)	{
-				$('#sale-blockAngular').html('4%');
+				var blockAngularWithSale = priceBlockAngular - (+$('#price-blockAngular').text() * four/100 * blockAngular);
+				var four = 4;
+				$('#sale-blockAngular').html(four + '%');
 			}
 			else if(blockAngularMetr >= 40.45)	{
-				$('#sale-blockAngular').html('5%');
+				var five = 5;
+				var blockAngularWithSale = priceBlockAngular - (+$('#price-blockAngular').text() * five/100 * blockAngular);
+				$('#sale-blockAngular').html(five + '%');
 			}
 			else {
-				$('#sale-blockAngular').html('0');
+				var zero = 0;
+				$('#sale-blockAngular').html(zero);
 			}
 
 			console.log("блок угловой: " + blockAngular);
 			console.log(blockAngularMetr);
+
+
+
+
 
 			//периметр
 			perimetrTypeFirst = (lenght + width) * 2;
@@ -96,27 +120,48 @@ $(document).ready(function () {
 			$('#count-blockWaist').html(blockWaist);
 			var blockWaistMetr = +(blockWaist * 0.014).toFixed(2);
 			$('#metres-blockWaist').html(blockWaistMetr);
-			$('#total-blockWaist').html(+$('#price-blockWaist').text() * blockWaist);
+
+			//расчет без скидки
+			var priceBlockWaist = +(+$('#price-blockWaist').text() * blockWaist)
+			$('#total-blockWaist').html(priceBlockWaist);
+
 			if(blockWaistMetr > 0.45 && blockWaistMetr <= 10.44) {
-				$('#sale-blockWaist').html('1%');
+				var one = 1;
+				$('#sale-blockAngular').html(one + '%');
+				var blockAngularWithSale = priceBlockAngular - (+$('#price-blockAngular').text() * one/100 * blockAngular);
+				$('#with-sale-blockAngular').html(blockAngularWithSale);
 			}
 			else if(blockWaistMetr >= 10.45 && blockWaistMetr < 20.45) {
-				$('#sale-blockWaist').html('2%');
+				var two = 2;
+				var blockAngularWithSale = priceBlockAngular - (+$('#price-blockAngular').text() * two/100 * blockAngular);
+				$('#sale-blockAngular').html(two + '%');
 			}
 			else if(blockWaistMetr >= 20.45 && blockWaistMetr < 30.44)	{
-				$('#sale-blockWaist').html('3%');
+				var three = 3;
+				var blockAngularWithSale = priceBlockAngular - (+$('#price-blockAngular').text() * three/100 * blockAngular);
+				$('#sale-blockAngular').html(three + '%');
 			}
 			else if(blockWaistMetr >= 30.45 && blockWaistMetr < 40.44)	{
-				$('#sale-blockWaist').html('4%');
+				var blockAngularWithSale = priceBlockAngular - (+$('#price-blockAngular').text() * four/100 * blockAngular);
+				var four = 4;
+				$('#sale-blockAngular').html(four + '%');
 			}
 			else if(blockWaistMetr >= 40.45)	{
-				$('#sale-blockWaist').html('5%');
+				var five = 5;
+				var blockAngularWithSale = priceBlockAngular - (+$('#price-blockAngular').text() * five/100 * blockAngular);
+				$('#sale-blockAngular').html(five + '%');
 			}
 			else {
-				$('#sale-blockWaist').html('0');
+				var zero = 0;
+				$('#sale-blockAngular').html(zero);
 			}
 			console.log("блок поясной: " +  blockWaist);
 			console.log(blockWaistMetr);
+
+
+
+
+
 
 			//блок рядовой
 			var blockPrivate = Math.round(((perimetrTypeFirst - 3.2) / 0.4 * ((floorHeightFirst + floorHeightSecond + floorHeightThird) / 0.2)) - blockWaist);
