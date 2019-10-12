@@ -59,8 +59,6 @@ $(document).ready(function () {
 			$('._block-interior').text('-');
 			console.log(roofChecked);
 
-
-
 			//угловой блок
 			var blockAngular = Math.round(((floorHeightFirst + floorHeightSecond + floorHeightThird)/0.2) * 4);
 			$('#count-blockAngular').html(blockAngular);
@@ -68,38 +66,58 @@ $(document).ready(function () {
 			//расчет метров
 			var blockAngularMetr = +((blockAngular * 0.03).toFixed(2));
 			console.log("blockAngularMetr: " + blockAngularMetr);
-
+			//запись метров в таблицу
 			$('#metres-blockAngular').html(blockAngularMetr);
 			//расчет без скидки
 			var priceBlockAngular = +(+$('#price-blockAngular').text() * blockAngular)
-
+			//запись в прайс
 			$('#total-blockAngular').html( priceBlockAngular);
 			// расчет скидки
+
 			if(blockAngularMetr > 0.45 && blockAngularMetr <= 10.44) {
 				var one = 1;
 				$('#sale-blockAngular').html(one + '%');
-				var blockAngularWithSale = priceBlockAngular - (+$('#price-blockAngular').text() * one/100 * blockAngular);
+				var blockAngularWithSale = (+$('#price-blockAngular').text() * one/100 * blockAngular);
 				$('#with-sale-blockAngular').html(blockAngularWithSale);
+				blockAngularSale = priceBlockAngular - blockAngularWithSale;
+				$('#summ-sale-blockAngular').html(blockAngularSale);
+				$('#with-sale-blockAngular').html(blockAngularSale);
 			}
 			else if(blockAngularMetr >= 10.45 && blockAngularMetr < 20.45) {
 				var two = 2;
-				var blockAngularWithSale = priceBlockAngular - (+$('#price-blockAngular').text() * two/100 * blockAngular);
+				var blockAngularWithSale = (+$('#price-blockAngular').text() * two/100 * blockAngular);
 				$('#sale-blockAngular').html(two + '%');
+				$('#with-sale-blockAngular').html(blockAngularWithSale);
+				blockAngularSale = priceBlockAngular - blockAngularWithSale;
+				$('#summ-sale-blockAngular').html(blockAngularSale);
+				$('#with-sale-blockAngular').html(blockAngularSale);
 			}
 			else if(blockAngularMetr >= 20.45 && blockAngularMetr < 30.44)	{
 				var three = 3;
-				var blockAngularWithSale = priceBlockAngular - (+$('#price-blockAngular').text() * three/100 * blockAngular);
+				var blockAngularWithSale = (+$('#price-blockAngular').text() * three/100 * blockAngular);
 				$('#sale-blockAngular').html(three + '%');
+				$('#with-sale-blockAngular').html(blockAngularWithSale);
+				blockAngularSale = priceBlockAngular - blockAngularWithSale;
+				$('#summ-sale-blockAngular').html(blockAngularSale);
+				$('#with-sale-blockAngular').html(blockAngularSale);
 			}
 			else if(blockAngularMetr >= 30.45 && blockAngularMetr < 40.44)	{
-				var blockAngularWithSale = priceBlockAngular - (+$('#price-blockAngular').text() * four/100 * blockAngular);
+				var blockAngularWithSale = (+$('#price-blockAngular').text() * four/100 * blockAngular);
 				var four = 4;
 				$('#sale-blockAngular').html(four + '%');
+				$('#with-sale-blockAngular').html(blockAngularWithSale);
+				blockAngularSale = priceBlockAngular - blockAngularWithSale;
+				$('#summ-sale-blockAngular').html(blockAngularSale);
+				$('#with-sale-blockAngular').html(blockAngularSale);
 			}
 			else if(blockAngularMetr >= 40.45)	{
 				var five = 5;
-				var blockAngularWithSale = priceBlockAngular - (+$('#price-blockAngular').text() * five/100 * blockAngular);
+				var blockAngularWithSale = (+$('#price-blockAngular').text() * five/100 * blockAngular);
 				$('#sale-blockAngular').html(five + '%');
+				$('#with-sale-blockAngular').html(blockAngularWithSale);
+				blockAngularSale = priceBlockAngular - blockAngularWithSale;
+				$('#summ-sale-blockAngular').html(blockAngularSale);
+				$('#with-sale-blockAngular').html(blockAngularSale);
 			}
 			else {
 				var zero = 0;
@@ -109,8 +127,7 @@ $(document).ready(function () {
 			console.log("блок угловой: " + blockAngular);
 			console.log(blockAngularMetr);
 
-
-
+			//---------------УГЛОВОЙ БЛОК ЗАКОНЧИЛСЯ -------------------------------------
 
 
 			//периметр
@@ -127,29 +144,53 @@ $(document).ready(function () {
 
 			if(blockWaistMetr > 0.45 && blockWaistMetr <= 10.44) {
 				var one = 1;
-				$('#sale-blockAngular').html(one + '%');
-				var blockAngularWithSale = priceBlockAngular - (+$('#price-blockAngular').text() * one/100 * blockAngular);
-				$('#with-sale-blockAngular').html(blockAngularWithSale);
+				$('#sale-blockWaist').html(one + '%');
+				var blockWaistWithSale = (+$('#price-blockWaist').text() * one/100 * blockWaist);
+				$('#with-sale-blockWaist').html(blockWaistWithSale);
+
+				blockWaistSale = priceBlockWaist - blockWaistWithSale;
+				$('#summ-sale-blockWaist').html(blockWaistSale);
+				$('#with-sale-blockWaist').html(blockWaistSale);
 			}
 			else if(blockWaistMetr >= 10.45 && blockWaistMetr < 20.45) {
 				var two = 2;
-				var blockAngularWithSale = priceBlockAngular - (+$('#price-blockAngular').text() * two/100 * blockAngular);
-				$('#sale-blockAngular').html(two + '%');
+				$('#sale-blockWaist').html(two + '%');
+				var blockWaistWithSale = (+$('#price-blockWaist').text() * two/100 * blockWaist);
+				$('#with-sale-blockWaist').html(blockWaistWithSale);
+
+				blockWaistSale = priceBlockWaist - blockWaistWithSale;
+				$('#summ-sale-blockWaist').html(blockWaistSale);
+				$('#with-sale-blockWaist').html(blockWaistSale);
 			}
 			else if(blockWaistMetr >= 20.45 && blockWaistMetr < 30.44)	{
 				var three = 3;
-				var blockAngularWithSale = priceBlockAngular - (+$('#price-blockAngular').text() * three/100 * blockAngular);
-				$('#sale-blockAngular').html(three + '%');
+				$('#sale-blockWaist').html(three + '%');
+				var blockWaistWithSale = (+$('#price-blockWaist').text() * three/100 * blockWaist);
+				$('#with-sale-blockWaist').html(blockWaistWithSale);
+
+				blockWaistSale = priceBlockWaist - blockWaistWithSale;
+				$('#summ-sale-blockWaist').html(blockWaistSale);
+				$('#with-sale-blockWaist').html(blockWaistSale);
 			}
 			else if(blockWaistMetr >= 30.45 && blockWaistMetr < 40.44)	{
-				var blockAngularWithSale = priceBlockAngular - (+$('#price-blockAngular').text() * four/100 * blockAngular);
 				var four = 4;
-				$('#sale-blockAngular').html(four + '%');
+				$('#sale-blockWaist').html(four + '%');
+				var blockWaistWithSale = (+$('#price-blockWaist').text() * four/100 * blockWaist);
+				$('#with-sale-blockWaist').html(blockWaistWithSale);
+
+				blockWaistSale = priceBlockWaist - blockWaistWithSale;
+				$('#summ-sale-blockWaist').html(blockWaistSale);
+				$('#with-sale-blockWaist').html(blockWaistSale);
 			}
 			else if(blockWaistMetr >= 40.45)	{
 				var five = 5;
-				var blockAngularWithSale = priceBlockAngular - (+$('#price-blockAngular').text() * five/100 * blockAngular);
-				$('#sale-blockAngular').html(five + '%');
+				$('#sale-blockWaist').html(five + '%');
+				var blockWaistWithSale = (+$('#price-blockWaist').text() * five/100 * blockWaist);
+				$('#with-sale-blockWaist').html(blockWaistWithSale);
+
+				blockWaistSale = priceBlockWaist - blockWaistWithSale;
+				$('#summ-sale-blockWaist').html(blockWaistSale);
+				$('#with-sale-blockWaist').html(blockWaistSale);
 			}
 			else {
 				var zero = 0;
@@ -158,7 +199,7 @@ $(document).ready(function () {
 			console.log("блок поясной: " +  blockWaist);
 			console.log(blockWaistMetr);
 
-
+			//-------БЛОК ПОЯСНОЙ --------------------------------------------
 
 
 
