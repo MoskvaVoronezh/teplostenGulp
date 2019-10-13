@@ -10,80 +10,141 @@
 </head>
 <body>
 	<header class="header" id="top">
-			<div class="container">
-				<div class="header-top header__top">
-					<div class="header__logo">
-						<img src="img/header/logo.png" alt="logo teplosten" class="header__img">
-					</div>
-					<div class="header__info">
-						<div class="info-block">
-							<div class="info-block__number">
-								<img class="info-block__phone-img" src="img/header/phone.svg" alt="phone">
-								<a class="info-block__phone" href="tel:8-383-41-5-83-22">
-									8-383-41-5-83-22							
-								</a>
-								<ul class="info-list">
-									<li class="info-list__item">
-										<a class="info-list__item-link" href="tel:8-383-304-83-22">
-											8-383-304-83-22
-										</a>
-									</li>
-									<li class="info-list__item">
-										<a class="info-list__item-link" href="tel:8-913-911-14-32">
-											8-913-911-14-32
-										</a>
-									</li>
-								</ul>
-								<img src="img/header/current.svg" alt="current" class="info-block__phone-current">
-							</div>
-							<div class="info-block__btn">
-								<button class="info-block__button">
-									<img class="info-block__button-img" src="img/header/phoneActive.svg" alt="phone">
-									Обратный звонок
-								</button>
-							</div>
-							<div class="burger">
-								<a class="burger-link" href="#">
-									<span class="burger-span"></span>
-								</a>
-							</div>
+		<div class="container">
+			<div class="header-top header__top">
+				<div class="header__logo">
+					<img src="img/header/logo.png" alt="logo teplosten" class="header__img">
+				</div>
+				<div class="header__info">
+					<div class="info-block">
+						<div class="info-block__number">
+							<img class="info-block__phone-img" src="img/header/phone.svg" alt="phone">
+							<a class="info-block__phone" href="tel:8-383-41-5-83-22">
+								8-383-41-5-83-22
+							</a>
+							<ul class="info-list">
+								<li class="info-list__item">
+									<a class="info-list__item-link" href="tel:8-383-304-83-22">
+										8-383-304-83-22
+									</a>
+								</li>
+								<li class="info-list__item">
+									<a class="info-list__item-link" href="tel:8-913-911-14-32">
+										8-913-911-14-32
+									</a>
+								</li>
+							</ul>
+							<img src="img/header/current.svg" alt="current" class="info-block__phone-current">
+						</div>
+						<div class="info-block__btn">
+							<a data-fancybox data-src="#modal-forms" href="javascript:;" class="info-block__button">
+								<img class="info-block__button-img" src="img/header/phoneActive.svg" alt="phone">
+								Обратный звонок
+							</a>
+						</div>
+						<div class="burger">
+							<a class="burger-link" href="#">
+								<span class="burger-span"></span>
+							</a>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="header-menu header__menu">
-				<div class="container">
-					<nav class="main-menu">
-						<ul class="menu-list menu__list">
-							<li class="menu-list__item">
-								<a href="index.html" class="menu-list__link">
-									Главная
-								</a>
-							</li>
-							<li class="menu-list__item">
-								<a href="catalog-price.html" class="menu-list__link">
-									Каталог
-								</a>
-							</li>
-							<li class="menu-list__item">
-								<a href="calculator.html" class="menu-list__link">
-									Калькулятор
-								</a>
-							</li>
-							<li class="menu-list__item">
-								<a href="answers.html" class="menu-list__link">
-									Вопрос-ответ
-								</a>
-							</li>
-							<li class="menu-list__item">
-								<a href="#" class="menu-list__link">
-									Контакты
-								</a>
-							</li>
-						</ul>
-					</nav>
-				</div>		
+			<div id="modal-forms" class="modal-forms" style="display: none;">
+				<h2 class="modal-forms-title">
+					Заказать обратный звонок
+				</h2>
+				<form action="#" class="modal-forms">
+					<input type="text" class="modal-forms__input" placeholder="Ваше Имя">
+					<input type="email" class="modal-forms__input" placeholder="E-mail">
+					<input type="phone" class="modal-forms__input" placeholder="+7 (___)-___-__-__">
+					<span class="modal-forms__subtitle">Мы перезвоним вам в течение рабочего дня.</span>
+					<div class="modal-forms-btn">
+						<button type="submit" class="modal-forms__submit">Отправить</button>
+					</div>
+				</form>
 			</div>
+		</div>
+		<div class="header-menu header__menu">
+			<div class="container">
+				<nav class="main-menu">
+					<ul class="menu-list menu__list">
+						<li class="menu-list__item">
+							<a href="index.html" class="menu-list__link">
+								Главная
+							</a>
+						</li>
+						<li class="menu-list__item">
+							<a href="catalog-price.html" class="menu-list__link">
+								Каталог
+							</a>
+							<ul class="menu-list__item-dropdown">
+								<li class="menu-list__item-dropdown__item">
+									<a href="" class="menu-list__link">
+										Блоки теплостен
+									</a>
+								</li>
+								<li class="menu-list__item-dropdown__item">
+									<a href="" class="menu-list__link">
+										CТАНДАРТНЫЕ БЛОКИ
+									</a>
+								</li>
+								<li class="menu-list__item-dropdown__item">
+									<a href="" class="menu-list__link">
+										ДАЧНЫЕ БЛОКИ
+									</a>
+								</li>
+								<li class="menu-list__item-dropdown__item">
+									<a href="" class="menu-list__link">
+										ПЕСКОБЕТОННЫЙ БЛОК ПУСТОТЕЛЫЙ
+									</a>
+								</li>
+								<li class="menu-list__item-dropdown__item">
+									<a href="" class="menu-list__link">
+										КЛАДОЧНАЯ СМЕСЬ
+									</a>
+								</li>
+								<li class="menu-list__item-dropdown__item">
+									<a href="" class="menu-list__link">
+										СТЕКЛОПЛАСТИКОВАЯ АРМАТУРА
+									</a>
+								</li>
+								<li class="menu-list__item-dropdown__item">
+									<a href="" class="menu-list__link">
+										ПЕСКОБЕТОННЫЙ БЛОК ПУСТОТЕЛЫЙ
+									</a>
+								</li>
+								<li class="menu-list__item-dropdown__item">
+									<a href="" class="menu-list__link">
+										ПЕНА МОНТАЖНАЯ КРОВЛЯ
+									</a>
+								</li>
+								<li class="menu-list__item-dropdown__item">
+									<a href="" class="menu-list__link">
+										КРОВЛЯ ВОЛНАКОЛОР
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="menu-list__item">
+							<a href="calculator.html" class="menu-list__link">
+								Калькулятор
+							</a>
+						</li>
+						<li class="menu-list__item">
+							<a href="answers.html" class="menu-list__link">
+								Вопрос-ответ
+							</a>
+						</li>
+						<li class="menu-list__item">
+							<a href="#" class="menu-list__link">
+								Контакты
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
 	</header>
 	<main class="main">
 		<div class="container">
@@ -118,31 +179,31 @@
 										<label for="#" class="calculator-input__label-label">
 											Высота этажа 1:
 										</label>
-										<input type="number" class="calculator-block__input-input floor-height-first">
+										<input type="number" class="calculator-block__input-input floor-height-first" min="1">
 									</div>
 									<div class="absoulute-floor-2">
 										<label for="#" class="calculator-input__label-label">
 											Высота этажа 2:
 										</label>
-										<input type="number" class="calculator-block__input-input floor-height_second">
+										<input type="number" class="calculator-block__input-input floor-height_second" min="1">
 									</div>
 									<div class="absoulute-floor-3">
 										<label for="#" class="calculator-input__label-label">
 											Высота этажа 3:
 										</label>
-										<input type="number" class="calculator-block__input-input floor-height_third">
+										<input type="number" class="calculator-block__input-input floor-height_third" min="1">
 									</div>
 									<div class="absolute-2">
 										<label for="#" class="calculator-input__label-label">
 											Ширина:
 										</label>
-										<input type="number" class="calculator-block__input-input input-2">
+										<input type="number" class="calculator-block__input-input input-2" min="1">
 									</div>
 									<div class="absolute-3">
 										<label for="#" class="calculator-input__label-label">
 											Длина:
 										</label>
-										<input type="number" class="calculator-block__input-input input-3">
+										<input type="number" class="calculator-block__input-input input-3" min="1">
 									</div>
 								</div>
 								<div class="calculator-wrapper__item">
@@ -154,43 +215,43 @@
 										<label for="#" class="calculator-input__label-label">
 											Длина:
 										</label>
-										<input type="number" class="calculator-block__input-input lenght-type-2-first">
+										<input type="number" class="calculator-block__input-input lenght-type-2-first" min="1">
 									</div>
 									<div class="absolute-5">
 										<label for="#" class="calculator-input__label-label">
 											Длина:
 										</label>
-										<input type="number" class="calculator-block__input-input lenght-type-2-second">
+										<input type="number" class="calculator-block__input-input lenght-type-2-second" min="1">
 									</div>
 									<div class="absolute-6 first-floor-type-2">
 										<label for="#" class="calculator-input__label-label">
 											Высота этажа 1:
 										</label>
-										<input type="number" class="calculator-block__input-input input-6 type-second-first-floor">
+										<input type="number" class="calculator-block__input-input input-6 type-second-first-floor" min="1">
 									</div>
 									<div class="second-floor-type-2">
 										<label for="#" class="calculator-input__label-label">
 											Высота этажа 2:
 										</label>
-										<input type="number" class="calculator-block__input-input input-6 type-second-second-floor">
+										<input type="number" class="calculator-block__input-input input-6 type-second-second-floor" min="1">
 									</div>
 									<div class="fhird-floor-type-2">
 										<label for="#" class="calculator-input__label-label">
 											Высота этажа 3:
 										</label>
-										<input type="number" class="calculator-block__input-input input-6 type-second-fhird-floor">
+										<input type="number" class="calculator-block__input-input input-6 type-second-fhird-floor" min="1">
 									</div>
 									<div class="absolute-7">
 										<label for="#" class="calculator-input__label-label">
 											Ширина:
 										</label>
-										<input type="number" class="calculator-block__input-input width-type-second-1">
+										<input type="number" class="calculator-block__input-input width-type-second-1" min="1">
 									</div>
 									<div class="absolute-8">
 										<label for="#" class="calculator-input__label-label">
 											
 										</label>
-										<input type="number" class="calculator-block__input-input width-type-second-2">
+										<input type="number" class="calculator-block__input-input width-type-second-2" min="1">
 									</div>
 								</div>
 							</div>
@@ -217,13 +278,13 @@
 									<label for="#" class="calculator-input__label-label">
 										Высота:
 									</label>
-									<input type="number" class="calculator-block__input-input roof-height">
+									<input type="number" class="calculator-block__input-input roof-height" min="1">
 								</div>
 								<div class="absolute-10">
 									<label for="#" class="calculator-input__label-label">
 										Длина:
 									</label>
-									<input type="number" class="calculator-block__input-input roof-lenght">
+									<input type="number" class="calculator-block__input-input roof-lenght" min="1">
 								</div>
 							</div>
 						</div>
@@ -240,7 +301,7 @@
 									<label for="#" class="calculator-input__label-label">
 										Длина:
 									</label>
-									<input type="number" class="calculator-block__input-input lenght-door">
+									<input type="number" class="calculator-block__input-input lenght-door" min="1">
 								</div>
 								<div class="position-count-door">
 									<label for="#" class="calculator-input__label-label">
@@ -252,7 +313,7 @@
 									<label for="#" class="calculator-input__label-label">
 										Высота:
 									</label>
-									<input type="number" class="calculator-block__input-input height-door">
+									<input type="number" class="calculator-block__input-input height-door" min="1">
 								</div>
 							</div>
 						</div>
@@ -273,13 +334,13 @@
 										<label for="#" class="calculator-input__label-label">
 											Высота:
 										</label>
-										<input type="number" class="calculator-block__input-input height-window">
+										<input type="number" class="calculator-block__input-input height-window" min="1">
 									</div>
 									<div class="absolute-14">
 										<label for="#" class="calculator-input__label-label">
 											Длина:
 										</label>
-										<input type="number" class="calculator-block__input-input lenght-window">
+										<input type="number" class="calculator-block__input-input lenght-window" min="1">
 									</div>
 								</div>
 								<!-- <div class="calculator-window__item">

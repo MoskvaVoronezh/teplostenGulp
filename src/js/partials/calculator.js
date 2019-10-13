@@ -435,7 +435,7 @@ $(document).ready(function () {
 			var totalCountBlocks = blockAngular + blockWaist + blockPrivate + blockHalf;
 			console.log("общее количество блоков" + totalCountBlocks);
 
-			var totalMetres = +((+(blockAngular * 0.012).toFixed(2)) + (+(blockWaist * 0.012).toFixed(2)) + (+(blockPrivate * 0.024).toFixed(2)) +(+(blockHalf * 0.012).toFixed(2))).toFixed(2);
+			var totalMetres = +((+(blockAngular * 0.03).toFixed(2)) + (+(blockWaist * 0.014).toFixed(2)) + (+(blockPrivate * 0.024).toFixed(2)) +(+(blockHalf * 0.012).toFixed(2))).toFixed(2);
 			console.log("общее количество метров3" + totalMetres);
 			$('#total-counts').html(totalCountBlocks);
 			$('#total-metres').html(totalMetres);
@@ -472,6 +472,9 @@ $(document).ready(function () {
 			$('#final-price').html(finalPrice);
 			
 		}
+//222222222222222222222222222222222222222222222222222222222222222222222222222222222222222
+
+
 		else if (houseType == 'type-2') {
 			//угловой наружный блок
 			var blockAngularTypeSecond = Math.round(((floorHeightFirstTypeSecond + floorHeightSecondTypeSecond + floorHeightThirdTypeSecond) / 0.2) * 5);
@@ -544,10 +547,6 @@ $(document).ready(function () {
 
 
 
-
-
-
-			
 			//угловой внутренний блок
 			var blockInteriorTypeSecond = Math.round((floorHeightFirstTypeSecond + floorHeightSecondTypeSecond + floorHeightThirdTypeSecond)/0.2);
 			$('#count-blockInterior').html(blockInteriorTypeSecond);
@@ -620,10 +619,6 @@ $(document).ready(function () {
 				var zero = 0;
 				$('#sale-blockInterior').html(zero);
 			}
-
-
-
-
 
 
 
@@ -933,11 +928,52 @@ $(document).ready(function () {
 				}
 				console.log("угловой без крыши: " + blockAngularTypeSecond);
 				console.log("внутренний без крыши: " + blockInteriorTypeSecond);
+
 			}
 
+			var totalCountBlockstotalMetresTypeSecond = blockInteriorTypeSecond + blockAngularTypeSecond + blockWaistTypeSecond + blockPrivateTypeSecond + blockHalfTypeSecond;
+			debugger;
+			$('#total-counts').html(totalCountBlockstotalMetresTypeSecond);
+			console.log("общее количество блоков" + totalCountBlockstotalMetresTypeSecond);
+
+			var totalMetresTypeSecond = +((+(blockAngularTypeSecond * 0.03).toFixed(2)) + (+(blockWaistTypeSecond * 0.014).toFixed(2)) + (+(blockPrivateTypeSecond * 0.024).toFixed(2)) + (+(blockHalfTypeSecond * 0.012).toFixed(2)) + (+(blockInteriorTypeSecond * 0.03).toFixed(2))).toFixed(2);
+			console.log("общее количество метров3" + totalMetresTypeSecond);
+
+			$('#total-metres').html(totalMetresTypeSecond);
+
+			var totalPriceTypeSecondNoSale = (+($('#price-blockAngular').text() * blockAngularTypeSecond)) + (+$('#price-blockWaist').text() * blockWaistTypeSecond) + (+$('#price-blockHalf').text() * blockHalfTypeSecond) + (+$('#price-private').text() * blockPrivateTypeSecond) + (+$('#price-blockInterior').text() * blockInteriorTypeSecond);
+			$('#total-price-no-sale').html(totalPriceTypeSecondNoSale);
+
+			var totalSalePriceTypeSecond = priceAngularTypeSecond + priceBlockHalfTypeSecond + priceBlockPrivateTypeSecond + priceBlockWaistTypeSecond + priceBlockInteriorTypeSecond;
+			$('#total-not-sale-price').html(totalSalePriceTypeSecond);
+
+			var totalPriceWithSalesTypeSecond = +Math.floor(blockPrivateTypeSecondSale + blockAngularTypeSecondSale + blockHalfTypeSecondSale + blockWaistTypeSecondSale + blockInteriorTypeSecondSale);
+			$('#total-sale-price').html(totalPriceWithSalesTypeSecond);
+			$('#total-all').html(totalPriceWithSalesTypeSecond);
+
+
+			//клей и общая стоимость клея
+			var countGlue = totalMetresTypeSecond * 2;
+			$('#count-glue').html(countGlue);
+			var totalPriceGlue = countGlue * (+$('#price-glue').html());
+			$('#total-price-glue').html(Math.floor(totalPriceGlue));
+
+			var countFoam = totalMetresTypeSecond * 2;
+			$('#count-foam').html(countFoam);
+			var totalPriceFoam = countFoam * (+$('#price-foam').html());
+			$('#total-price-foam').html(Math.floor(totalPriceFoam));
+
+			var countPallet = Math.ceil(blockPrivateTypeSecond / 54 + blockHalfTypeSecond / 90 + blockAngularTypeSecond / 30 + blockWaistTypeSecond / 72 + countGlue  / 50 + blockInteriorTypeSecond / 30);
+			var totalPricePallet = countPallet * (+$('#price-pallet').html());
+			$('#total-price-pallet').html(Math.floor(totalPricePallet));
+
+			var totalCountAll = totalCountBlockstotalMetresTypeSecond + countGlue + countFoam + countPallet;
+			$('#count-all').html(Math.floor(totalCountAll));
+
+			var finalPrice = totalPriceWithSalesTypeSecond + totalPriceGlue + totalPriceFoam + countPallet;
+			$('#final-price').html(finalPrice);
+
 		}
+
 	});
-
-		
-
 });
