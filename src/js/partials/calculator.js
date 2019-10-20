@@ -89,7 +89,6 @@ $(document).ready(function () {
 			//запись в прайс	
 			$('#total-blockAngular').html( priceBlockAngular);
 			// расчет скидки
-
 			console.log("blockAngular: " + blockAngular);
 			console.log("blockAngularMetr: " + blockAngularMetr);
 			console.log("priceBlockAngular: " + priceBlockAngular); 
@@ -182,41 +181,156 @@ $(document).ready(function () {
 
 			var totalCountBlocks = blockAngular + blockWaist + blockPrivate + blockHalf;
 			console.log("общее количество блоков" + totalCountBlocks);
+			$('#total-counts').html(totalCountBlocks);
 
 			var totalMetres = +((+(blockAngular * 0.03).toFixed(2)) + (+(blockWaist * 0.014).toFixed(2)) + (+(blockPrivate * 0.024).toFixed(2)) +(+(blockHalf * 0.012).toFixed(2))).toFixed(2);
 			console.log("общее количество метров: " + totalMetres);
 
 			$('#total-metres').html(totalMetres);
 
+			var totalPriceNoSale = priceBlockAngular + priceBlockWaist + priceBlockPrivate + priceBlockHalf;
+
+			$('#total-not-sale-price').html(totalPriceNoSale);
+
 			if(totalMetres > 0.45 && totalMetres < 10.44) {
 				$('#sale-private').html(one + '%'); 
 				$('#sale-blockHalf').html(one + '%');
 				$('#sale-blockAngular').html(one + '%');
 				$('#sale-blockWaist').html(one + '%');
+
+				var BlockAngularWithSale = Math.floor(priceBlockAngular - priceBlockAngular * 0.01);
+				var BlockWaistWithSale = Math.floor(priceBlockWaist - priceBlockWaist * 0.01);
+				var BlockPrivateWithSale = Math.floor(priceBlockPrivate - priceBlockPrivate * 0.01);
+				var BlockHalfWithSale = Math.floor(priceBlockHalf - priceBlockHalf * 0.01);
+
+				var BlockSaleAll = Math.floor(BlockAngularWithSale + BlockWaistWithSale + BlockPrivateWithSale + BlockHalfWithSale);
+
+				$('#total-sale-price').html(BlockSaleAll);
+				$('#total-all').html(BlockSaleAll);
+
+				$('#summ-sale-private').html(BlockPrivateWithSale);
+				$('#with-sale-private').html(BlockPrivateWithSale)
+
+				$('#summ-sale-blockHalf').html(BlockHalfWithSale);
+				$('#with-sale-blockHalf').html(BlockHalfWithSale)
+
+				$('#summ-sale-blockAngular').html(BlockAngularWithSale);
+				$('#with-sale-blockAngular').html(BlockAngularWithSale);
+
+				$('#summ-sale-blockWaist').html(BlockWaistWithSale)
+				$('#with-sale-blockWaist').html(BlockWaistWithSale);
 			}
 			else if (totalMetres >= 10.45 && totalMetres < 20.44) {
 				$('#sale-private').html(two + '%');
 				$('#sale-blockHalf').html(two + '%');
 				$('#sale-blockAngular').html(two + '%');
 				$('#sale-blockWaist').html(two + '%');
+
+				var BlockAngularWithSale = Math.floor(priceBlockAngular - priceBlockAngular * 0.02);
+				var BlockWaistWithSale = Math.floor(priceBlockWaist - priceBlockWaist * 0.02);
+				var BlockPrivateWithSale = Math.floor(priceBlockPrivate - priceBlockPrivate * 0.02);
+				var BlockHalfWithSale = Math.floor(priceBlockHalf - priceBlockHalf * 0.02);
+
+				var BlockSaleAll = Math.floor(BlockAngularWithSale + BlockWaistWithSale + BlockPrivateWithSale + BlockHalfWithSale);
+
+				$('#total-sale-price').html(BlockSaleAll);
+				$('#total-all').html(BlockSaleAll);
+
+				$('#summ-sale-private').html(BlockPrivateWithSale);
+				$('#with-sale-private').html(BlockPrivateWithSale)
+
+				$('#summ-sale-blockHalf').html(BlockHalfWithSale);
+				$('#with-sale-blockHalf').html(BlockHalfWithSale)
+
+				$('#summ-sale-blockAngular').html(BlockAngularWithSale);
+				$('#with-sale-blockAngular').html(BlockAngularWithSale);
+
+				$('#summ-sale-blockWaist').html(BlockWaistWithSale)
+				$('#with-sale-blockWaist').html(BlockWaistWithSale);
 			}
 			else if (totalMetres >= 20.45 && totalMetres < 30.44) {
 				$('#sale-private').html(three + '%');
 				$('#sale-blockHalf').html(three + '%');
 				$('#sale-blockAngular').html(three + '%');
 				$('#sale-blockWaist').html(three + '%');
+
+				var BlockAngularWithSale = Math.floor(priceBlockAngular - priceBlockAngular * 0.03);
+				var BlockWaistWithSale = Math.floor(priceBlockWaist - priceBlockWaist * 0.03);
+				var BlockPrivateWithSale = Math.floor(priceBlockPrivate - priceBlockPrivate * 0.03);
+				var BlockHalfWithSale = Math.floor(priceBlockHalf - priceBlockHalf * 0.03);
+
+				var BlockSaleAll = Math.floor(BlockAngularWithSale + BlockWaistWithSale + BlockPrivateWithSale + BlockHalfWithSale);
+
+				$('#total-sale-price').html(BlockSaleAll);
+				$('#total-all').html(BlockSaleAll);
+
+				$('#summ-sale-private').html(BlockPrivateWithSale);
+				$('#with-sale-private').html(BlockPrivateWithSale)
+
+				$('#summ-sale-blockHalf').html(BlockHalfWithSale);
+				$('#with-sale-blockHalf').html(BlockHalfWithSale)
+
+				$('#summ-sale-blockAngular').html(BlockAngularWithSale);
+				$('#with-sale-blockAngular').html(BlockAngularWithSale);
+
+				$('#summ-sale-blockWaist').html(BlockWaistWithSale)
+				$('#with-sale-blockWaist').html(BlockWaistWithSale);
 			}
 			else if (totalMetres >= 30.45 && totalMetres < 40.44) {
 				$('#sale-private').html(four + '%');
 				$('#sale-blockHalf').html(four + '%');
 				$('#sale-blockAngular').html(four + '%');
 				$('#sale-blockWaist').html(four + '%');
+
+				var BlockAngularWithSale = Math.floor(priceBlockAngular - priceBlockAngular * 0.04);
+				var BlockWaistWithSale = Math.floor(priceBlockWaist - priceBlockWaist * 0.04);
+				var BlockPrivateWithSale = Math.floor(priceBlockPrivate - priceBlockPrivate * 0.04);
+				var BlockHalfWithSale = Math.floor(priceBlockHalf - priceBlockHalf * 0.04);
+
+				var BlockSaleAll = Math.floor(BlockAngularWithSale + BlockWaistWithSale + BlockPrivateWithSale + BlockHalfWithSale);
+
+				$('#total-sale-price').html(BlockSaleAll);
+				$('#total-all').html(BlockSaleAll);
+
+				$('#summ-sale-private').html(BlockPrivateWithSale);
+				$('#with-sale-private').html(BlockPrivateWithSale)
+
+				$('#summ-sale-blockHalf').html(BlockHalfWithSale);
+				$('#with-sale-blockHalf').html(BlockHalfWithSale)
+
+				$('#summ-sale-blockAngular').html(BlockAngularWithSale);
+				$('#with-sale-blockAngular').html(BlockAngularWithSale);
+
+				$('#summ-sale-blockWaist').html(BlockWaistWithSale)
+				$('#with-sale-blockWaist').html(BlockWaistWithSale);
 			}
 			else if(totalMetres >= 40.45) {
 				$('#sale-private').html(five + '%');
 				$('#sale-blockHalf').html(five + '%');
 				$('#sale-blockAngular').html(five + '%');
 				$('#sale-blockWaist').html(five + '%');
+
+				var BlockAngularWithSale = Math.floor(priceBlockAngular - priceBlockAngular * 0.05);
+				var BlockWaistWithSale = Math.floor(priceBlockWaist - priceBlockWaist * 0.05);
+				var BlockPrivateWithSale = Math.floor(priceBlockPrivate - priceBlockPrivate * 0.05);
+				var BlockHalfWithSale = Math.floor(priceBlockHalf - priceBlockHalf * 0.05);
+
+				var BlockSaleAll = Math.floor(BlockAngularWithSale + BlockWaistWithSale + BlockPrivateWithSale + BlockHalfWithSale);
+
+				$('#total-sale-price').html(BlockSaleAll);
+				$('#total-all').html(BlockSaleAll);
+
+				$('#summ-sale-private').html(BlockPrivateWithSale);
+				$('#with-sale-private').html(BlockPrivateWithSale)
+
+				$('#summ-sale-blockHalf').html(BlockHalfWithSale);
+				$('#with-sale-blockHalf').html(BlockHalfWithSale)
+
+				$('#summ-sale-blockAngular').html(BlockAngularWithSale);
+				$('#with-sale-blockAngular').html(BlockAngularWithSale);
+
+				$('#summ-sale-blockWaist').html(BlockWaistWithSale)
+				$('#with-sale-blockWaist').html(BlockWaistWithSale);
 			}
 			else {
 				$('#sale-private').html(0);
@@ -225,35 +339,39 @@ $(document).ready(function () {
 				$('#sale-blockWaist').html(0);
 			}
 
-			var totalPriceNoSale = (+($('#price-blockAngular').text() * blockAngular)) + (+$('#price-blockWaist').text() * blockWaist) + (+$('#price-blockHalf').text() * blockHalf) + (+$('#price-private').text() * blockPrivate);
-			$('#total-price-no-sale').html(totalPriceNoSale);
-			
-			var totalSalePrice = priceBlockAngular + priceBlockHalf + priceBlockPrivate + priceBlockWaist; 
-			$('#total-not-sale-price').html(totalSalePrice);
-			
-			var totalPriceWithSales = +Math.floor(blockPrivateSale + blockAngularSale + blockHalfSale + blockWaistSale);
-			$('#total-sale-price').html(totalPriceWithSales);
-			$('#total-all').html(totalPriceWithSales);
-
 			//клей и общая стоимость клея
-			var countGlue = totalMetres * 2;
+			var countGlue = Math.ceil((totalMetres * 2).toFixed(2));
 			$('#count-glue').html(countGlue);
 			var totalPriceGlue = countGlue * (+$('#price-glue').html());
+			console.log(totalPriceGlue);
 			$('#total-price-glue').html(Math.floor(totalPriceGlue));
 
-			var countFoam = totalMetres * 2;
+			var countFoam = Math.ceil(totalMetres);
 			$('#count-foam').html(countFoam);
 			var totalPriceFoam = countFoam * (+$('#price-foam').html());
+			console.log(totalPriceFoam);
 			$('#total-price-foam').html(Math.floor(totalPriceFoam));
 
 			var countPallet = Math.ceil(blockPrivate / 54 + blockHalf / 90 + blockAngular / 30 + blockWaist / 72 + countGlue / 50);
+			$('#count-pallet').html(countPallet);
 			var totalPricePallet = countPallet * (+$('#price-pallet').html());
+			console.log(totalPricePallet);
 			$('#total-price-pallet').html(Math.floor(totalPricePallet));
 
-			var totalCountAll = totalCountBlocks + countGlue + countFoam + countPallet;
-			$('#count-all').html(Math.floor(totalCountAll));
+			var countFittings = Math.ceil((perimetrTypeFirst * ((floorHeightFirst + floorHeightSecond + floorHeightThird) / 0.2)) / 50)
+			;
+			$('#count-fittings').html(countFittings);
+			var totalPriceFittings = countFittings * (+$('#price-fittings').html());
+			console.log(totalPriceFittings);
+			$('#total-price-fittings').html(Math.floor(totalPriceFittings));
 
-			var finalPrice = totalPriceWithSales + totalPriceGlue + totalPriceFoam + countPallet;
+			var totalCountAll = Math.ceil(totalCountBlocks + countGlue + countFoam + countPallet + countFittings);
+			console.log("all count " + totalCountAll)
+			$('#count-all').html(Math.ceil(totalCountAll));
+
+			console.log()
+			var finalPrice = Math.ceil(BlockSaleAll + totalPriceGlue + totalPriceFoam + totalPricePallet + totalPriceFittings);
+			console.log(finalPrice);
 			$('#final-price').html(finalPrice);
 			
 		}
