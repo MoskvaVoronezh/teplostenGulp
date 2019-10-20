@@ -184,9 +184,46 @@ $(document).ready(function () {
 			console.log("общее количество блоков" + totalCountBlocks);
 
 			var totalMetres = +((+(blockAngular * 0.03).toFixed(2)) + (+(blockWaist * 0.014).toFixed(2)) + (+(blockPrivate * 0.024).toFixed(2)) +(+(blockHalf * 0.012).toFixed(2))).toFixed(2);
-			console.log("общее количество метров3" + totalMetres);
-			$('#total-counts').html(totalCountBlocks);
+			console.log("общее количество метров: " + totalMetres);
+
 			$('#total-metres').html(totalMetres);
+
+			if(totalMetres > 0.45 && totalMetres < 10.44) {
+				$('#sale-private').html(one + '%'); 
+				$('#sale-blockHalf').html(one + '%');
+				$('#sale-blockAngular').html(one + '%');
+				$('#sale-blockWaist').html(one + '%');
+			}
+			else if (totalMetres >= 10.45 && totalMetres < 20.44) {
+				$('#sale-private').html(two + '%');
+				$('#sale-blockHalf').html(two + '%');
+				$('#sale-blockAngular').html(two + '%');
+				$('#sale-blockWaist').html(two + '%');
+			}
+			else if (totalMetres >= 20.45 && totalMetres < 30.44) {
+				$('#sale-private').html(three + '%');
+				$('#sale-blockHalf').html(three + '%');
+				$('#sale-blockAngular').html(three + '%');
+				$('#sale-blockWaist').html(three + '%');
+			}
+			else if (totalMetres >= 30.45 && totalMetres < 40.44) {
+				$('#sale-private').html(four + '%');
+				$('#sale-blockHalf').html(four + '%');
+				$('#sale-blockAngular').html(four + '%');
+				$('#sale-blockWaist').html(four + '%');
+			}
+			else if(totalMetres >= 40.45) {
+				$('#sale-private').html(five + '%');
+				$('#sale-blockHalf').html(five + '%');
+				$('#sale-blockAngular').html(five + '%');
+				$('#sale-blockWaist').html(five + '%');
+			}
+			else {
+				$('#sale-private').html(0);
+				$('#sale-blockHalf').html(0);
+				$('#sale-blockAngular').html(0);
+				$('#sale-blockWaist').html(0);
+			}
 
 			var totalPriceNoSale = (+($('#price-blockAngular').text() * blockAngular)) + (+$('#price-blockWaist').text() * blockWaist) + (+$('#price-blockHalf').text() * blockHalf) + (+$('#price-private').text() * blockPrivate);
 			$('#total-price-no-sale').html(totalPriceNoSale);
