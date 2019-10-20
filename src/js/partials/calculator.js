@@ -379,6 +379,9 @@ $(document).ready(function () {
 
 
 		else if (houseType == 'type-2') {
+
+
+   //---------------УГЛОВОЙ БЛОК -------------------------------------
 			//угловой наружный блок
 			var blockAngularTypeSecond = Math.round(((floorHeightFirstTypeSecond + floorHeightSecondTypeSecond + floorHeightThirdTypeSecond) / 0.2) * 5);
 			console.log("блок угловой: " + blockAngularTypeSecond);
@@ -392,16 +395,27 @@ $(document).ready(function () {
 			//запись в прайс
 			$('#total-blockAngular').html(priceAngularTypeSecond);
 
+
+   //---------------УГЛОВОЙ БЛОК ЗАКОНЧИЛСЯ 
+
+
+	//-------------- УГЛОВОЙ ВНУТРЕННИЙ БЛОК ------------------------------------
 			//угловой внутренний блок
 			var blockInteriorTypeSecond = Math.round((floorHeightFirstTypeSecond + floorHeightSecondTypeSecond + floorHeightThirdTypeSecond)/0.2);
 			$('#count-blockInterior').html(blockInteriorTypeSecond);
 			var blockInteriorTypeSecondMetr = +((blockInteriorTypeSecond * 0.03).toFixed(2));
 			$('#metres-blockInterior').html(blockInteriorTypeSecondMetr);
 			var priceBlockInteriorTypeSecond = +(+$('#price-blockInterior').text() * blockInteriorTypeSecond);
-			$('#total-blockInterior').html(priceBlockInteriorTypeSecond);
 
+
+			$('#total-blockInterior').html(priceBlockInteriorTypeSecond);
+	//-------------- УГЛОВОЙ ВНУТРЕННИЙ БЛОК ЗАКОНЧИЛСЯ------------------------------------
+
+	
 			var perimetrTypeSecond = (widthFirstSecondType + widthSecondSecondType + lenghtFirstSecondType + lenghtSecondSecondType) * 2;
 
+
+	//----------------- ПОЯСНОЙ БЛОК -----------------------------------------------
 			//поясной блок
 			var blockWaistTypeSecond = Math.round(((+perimetrTypeSecond - 4.2) / 0.4) * (+floorCount.val()));
 			console.log("блок поясной: " + blockWaistTypeSecond);
@@ -412,6 +426,11 @@ $(document).ready(function () {
 			var priceBlockWaistTypeSecond = +(+$('#price-blockWaist').text() * blockWaistTypeSecond)
 			$('#total-blockWaist').html(priceBlockWaistTypeSecond );
 
+
+	//----------------- ПОЯСНОЙ БЛОК ЗАКОНЧИЛСЯ-----------------------------------------------
+
+
+	//----------------- ПОЛОВИНЧАТЫЙ БЛОК-----------------------------------------------
 			//блок половинчатый
 			var blockHalfTypeSecond = ((doorHeight * doorCount) / 0.2) + ((windowHeight * windowCount) / 0.2);
 			console.log("блок половинчатый: " + blockHalfTypeSecond);
@@ -422,6 +441,10 @@ $(document).ready(function () {
 			var priceBlockHalfTypeSecond = +(+$('#price-blockHalf').text() * blockHalfTypeSecond);
 			$('#total-blockHalf').html(priceBlockHalfTypeSecond);
 
+
+//----------------- ПОЛОВИНЧАТЫЙ БЛОК ЗАКОНЧИЛСЯ ----------------------------------------------
+
+	//----------------- РЯДОВОЙ БЛОК -----------------------------------------------
 			//блок рядовой
 			var blockPrivateTypeSecond = Math.round(((perimetrTypeSecond - 4.2) / 0.4 * ((floorHeightFirstTypeSecond + floorHeightSecondTypeSecond + floorHeightThirdTypeSecond) / 0.2)) - blockWaistTypeSecond);
 			console.log("блок рядовой: " + blockPrivateTypeSecond);
@@ -429,10 +452,14 @@ $(document).ready(function () {
 			var doors = Math.round((doorLenght + 0.2) * doorHeight * 12.5 * doorCount);
 			console.log("двери: " + doors);
 			//окна
-			var windows = Math.round((windowLenght + 0.2) * windowHeight * 12.5 * windowCount);
-			console.log("окна: " + windows);
+			var window1 = Math.round((windowLenght + 0.2) * windowHeight * 12.5 * windowCount);
+			console.log("окна: " + window1);
+			var window2 = Math.round((windowLenght2 + 0.2) * windowHeight2 * 12.5 * windowCount2);
+			console.log("окно 2: " + window2);
+			var window3 = Math.round((windowLenght3 + 0.2) * windowHeight3 * 12.5 * windowCount3);
+			console.log("окно 3: " + window3);
 
-			blockPrivateTypeSecond = Math.round((blockPrivateTypeSecond - doors - windows));
+			blockPrivateTypeSecond = Math.round((blockPrivateTypeSecond - doors - window1 - window2 - window3));
 			console.log("блок рядовой без дверей и окон: " + blockPrivateTypeSecond);
 
 
@@ -457,12 +484,9 @@ $(document).ready(function () {
 			else if (roofChecked == 'roof-2') {
 				blockInteriorTypeSecond = blockInteriorTypeSecond;
 				blockAngularTypeSecond = blockAngularTypeSecond;
-
 				$('#count-private').html(blockPrivateTypeSecond);
-
 				var blockPrivateTypeSecondMetr = (blockPrivateTypeSecond * 0.024).toFixed(2);
 				$('#metres-private').html(blockPrivateTypeSecondMetr);
-
 				var priceBlockPrivateTypeSecond = +$('#price-private').text() * blockPrivateTypeSecond;
 				$('#total-private').html(priceBlockPrivateTypeSecond);
 
@@ -470,6 +494,8 @@ $(document).ready(function () {
 				console.log("внутренний без крыши: " + blockInteriorTypeSecond);
 
 			}
+//----------------- РЯДОВОЙ БЛОК ЗАКОНЧИЛСЯ  -----------------------------------------------
+
 
 			var totalCountBlockstotalMetresTypeSecond = blockInteriorTypeSecond + blockAngularTypeSecond + blockWaistTypeSecond + blockPrivateTypeSecond + blockHalfTypeSecond;
 			debugger;
@@ -481,35 +507,210 @@ $(document).ready(function () {
 
 			$('#total-metres').html(totalMetresTypeSecond);
 
-			var totalPriceTypeSecondNoSale = (+($('#price-blockAngular').text() * blockAngularTypeSecond)) + (+$('#price-blockWaist').text() * blockWaistTypeSecond) + (+$('#price-blockHalf').text() * blockHalfTypeSecond) + (+$('#price-private').text() * blockPrivateTypeSecond) + (+$('#price-blockInterior').text() * blockInteriorTypeSecond);
-			$('#total-price-no-sale').html(totalPriceTypeSecondNoSale);
+			var totalPriceTypeSecondNoSale = priceAngularTypeSecond + priceBlockWaistTypeSecond + priceBlockPrivateTypeSecond + priceBlockHalfTypeSecond + priceBlockInteriorTypeSecond;
 
-			var totalSalePriceTypeSecond = priceAngularTypeSecond + priceBlockHalfTypeSecond + priceBlockPrivateTypeSecond + priceBlockWaistTypeSecond + priceBlockInteriorTypeSecond;
-			$('#total-not-sale-price').html(totalSalePriceTypeSecond);
+			$('#total-not-sale-price').html(totalPriceTypeSecondNoSale);
 
-			var totalPriceWithSalesTypeSecond = +Math.floor(blockPrivateTypeSecondSale + blockAngularTypeSecondSale + blockHalfTypeSecondSale + blockWaistTypeSecondSale + blockInteriorTypeSecondSale);
-			$('#total-sale-price').html(totalPriceWithSalesTypeSecond);
-			$('#total-all').html(totalPriceWithSalesTypeSecond);
+			if (totalMetresTypeSecond > 0.45 && totalMetresTypeSecond < 10.44) {
+				$('#sale-private').html(one + '%');
+				$('#sale-blockHalf').html(one + '%');
+				$('#sale-blockAngular').html(one + '%');
+				$('#sale-blockWaist').html(one + '%');
+				$('#sale-blockInterior').html(one + '%');
+
+				var BlockAngularWithSale = Math.floor(priceAngularTypeSecond - priceAngularTypeSecond * 0.01);
+				var BlockWaistWithSale = Math.floor(priceBlockWaistTypeSecond - priceBlockWaistTypeSecond * 0.01);
+				var BlockPrivateWithSale = Math.floor(priceBlockPrivateTypeSecond - priceBlockPrivateTypeSecond * 0.01);
+				var BlockHalfWithSale = Math.floor(priceBlockHalfTypeSecond - priceBlockHalfTypeSecond * 0.01);
+				var BlockInteriorWithSale = Math.floor(priceBlockInteriorTypeSecond - priceBlockInteriorTypeSecond * 0.01);
+
+				var BlockSaleAll = Math.floor(BlockAngularWithSale + BlockWaistWithSale + BlockPrivateWithSale + BlockHalfWithSale + BlockInteriorWithSale);
+
+				$('#total-sale-price').html(BlockSaleAll);
+				$('#total-all').html(BlockSaleAll);
+
+				$('#summ-sale-private').html(BlockPrivateWithSale);
+				$('#with-sale-private').html(BlockPrivateWithSale)
+
+				$('#summ-sale-blockHalf').html(BlockHalfWithSale);
+				$('#with-sale-blockHalf').html(BlockHalfWithSale)
+
+				$('#summ-sale-blockAngular').html(BlockAngularWithSale);
+				$('#with-sale-blockAngular').html(BlockAngularWithSale);
+
+				$('#summ-sale-blockWaist').html(BlockWaistWithSale)
+				$('#with-sale-blockWaist').html(BlockWaistWithSale);
+
+				$('#summ-sale-blockInterior').html(BlockInteriorWithSale);
+				$('#with-sale-blockInterior').html(BlockInteriorWithSale);
+			}
+			else if (totalMetresTypeSecond >= 10.45 && totalMetresTypeSecond < 20.44) {
+				$('#sale-private').html(two + '%');
+				$('#sale-blockHalf').html(two + '%');
+				$('#sale-blockAngular').html(two + '%');
+				$('#sale-blockWaist').html(two + '%');
+				$('#sale-blockInterior').html(two + '%');
+
+				var BlockAngularWithSale = Math.floor(priceAngularTypeSecond - priceAngularTypeSecond * 0.02);
+				var BlockWaistWithSale = Math.floor(priceBlockWaistTypeSecond - priceBlockWaistTypeSecond * 0.02);
+				var BlockPrivateWithSale = Math.floor(priceBlockPrivateTypeSecond - priceBlockPrivateTypeSecond * 0.02);
+				var BlockHalfWithSale = Math.floor(priceBlockHalfTypeSecond - priceBlockHalfTypeSecond * 0.02);
+				var BlockInteriorWithSale = Math.floor(priceBlockInteriorTypeSecond - priceBlockInteriorTypeSecond * 0.02);
+
+				var BlockSaleAll = Math.floor(BlockAngularWithSale + BlockWaistWithSale + BlockPrivateWithSale + BlockHalfWithSale + BlockInteriorWithSale);
+
+				$('#total-sale-price').html(BlockSaleAll);
+				$('#total-all').html(BlockSaleAll);
+
+				$('#summ-sale-private').html(BlockPrivateWithSale);
+				$('#with-sale-private').html(BlockPrivateWithSale)
+
+				$('#summ-sale-blockHalf').html(BlockHalfWithSale);
+				$('#with-sale-blockHalf').html(BlockHalfWithSale)
+
+				$('#summ-sale-blockAngular').html(BlockAngularWithSale);
+				$('#with-sale-blockAngular').html(BlockAngularWithSale);
+
+				$('#summ-sale-blockWaist').html(BlockWaistWithSale)
+				$('#with-sale-blockWaist').html(BlockWaistWithSale);
+
+				$('#summ-sale-blockInterior').html(BlockInteriorWithSale);
+				$('#with-sale-blockInterior').html(BlockInteriorWithSale);
+			}
+			else if (totalMetresTypeSecond >= 20.45 && totalMetresTypeSecond < 30.44) {
+				$('#sale-private').html(three + '%');
+				$('#sale-blockHalf').html(three + '%');
+				$('#sale-blockAngular').html(three + '%');
+				$('#sale-blockWaist').html(three + '%');
+				$('#sale-blockInterior').html(three + '%');
+
+				var BlockAngularWithSale = Math.floor(priceAngularTypeSecond - priceAngularTypeSecond * 0.03);
+				var BlockWaistWithSale = Math.floor(priceBlockWaistTypeSecond - priceBlockWaistTypeSecond * 0.03);
+				var BlockPrivateWithSale = Math.floor(priceBlockPrivateTypeSecond - priceBlockPrivateTypeSecond * 0.03);
+				var BlockHalfWithSale = Math.floor(priceBlockHalfTypeSecond - priceBlockHalfTypeSecond * 0.03);
+				var BlockInteriorWithSale = Math.floor(priceBlockInteriorTypeSecond - priceBlockInteriorTypeSecond * 0.03);
+
+				var BlockSaleAll = Math.floor(BlockAngularWithSale + BlockWaistWithSale + BlockPrivateWithSale + BlockHalfWithSale + BlockInteriorWithSale);
+
+				$('#total-sale-price').html(BlockSaleAll);
+				$('#total-all').html(BlockSaleAll);
+
+				$('#summ-sale-private').html(BlockPrivateWithSale);
+				$('#with-sale-private').html(BlockPrivateWithSale)
+
+				$('#summ-sale-blockHalf').html(BlockHalfWithSale);
+				$('#with-sale-blockHalf').html(BlockHalfWithSale)
+
+				$('#summ-sale-blockAngular').html(BlockAngularWithSale);
+				$('#with-sale-blockAngular').html(BlockAngularWithSale);
+
+				$('#summ-sale-blockWaist').html(BlockWaistWithSale)
+				$('#with-sale-blockWaist').html(BlockWaistWithSale);
+
+				$('#summ-sale-blockInterior').html(BlockInteriorWithSale);
+				$('#with-sale-blockInterior').html(BlockInteriorWithSale);
+			}
+			else if (totalMetresTypeSecond >= 30.45 && totalMetresTypeSecond < 40.44) {
+				$('#sale-private').html(four + '%');
+				$('#sale-blockHalf').html(four + '%');
+				$('#sale-blockAngular').html(four + '%');
+				$('#sale-blockWaist').html(four + '%');
+				$('#sale-blockInterior').html(four + '%');
+
+				var BlockAngularWithSale = Math.floor(priceAngularTypeSecond - priceAngularTypeSecond * 0.04);
+				var BlockWaistWithSale = Math.floor(priceBlockWaistTypeSecond - priceBlockWaistTypeSecond * 0.04);
+				var BlockPrivateWithSale = Math.floor(priceBlockPrivateTypeSecond - priceBlockPrivateTypeSecond * 0.04);
+				var BlockHalfWithSale = Math.floor(priceBlockHalfTypeSecond - priceBlockHalfTypeSecond * 0.04);
+				var BlockInteriorWithSale = Math.floor(priceBlockInteriorTypeSecond - priceBlockInteriorTypeSecond * 0.04);
+
+				var BlockSaleAll = Math.floor(BlockAngularWithSale + BlockWaistWithSale + BlockPrivateWithSale + BlockHalfWithSale + BlockInteriorWithSale);
+
+				$('#total-sale-price').html(BlockSaleAll);
+				$('#total-all').html(BlockSaleAll);
+
+				$('#summ-sale-private').html(BlockPrivateWithSale);
+				$('#with-sale-private').html(BlockPrivateWithSale)
+
+				$('#summ-sale-blockHalf').html(BlockHalfWithSale);
+				$('#with-sale-blockHalf').html(BlockHalfWithSale)
+
+				$('#summ-sale-blockAngular').html(BlockAngularWithSale);
+				$('#with-sale-blockAngular').html(BlockAngularWithSale);
+
+				$('#summ-sale-blockWaist').html(BlockWaistWithSale)
+				$('#with-sale-blockWaist').html(BlockWaistWithSale);
+
+				$('#summ-sale-blockInterior').html(BlockInteriorWithSale);
+				$('#with-sale-blockInterior').html(BlockInteriorWithSale);
+			}
+			else if (totalMetresTypeSecond >= 40.45) {
+				$('#sale-private').html(five + '%');
+				$('#sale-blockHalf').html(five + '%');
+				$('#sale-blockAngular').html(five + '%');
+				$('#sale-blockWaist').html(five + '%');
+				$('#sale-blockInterior').html(five + '%');
+
+				var BlockAngularWithSale = Math.floor(priceAngularTypeSecond - priceAngularTypeSecond * 0.05);
+				var BlockWaistWithSale = Math.floor(priceBlockWaistTypeSecond - priceBlockWaistTypeSecond * 0.05);
+				var BlockPrivateWithSale = Math.floor(priceBlockPrivateTypeSecond - priceBlockPrivateTypeSecond * 0.05);
+				var BlockHalfWithSale = Math.floor(priceBlockHalfTypeSecond - priceBlockHalfTypeSecond * 0.05);
+				var BlockInteriorWithSale = Math.floor(priceBlockInteriorTypeSecond - priceBlockInteriorTypeSecond * 0.05);
+
+				var BlockSaleAll = Math.floor(BlockAngularWithSale + BlockWaistWithSale + BlockPrivateWithSale + BlockHalfWithSale + BlockInteriorWithSale);
+
+				$('#total-sale-price').html(BlockSaleAll);
+				$('#total-all').html(BlockSaleAll);
+
+				$('#summ-sale-private').html(BlockPrivateWithSale);
+				$('#with-sale-private').html(BlockPrivateWithSale)
+
+				$('#summ-sale-blockHalf').html(BlockHalfWithSale);
+				$('#with-sale-blockHalf').html(BlockHalfWithSale)
+
+				$('#summ-sale-blockAngular').html(BlockAngularWithSale);
+				$('#with-sale-blockAngular').html(BlockAngularWithSale);
+
+				$('#summ-sale-blockWaist').html(BlockWaistWithSale)
+				$('#with-sale-blockWaist').html(BlockWaistWithSale);
+
+				$('#summ-sale-blockInterior').html(BlockInteriorWithSale);
+				$('#with-sale-blockInterior').html(BlockInteriorWithSale);
+			}
+			else {
+				$('#sale-private').html(0);
+				$('#sale-blockHalf').html(0);
+				$('#sale-blockAngular').html(0);
+				$('#sale-blockWaist').html(0);
+				$('#sale-blockInterior').html(0);
+			}
 
 			//клей и общая стоимость клея
-			var countGlue = totalMetresTypeSecond * 2;
+			var countGlue = Math.ceil(totalMetresTypeSecond * 2);
 			$('#count-glue').html(countGlue);
 			var totalPriceGlue = countGlue * (+$('#price-glue').html());
 			$('#total-price-glue').html(Math.floor(totalPriceGlue));
 
-			var countFoam = totalMetresTypeSecond * 2;
+			var countFoam = Math.ceil(totalMetresTypeSecond * 2);
 			$('#count-foam').html(countFoam);
 			var totalPriceFoam = countFoam * (+$('#price-foam').html());
 			$('#total-price-foam').html(Math.floor(totalPriceFoam));
 
 			var countPallet = Math.ceil(blockPrivateTypeSecond / 54 + blockHalfTypeSecond / 90 + blockAngularTypeSecond / 30 + blockWaistTypeSecond / 72 + countGlue  / 50 + blockInteriorTypeSecond / 30);
+			$('#count-pallet').html(countPallet);
 			var totalPricePallet = countPallet * (+$('#price-pallet').html());
 			$('#total-price-pallet').html(Math.floor(totalPricePallet));
 
-			var totalCountAll = totalCountBlockstotalMetresTypeSecond + countGlue + countFoam + countPallet;
+			var countFittings = Math.ceil((perimetrTypeSecond * ((floorHeightFirstTypeSecond + floorHeightSecondTypeSecond + floorHeightThirdTypeSecond) / 0.2)) / 50)
+				;
+			$('#count-fittings').html(countFittings);
+			var totalPriceFittings = countFittings * (+$('#price-fittings').html());
+			console.log(totalPriceFittings);
+			$('#total-price-fittings').html(Math.floor(totalPriceFittings));
+
+			var totalCountAll = Math.ceil(totalCountBlockstotalMetresTypeSecond + countGlue + countFoam + countPallet + countFittings);
 			$('#count-all').html(Math.floor(totalCountAll));
 
-			var finalPrice = totalPriceWithSalesTypeSecond + totalPriceGlue + totalPriceFoam + countPallet;
+			var finalPrice = Math.ceil(BlockSaleAll + totalPriceGlue + totalPriceFoam + countPallet + totalPriceFittings);
 			$('#final-price').html(finalPrice);
 
 		}
