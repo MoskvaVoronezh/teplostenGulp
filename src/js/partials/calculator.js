@@ -203,21 +203,26 @@ $(document).ready(function () {
 				var BlockPrivateWithSale = Math.floor(priceBlockPrivate - priceBlockPrivate * 0.01);
 				var BlockHalfWithSale = Math.floor(priceBlockHalf - priceBlockHalf * 0.01);
 
+				var BlockAngularWithSales = Math.floor(priceBlockAngular * 0.01);
+				var BlockWaistWithSales = Math.floor(priceBlockWaist * 0.01);
+				var BlockPrivateWithSales = Math.floor(priceBlockPrivate * 0.01);
+				var BlockHalfWithSales = Math.floor(priceBlockHalf * 0.01);
+
 				var BlockSaleAll = Math.floor(BlockAngularWithSale + BlockWaistWithSale + BlockPrivateWithSale + BlockHalfWithSale);
 
 				$('#total-sale-price').html(BlockSaleAll);
 				$('#total-all').html(BlockSaleAll);
 
-				$('#summ-sale-private').html(BlockPrivateWithSale);
+				$('#summ-sale-private').html(BlockPrivateWithSales);
 				$('#with-sale-private').html(BlockPrivateWithSale)
 
-				$('#summ-sale-blockHalf').html(BlockHalfWithSale);
+				$('#summ-sale-blockHalf').html(BlockHalfWithSales);
 				$('#with-sale-blockHalf').html(BlockHalfWithSale)
 
-				$('#summ-sale-blockAngular').html(BlockAngularWithSale);
+				$('#summ-sale-blockAngular').html(BlockAngularWithSales);
 				$('#with-sale-blockAngular').html(BlockAngularWithSale);
 
-				$('#summ-sale-blockWaist').html(BlockWaistWithSale)
+				$('#summ-sale-blockWaist').html(BlockWaistWithSales)
 				$('#with-sale-blockWaist').html(BlockWaistWithSale);
 			}
 			else if (totalMetres >= 10.45 && totalMetres < 20.44) {
@@ -231,21 +236,26 @@ $(document).ready(function () {
 				var BlockPrivateWithSale = Math.floor(priceBlockPrivate - priceBlockPrivate * 0.02);
 				var BlockHalfWithSale = Math.floor(priceBlockHalf - priceBlockHalf * 0.02);
 
+				var BlockAngularWithSales = Math.floor(priceBlockAngular * 0.02);
+				var BlockWaistWithSales = Math.floor(priceBlockWaist * 0.02);
+				var BlockPrivateWithSales = Math.floor(priceBlockPrivate * 0.02);
+				var BlockHalfWithSales = Math.floor(priceBlockHalf * 0.02);
+
 				var BlockSaleAll = Math.floor(BlockAngularWithSale + BlockWaistWithSale + BlockPrivateWithSale + BlockHalfWithSale);
 
 				$('#total-sale-price').html(BlockSaleAll);
 				$('#total-all').html(BlockSaleAll);
 
-				$('#summ-sale-private').html(BlockPrivateWithSale);
+				$('#summ-sale-private').html(BlockPrivateWithSales);
 				$('#with-sale-private').html(BlockPrivateWithSale)
 
-				$('#summ-sale-blockHalf').html(BlockHalfWithSale);
+				$('#summ-sale-blockHalf').html(BlockHalfWithSales);
 				$('#with-sale-blockHalf').html(BlockHalfWithSale)
 
-				$('#summ-sale-blockAngular').html(BlockAngularWithSale);
+				$('#summ-sale-blockAngular').html(BlockAngularWithSales);
 				$('#with-sale-blockAngular').html(BlockAngularWithSale);
 
-				$('#summ-sale-blockWaist').html(BlockWaistWithSale)
+				$('#summ-sale-blockWaist').html(BlockWaistWithSales)
 				$('#with-sale-blockWaist').html(BlockWaistWithSale);
 			}
 			else if (totalMetres >= 20.45 && totalMetres < 30.44) {
@@ -259,21 +269,26 @@ $(document).ready(function () {
 				var BlockPrivateWithSale = Math.floor(priceBlockPrivate - priceBlockPrivate * 0.03);
 				var BlockHalfWithSale = Math.floor(priceBlockHalf - priceBlockHalf * 0.03);
 
+				var BlockAngularWithSales = Math.floor(priceBlockAngular * 0.03);
+				var BlockWaistWithSales = Math.floor(priceBlockWaist * 0.03);
+				var BlockPrivateWithSales = Math.floor(priceBlockPrivate * 0.03);
+				var BlockHalfWithSales = Math.floor(priceBlockHalf * 0.03);
+
 				var BlockSaleAll = Math.floor(BlockAngularWithSale + BlockWaistWithSale + BlockPrivateWithSale + BlockHalfWithSale);
 
 				$('#total-sale-price').html(BlockSaleAll);
 				$('#total-all').html(BlockSaleAll);
 
-				$('#summ-sale-private').html(BlockPrivateWithSale);
+				$('#summ-sale-private').html(BlockPrivateWithSales);
 				$('#with-sale-private').html(BlockPrivateWithSale)
 
-				$('#summ-sale-blockHalf').html(BlockHalfWithSale);
+				$('#summ-sale-blockHalf').html(BlockHalfWithSales);
 				$('#with-sale-blockHalf').html(BlockHalfWithSale)
 
-				$('#summ-sale-blockAngular').html(BlockAngularWithSale);
+				$('#summ-sale-blockAngular').html(BlockAngularWithSales);
 				$('#with-sale-blockAngular').html(BlockAngularWithSale);
 
-				$('#summ-sale-blockWaist').html(BlockWaistWithSale)
+				$('#summ-sale-blockWaist').html(BlockWaistWithSales)
 				$('#with-sale-blockWaist').html(BlockWaistWithSale);
 			}
 			else if (totalMetres >= 30.45 && totalMetres < 40.44) {
@@ -287,21 +302,26 @@ $(document).ready(function () {
 				var BlockPrivateWithSale = Math.floor(priceBlockPrivate - priceBlockPrivate * 0.04);
 				var BlockHalfWithSale = Math.floor(priceBlockHalf - priceBlockHalf * 0.04);
 
+				var BlockAngularWithSales = Math.floor(priceBlockAngular * 0.04);
+				var BlockWaistWithSales = Math.floor(priceBlockWaist * 0.04);
+				var BlockPrivateWithSales = Math.floor(priceBlockPrivate * 0.04);
+				var BlockHalfWithSales = Math.floor(priceBlockHalf * 0.04);
+
 				var BlockSaleAll = Math.floor(BlockAngularWithSale + BlockWaistWithSale + BlockPrivateWithSale + BlockHalfWithSale);
 
 				$('#total-sale-price').html(BlockSaleAll);
 				$('#total-all').html(BlockSaleAll);
 
-				$('#summ-sale-private').html(BlockPrivateWithSale);
+				$('#summ-sale-private').html(BlockPrivateWithSales);
 				$('#with-sale-private').html(BlockPrivateWithSale)
 
-				$('#summ-sale-blockHalf').html(BlockHalfWithSale);
+				$('#summ-sale-blockHalf').html(BlockHalfWithSales);
 				$('#with-sale-blockHalf').html(BlockHalfWithSale)
 
-				$('#summ-sale-blockAngular').html(BlockAngularWithSale);
+				$('#summ-sale-blockAngular').html(BlockAngularWithSales);
 				$('#with-sale-blockAngular').html(BlockAngularWithSale);
 
-				$('#summ-sale-blockWaist').html(BlockWaistWithSale)
+				$('#summ-sale-blockWaist').html(BlockWaistWithSales)
 				$('#with-sale-blockWaist').html(BlockWaistWithSale);
 			}
 			else if(totalMetres >= 40.45) {
@@ -315,21 +335,26 @@ $(document).ready(function () {
 				var BlockPrivateWithSale = Math.floor(priceBlockPrivate - priceBlockPrivate * 0.05);
 				var BlockHalfWithSale = Math.floor(priceBlockHalf - priceBlockHalf * 0.05);
 
+				var BlockAngularWithSales = Math.floor(priceBlockAngular * 0.05);
+				var BlockWaistWithSales = Math.floor(priceBlockWaist * 0.05);
+				var BlockPrivateWithSales = Math.floor(priceBlockPrivate * 0.05);
+				var BlockHalfWithSales = Math.floor(priceBlockHalf * 0.05);
+
 				var BlockSaleAll = Math.floor(BlockAngularWithSale + BlockWaistWithSale + BlockPrivateWithSale + BlockHalfWithSale);
 
 				$('#total-sale-price').html(BlockSaleAll);
 				$('#total-all').html(BlockSaleAll);
 
-				$('#summ-sale-private').html(BlockPrivateWithSale);
+				$('#summ-sale-private').html(BlockPrivateWithSales);
 				$('#with-sale-private').html(BlockPrivateWithSale)
 
-				$('#summ-sale-blockHalf').html(BlockHalfWithSale);
+				$('#summ-sale-blockHalf').html(BlockHalfWithSales);
 				$('#with-sale-blockHalf').html(BlockHalfWithSale)
 
-				$('#summ-sale-blockAngular').html(BlockAngularWithSale);
+				$('#summ-sale-blockAngular').html(BlockAngularWithSales);
 				$('#with-sale-blockAngular').html(BlockAngularWithSale);
 
-				$('#summ-sale-blockWaist').html(BlockWaistWithSale)
+				$('#summ-sale-blockWaist').html(BlockWaistWithSales)
 				$('#with-sale-blockWaist').html(BlockWaistWithSale);
 			}
 			else {
@@ -524,24 +549,30 @@ $(document).ready(function () {
 				var BlockHalfWithSale = Math.floor(priceBlockHalfTypeSecond - priceBlockHalfTypeSecond * 0.01);
 				var BlockInteriorWithSale = Math.floor(priceBlockInteriorTypeSecond - priceBlockInteriorTypeSecond * 0.01);
 
+				var BlockAngularWithSales = Math.floor(priceBlockAngular * 0.01);
+				var BlockWaistWithSales = Math.floor(priceBlockWaist * 0.01);
+				var BlockPrivateWithSales = Math.floor(priceBlockPrivate * 0.01);
+				var BlockHalfWithSales = Math.floor(priceBlockHalf * 0.01);
+				var BlockInteriorWithSales = Math.floor(spriceBlockInteriorTypeSecond * 0.01);
+
 				var BlockSaleAll = Math.floor(BlockAngularWithSale + BlockWaistWithSale + BlockPrivateWithSale + BlockHalfWithSale + BlockInteriorWithSale);
 
 				$('#total-sale-price').html(BlockSaleAll);
 				$('#total-all').html(BlockSaleAll);
 
-				$('#summ-sale-private').html(BlockPrivateWithSale);
+				$('#summ-sale-private').html(BlockPrivateWithSales);
 				$('#with-sale-private').html(BlockPrivateWithSale)
 
-				$('#summ-sale-blockHalf').html(BlockHalfWithSale);
+				$('#summ-sale-blockHalf').html(BlockHalfWithSales);
 				$('#with-sale-blockHalf').html(BlockHalfWithSale)
 
-				$('#summ-sale-blockAngular').html(BlockAngularWithSale);
+				$('#summ-sale-blockAngular').html(BlockAngularWithSales);
 				$('#with-sale-blockAngular').html(BlockAngularWithSale);
 
-				$('#summ-sale-blockWaist').html(BlockWaistWithSale)
+				$('#summ-sale-blockWaist').html(BlockWaistWithSales)
 				$('#with-sale-blockWaist').html(BlockWaistWithSale);
 
-				$('#summ-sale-blockInterior').html(BlockInteriorWithSale);
+				$('#summ-sale-blockInterior').html(BlockInteriorWithSales);
 				$('#with-sale-blockInterior').html(BlockInteriorWithSale);
 			}
 			else if (totalMetresTypeSecond >= 10.45 && totalMetresTypeSecond < 20.44) {
@@ -557,24 +588,30 @@ $(document).ready(function () {
 				var BlockHalfWithSale = Math.floor(priceBlockHalfTypeSecond - priceBlockHalfTypeSecond * 0.02);
 				var BlockInteriorWithSale = Math.floor(priceBlockInteriorTypeSecond - priceBlockInteriorTypeSecond * 0.02);
 
+				var BlockAngularWithSales = Math.floor(priceBlockAngular * 0.02);
+				var BlockWaistWithSales = Math.floor(priceBlockWaist * 0.02);
+				var BlockPrivateWithSales = Math.floor(priceBlockPrivate * 0.02);
+				var BlockHalfWithSales = Math.floor(priceBlockHalf * 0.02);
+				var BlockInteriorWithSales = Math.floor(spriceBlockInteriorTypeSecond * 0.02);
+
 				var BlockSaleAll = Math.floor(BlockAngularWithSale + BlockWaistWithSale + BlockPrivateWithSale + BlockHalfWithSale + BlockInteriorWithSale);
 
 				$('#total-sale-price').html(BlockSaleAll);
 				$('#total-all').html(BlockSaleAll);
 
-				$('#summ-sale-private').html(BlockPrivateWithSale);
+				$('#summ-sale-private').html(BlockPrivateWithSales);
 				$('#with-sale-private').html(BlockPrivateWithSale)
 
-				$('#summ-sale-blockHalf').html(BlockHalfWithSale);
+				$('#summ-sale-blockHalf').html(BlockHalfWithSales);
 				$('#with-sale-blockHalf').html(BlockHalfWithSale)
 
-				$('#summ-sale-blockAngular').html(BlockAngularWithSale);
+				$('#summ-sale-blockAngular').html(BlockAngularWithSales);
 				$('#with-sale-blockAngular').html(BlockAngularWithSale);
 
-				$('#summ-sale-blockWaist').html(BlockWaistWithSale)
+				$('#summ-sale-blockWaist').html(BlockWaistWithSales)
 				$('#with-sale-blockWaist').html(BlockWaistWithSale);
 
-				$('#summ-sale-blockInterior').html(BlockInteriorWithSale);
+				$('#summ-sale-blockInterior').html(BlockInteriorWithSales);
 				$('#with-sale-blockInterior').html(BlockInteriorWithSale);
 			}
 			else if (totalMetresTypeSecond >= 20.45 && totalMetresTypeSecond < 30.44) {
@@ -590,24 +627,30 @@ $(document).ready(function () {
 				var BlockHalfWithSale = Math.floor(priceBlockHalfTypeSecond - priceBlockHalfTypeSecond * 0.03);
 				var BlockInteriorWithSale = Math.floor(priceBlockInteriorTypeSecond - priceBlockInteriorTypeSecond * 0.03);
 
+				var BlockAngularWithSales = Math.floor(priceBlockAngular * 0.03);
+				var BlockWaistWithSales = Math.floor(priceBlockWaist * 0.03);
+				var BlockPrivateWithSales = Math.floor(priceBlockPrivate * 0.03);
+				var BlockHalfWithSales = Math.floor(priceBlockHalf * 0.03);
+				var BlockInteriorWithSales = Math.floor(spriceBlockInteriorTypeSecond * 0.03);
+
 				var BlockSaleAll = Math.floor(BlockAngularWithSale + BlockWaistWithSale + BlockPrivateWithSale + BlockHalfWithSale + BlockInteriorWithSale);
 
 				$('#total-sale-price').html(BlockSaleAll);
 				$('#total-all').html(BlockSaleAll);
 
-				$('#summ-sale-private').html(BlockPrivateWithSale);
+				$('#summ-sale-private').html(BlockPrivateWithSales);
 				$('#with-sale-private').html(BlockPrivateWithSale)
 
-				$('#summ-sale-blockHalf').html(BlockHalfWithSale);
+				$('#summ-sale-blockHalf').html(BlockHalfWithSales);
 				$('#with-sale-blockHalf').html(BlockHalfWithSale)
 
-				$('#summ-sale-blockAngular').html(BlockAngularWithSale);
+				$('#summ-sale-blockAngular').html(BlockAngularWithSales);
 				$('#with-sale-blockAngular').html(BlockAngularWithSale);
 
-				$('#summ-sale-blockWaist').html(BlockWaistWithSale)
+				$('#summ-sale-blockWaist').html(BlockWaistWithSales)
 				$('#with-sale-blockWaist').html(BlockWaistWithSale);
 
-				$('#summ-sale-blockInterior').html(BlockInteriorWithSale);
+				$('#summ-sale-blockInterior').html(BlockInteriorWithSales);
 				$('#with-sale-blockInterior').html(BlockInteriorWithSale);
 			}
 			else if (totalMetresTypeSecond >= 30.45 && totalMetresTypeSecond < 40.44) {
@@ -623,24 +666,30 @@ $(document).ready(function () {
 				var BlockHalfWithSale = Math.floor(priceBlockHalfTypeSecond - priceBlockHalfTypeSecond * 0.04);
 				var BlockInteriorWithSale = Math.floor(priceBlockInteriorTypeSecond - priceBlockInteriorTypeSecond * 0.04);
 
+				var BlockAngularWithSales = Math.floor(priceBlockAngular * 0.04);
+				var BlockWaistWithSales = Math.floor(priceBlockWaist * 0.04);
+				var BlockPrivateWithSales = Math.floor(priceBlockPrivate * 0.04);
+				var BlockHalfWithSales = Math.floor(priceBlockHalf * 0.04);
+				var BlockInteriorWithSales = Math.floor(spriceBlockInteriorTypeSecond * 0.04);
+
 				var BlockSaleAll = Math.floor(BlockAngularWithSale + BlockWaistWithSale + BlockPrivateWithSale + BlockHalfWithSale + BlockInteriorWithSale);
 
 				$('#total-sale-price').html(BlockSaleAll);
 				$('#total-all').html(BlockSaleAll);
 
-				$('#summ-sale-private').html(BlockPrivateWithSale);
+				$('#summ-sale-private').html(BlockPrivateWithSales);
 				$('#with-sale-private').html(BlockPrivateWithSale)
 
-				$('#summ-sale-blockHalf').html(BlockHalfWithSale);
+				$('#summ-sale-blockHalf').html(BlockHalfWithSales);
 				$('#with-sale-blockHalf').html(BlockHalfWithSale)
 
-				$('#summ-sale-blockAngular').html(BlockAngularWithSale);
+				$('#summ-sale-blockAngular').html(BlockAngularWithSales);
 				$('#with-sale-blockAngular').html(BlockAngularWithSale);
 
-				$('#summ-sale-blockWaist').html(BlockWaistWithSale)
+				$('#summ-sale-blockWaist').html(BlockWaistWithSales)
 				$('#with-sale-blockWaist').html(BlockWaistWithSale);
 
-				$('#summ-sale-blockInterior').html(BlockInteriorWithSale);
+				$('#summ-sale-blockInterior').html(BlockInteriorWithSales);
 				$('#with-sale-blockInterior').html(BlockInteriorWithSale);
 			}
 			else if (totalMetresTypeSecond >= 40.45) {
@@ -656,24 +705,30 @@ $(document).ready(function () {
 				var BlockHalfWithSale = Math.floor(priceBlockHalfTypeSecond - priceBlockHalfTypeSecond * 0.05);
 				var BlockInteriorWithSale = Math.floor(priceBlockInteriorTypeSecond - priceBlockInteriorTypeSecond * 0.05);
 
+				var BlockAngularWithSales = Math.floor(priceBlockAngular * 0.05);
+				var BlockWaistWithSales = Math.floor(priceBlockWaist * 0.05);
+				var BlockPrivateWithSales = Math.floor(priceBlockPrivate * 0.05);
+				var BlockHalfWithSales = Math.floor(priceBlockHalf * 0.05);
+				var BlockInteriorWithSales = Math.floor(spriceBlockInteriorTypeSecond * 0.05);
+
 				var BlockSaleAll = Math.floor(BlockAngularWithSale + BlockWaistWithSale + BlockPrivateWithSale + BlockHalfWithSale + BlockInteriorWithSale);
 
 				$('#total-sale-price').html(BlockSaleAll);
 				$('#total-all').html(BlockSaleAll);
 
-				$('#summ-sale-private').html(BlockPrivateWithSale);
+				$('#summ-sale-private').html(BlockPrivateWithSales);
 				$('#with-sale-private').html(BlockPrivateWithSale)
 
-				$('#summ-sale-blockHalf').html(BlockHalfWithSale);
+				$('#summ-sale-blockHalf').html(BlockHalfWithSales);
 				$('#with-sale-blockHalf').html(BlockHalfWithSale)
 
-				$('#summ-sale-blockAngular').html(BlockAngularWithSale);
+				$('#summ-sale-blockAngular').html(BlockAngularWithSales);
 				$('#with-sale-blockAngular').html(BlockAngularWithSale);
 
-				$('#summ-sale-blockWaist').html(BlockWaistWithSale)
+				$('#summ-sale-blockWaist').html(BlockWaistWithSales)
 				$('#with-sale-blockWaist').html(BlockWaistWithSale);
 
-				$('#summ-sale-blockInterior').html(BlockInteriorWithSale);
+				$('#summ-sale-blockInterior').html(BlockInteriorWithSales);
 				$('#with-sale-blockInterior').html(BlockInteriorWithSale);
 			}
 			else {
