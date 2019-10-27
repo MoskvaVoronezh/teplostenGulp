@@ -2,7 +2,8 @@
 //= partials/jquery.min.js
 //= partials/slick.min.js
 //= partials/jquery.fancybox.min.js
-
+//= partials/jquery.validate.js
+//= partials/calculator.js
 
 $(document).ready(function () {
 	// slick-carousel
@@ -107,6 +108,80 @@ $(document).ready(function () {
 		loop       : true
 	});
 
+	$('.link-modal').fancybox({
+		type: 'inline',
+		// afterLoad: function () {
+		// 	$("#main-form").validate({
+		// 		rules: {
+		// 			user_name: {
+		// 				required: true,
+		// 			},
+		// 			user_email: {
+		// 				required: true,
+		// 				email: true
+		// 			},
+		// 			user_phone: {
+		// 				required: true,
+		// 			},
+		// 		},
+		// 		messages: {
+		// 			user_name: {
+		// 				required: "Это поле обязательно для заполнения",
+		// 			},
+		// 			user_email: {
+		// 				required: "Это поле обязательно для заполнения",
+		// 			},
+		// 			user_phone: {
+		// 				required: "Это поле обязательно для заполнения",
+		// 			},
+		// 		}
+		// 	});
+		// }
+			
+	});
+
+	
+
+	$('#main-form').submit(function (e) {
+		e.preventDefault();
+	}).validate({
+		rules: {
+			user_name: {
+				required: true,
+			},
+			user_email: {
+				required: true,
+				email: true
+			},
+			user_phone: {
+				required: true,
+			},
+		},
+		messages: {
+			user_name: {
+				required: "Это поле обязательно для заполнения",
+			},
+			user_email: {
+				required: "Это поле обязательно для заполнения",
+			},
+			user_phone: {
+				required: "Это поле обязательно для заполнения",
+			},
+		},
+		submitHandler: function(form) {
+			$.ajax({
+				type: 'POST',
+				url: "mail.php",
+				data: $(this).serialize()
+			}).done(function () {
+				alert("форма отправлена");
+			}).fail(function () {
+				console.log('fail');
+			});
+			return false;
+		}
+	});
+		
 });
 
-//= partials/calculator.js
+
