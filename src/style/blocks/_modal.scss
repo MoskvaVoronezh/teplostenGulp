@@ -109,7 +109,7 @@
 			width: 100%;
 			text-align: center;
 			padding: 20px 0;
-			margin-bottom: 20px;
+			margin-top: 20px;
 			border: none;
 			border-radius: 15px;
 			outline: none;
@@ -117,6 +117,9 @@
 				color: rgba(0,0,0,0.7);
 				font-size: 18px;
 				@include light;
+			}
+			&:first-child {
+				margin-top: 0;
 			}
 		}
 		&__subtitle {
@@ -194,4 +197,29 @@
 	display: flex;
 	justify-content: center;
 	width: 100%;
+}
+
+label.error {
+	color: red;
+	border: none;
+}
+
+.error {
+	border: 2px solid red;
+	&::placeholder {
+		color: red;
+	}
+}
+
+
+@media screen and (max-width: 576px) {
+	.modal-sliders {
+		flex-direction: column;
+	}
+	.modal-sliders__item {
+		width: 100%;
+	}
+	.modal-sliders__item:nth-child(2n) {
+		margin-left: 0;
+	}
 }

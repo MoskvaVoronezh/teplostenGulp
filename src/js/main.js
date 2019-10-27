@@ -145,6 +145,7 @@ $(document).ready(function () {
 	$('#main-form').submit(function (e) {
 		e.preventDefault();
 	}).validate({
+		// ignore: ".ignore",
 		rules: {
 			user_name: {
 				required: true,
@@ -163,20 +164,23 @@ $(document).ready(function () {
 			},
 			user_email: {
 				required: "Это поле обязательно для заполнения",
+				email: "Ваш email должен содержать @"
 			},
 			user_phone: {
 				required: "Это поле обязательно для заполнения",
 			},
 		},
 		submitHandler: function(form) {
+			console.log(form);
 			$.ajax({
 				type: 'POST',
 				url: "mail.php",
-				data: $(this).serialize()
+				data: $("#main-form").serialize()
 			}).done(function () {
-				alert("форма отправлена");
+				$(".modal-forms").css("display", "none");
+				$(".modal-forms-title").html("Спасибо за заявку, мы вам перезвоним");
 			}).fail(function () {
-				console.log('fail');
+				console.log("error submit Form");
 			});
 			return false;
 		}
