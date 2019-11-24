@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,7 @@
 	<title>Калькулятор</title>
 	<link rel="stylesheet" href="css/main.css">
 </head>
-<body>
+<body>	
 	<header class="header" id="top">
 		<div class="container">
 			<div class="header-top header__top">
@@ -57,7 +57,7 @@
 				<form action="#" class="modal-forms">
 					<input type="text" class="modal-forms__input" placeholder="Ваше Имя">
 					<input type="email" class="modal-forms__input" placeholder="E-mail">
-					<input type="phone" class="modal-forms__input" placeholder="+7 (___)-___-__-__">
+					<input type="tel" class="modal-forms__input" placeholder="+7 (___)-___-__-__">
 					<span class="modal-forms__subtitle">Мы перезвоним вам в течение рабочего дня.</span>
 					<div class="modal-forms-btn">
 						<button type="submit" class="modal-forms__submit">Отправить</button>
@@ -166,91 +166,88 @@
 						<div class="calculator-block">
 							<h2 class="calculator-block__title">Тип дома:</h2>
 							<div class="calculator-block__input">
-								<label for="#" class="calculator-block__label">Количество этажeй:</label>
-								<input class="calculator-block__input-input floor-count" type="number" min="1" value="1" max="3">
+								<label for="count-floors" class="calculator-block__label">Количество этажeй:</label>
+								<input class="calculator-block__input-input floor-count" type="number" min="1" value="1" max="3" id="count-floors">
 							</div>
 							<div class="calculator-wrapper">
 								<div class="calculator-wrapper__item">
-									<label class="answer-label" id="type-house-first">
-										<input type="radio" name="type" value="type-1" class="answer__input type" required checked> <span class="answer__checkbox calculator-checkbox-position"></span>
+									<label class="answer-label" for="type-house-first">
+										<input type="radio" name="type" value="type-1" class="answer__input type" required checked id="type-house-first"> <span class="answer__checkbox calculator-checkbox-position"></span>
 									</label>
 									<img class="calculator-wrapper__item-img" src="./img/calculator/home1.png" alt="дом">
 									<div class="absoulute-floor-1">
-										<label for="#" class="calculator-input__label-label">
+										<label for="heigt-floor-1" class="calculator-input__label-label">
 											Высота этажа 1:
 										</label>
-										<input type="number" class="calculator-block__input-input floor-height-first" min="1" step="0.2">
+										<input type="number" class="calculator-block__input-input floor-height-first" min="1" step="0.2" id="heigt-floor-1">
 									</div>
 									<div class="absoulute-floor-2">
-										<label for="#" class="calculator-input__label-label">
+										<label for="heigt-floor-2" class="calculator-input__label-label">
 											Высота этажа 2:
 										</label>
-										<input type="number" class="calculator-block__input-input floor-height_second" min="1" step="0.2">
+										<input type="number" class="calculator-block__input-input floor-height_second" min="1" step="0.2" id="heigt-floor-2">
 									</div>
 									<div class="absoulute-floor-3">
-										<label for="#" class="calculator-input__label-label">
+										<label for="heigt-floor-3" class="calculator-input__label-label">
 											Высота этажа 3:
 										</label>
-										<input type="number" class="calculator-block__input-input floor-height_third" min="1" step="0.2">
+										<input type="number" class="calculator-block__input-input floor-height_third" min="1" step="0.2" id="heigt-floor-3">
 									</div>
 									<div class="absolute-2">
-										<label for="#" class="calculator-input__label-label">
+										<label for="width--1" class="calculator-input__label-label">
 											Ширина:
 										</label>
-										<input type="number" class="calculator-block__input-input input-2" min="1" step="0.2">
+										<input type="number" class="calculator-block__input-input input-2" min="1" step="0.2" id="width--1">
 									</div>
 									<div class="absolute-3">
-										<label for="#" class="calculator-input__label-label">
+										<label for="lenght--1" class="calculator-input__label-label">
 											Длина:
 										</label>
-										<input type="number" class="calculator-block__input-input input-3" min="1" step="0.2">
+										<input type="number" class="calculator-block__input-input input-3" min="1" step="0.2" id="lenght--1">
 									</div>
 								</div>
 								<div class="calculator-wrapper__item">
-									<label class="answer-label">
+									<label for="type-house-second" class="answer-label">
 										<input type="radio" name="type" value="type-2" class="answer__input type" id="type-house-second" required> <span class="answer__checkbox calculator-checkbox-position"></span>
 									</label>
 									<img class="calculator-wrapper__item-img img-size" src="./img/calculator/home2.png" alt="дом">
 									<div class="absolute-4">
-										<label for="#" class="calculator-input__label-label">
+										<label for="lenght--2" class="calculator-input__label-label">
 											Длина:
 										</label>
-										<input type="number" class="calculator-block__input-input lenght-type-2-first" min="1" step="0.2">
+										<input type="number" class="calculator-block__input-input lenght-type-2-first" min="1" step="0.2" id="lenght--2">
 									</div>
 									<div class="absolute-5">
-										<label for="#" class="calculator-input__label-label">
+										<label for="lenght--3" class="calculator-input__label-label">
 											Длина:
 										</label>
-										<input type="number" class="calculator-block__input-input lenght-type-2-second" min="1" step="0.2">
+										<input type="number" class="calculator-block__input-input lenght-type-2-second" min="1" step="0.2" id="lenght--3">
 									</div>
 									<div class="absolute-6 first-floor-type-2">
-										<label for="#" class="calculator-input__label-label">
+										<label for="height-floor-1" class="calculator-input__label-label">
 											Высота этажа 1:
 										</label>
-										<input type="number" class="calculator-block__input-input input-6 type-second-first-floor" min="1" step="0.2">
+										<input type="number" class="calculator-block__input-input input-6 type-second-first-floor" min="1" step="0.2" id="height-floor-1">
 									</div>
 									<div class="second-floor-type-2">
-										<label for="#" class="calculator-input__label-label">
+										<label for="height-floor-2" class="calculator-input__label-label">
 											Высота этажа 2:
 										</label>
-										<input type="number" class="calculator-block__input-input input-6 type-second-second-floor" min="1" step="0.2">
+										<input type="number" class="calculator-block__input-input input-6 type-second-second-floor" min="1" step="0.2" id="height-floor-2">
 									</div>
 									<div class="fhird-floor-type-2">
-										<label for="#" class="calculator-input__label-label">
+										<label for="height-floor-3" class="calculator-input__label-label">
 											Высота этажа 3:
 										</label>
-										<input type="number" class="calculator-block__input-input input-6 type-second-fhird-floor" min="1" step="0.2">
+										<input type="number" class="calculator-block__input-input input-6 type-second-fhird-floor" min="1" step="0.2" id="height-floor-3">
 									</div>
 									<div class="absolute-7">
-										<label for="#" class="calculator-input__label-label">
+										<label for="width--2" class="calculator-input__label-label">
 											Ширина:
 										</label>
-										<input type="number" class="calculator-block__input-input width-type-second-1" min="1" step="0.2">
+										<input type="number" class="calculator-block__input-input width-type-second-1" min="1" step="0.2" id="width--2">
 									</div>
 									<div class="absolute-8">
-										<label for="#" class="calculator-input__label-label">
-											
-										</label>
 										<input type="number" class="calculator-block__input-input width-type-second-2" min="1" step="0.2">
 									</div>
 								</div>
@@ -275,13 +272,13 @@
 							<div class="calculator-block__wrap">
 								<img src="img/calculator/roof.png" alt="Крыша" class="calculator-block__wrap-img">
 								<div class="absolute-9">
-									<label for="#" class="calculator-input__label-label">
+									<label  class="calculator-input__label-label">
 										Высота:
 									</label>
 									<input type="number" class="calculator-block__input-input roof-height" min="1" step="0.2">
 								</div>
 								<div class="absolute-10">
-									<label for="#" class="calculator-input__label-label">
+									<label  class="calculator-input__label-label">
 										Длина:
 									</label>
 									<input type="number" class="calculator-block__input-input roof-lenght" min="1" step="0.2">
@@ -298,19 +295,19 @@
 							<div class="calculator-door calculator__door">
 								<img src="img/calculator/door.png" alt="дверь" class="calculator-door-img">
 								<div class="absolute-11">
-									<label for="#" class="calculator-input__label-label">
+									<label  class="calculator-input__label-label">
 										Длина:
 									</label>
 									<input type="number" class="calculator-block__input-input lenght-door" min="1" step="0.2">
 								</div>
 								<div class="position-count-door">
-									<label for="#" class="calculator-input__label-label">
+									<label  class="calculator-input__label-label">
 										Количество дверей:
 									</label>
 									<input type="number" class="calculator-block__input-input count-door" min="1" max="100" step="0.2">
 								</div>
 								<div class="absolute-12">
-									<label for="#" class="calculator-input__label-label">
+									<label  class="calculator-input__label-label">
 										Высота:
 									</label>
 									<input type="number" class="calculator-block__input-input height-door" min="1" step="0.2">
@@ -325,19 +322,19 @@
 								<div class="calculator-window__item">
 									<img src="img/calculator/window1.png" alt="Окно" class="calculator-window__item-img">
 									<div class="position-count-window">
-										<label for="#" class="calculator-input__label-label">
+										<label  class="calculator-input__label-label">
 											Количество окон:
 										</label>
 										<input type="number" class="calculator-block__input-input count-window" min="1" max="100" step="0.2">
 									</div>
 									<div class="absolute-13">
-										<label for="#" class="calculator-input__label-label">
+										<label  class="calculator-input__label-label">
 											Высота:
 										</label>
 										<input type="number" class="calculator-block__input-input height-window" min="1" step="0.2">
 									</div>
 									<div class="absolute-14">
-										<label for="#" class="calculator-input__label-label">
+										<label  class="calculator-input__label-label">
 											Длина:
 										</label>
 										<input type="number" class="calculator-block__input-input lenght-window" min="1" step="0.2">
@@ -345,20 +342,20 @@
 								</div>
 								<div class="calculator-window__item">
 									<div class="position-count-window-2">
-										<label for="#" class="calculator-input__label-label">
+										<label  class="calculator-input__label-label">
 											Количество окон:
 										</label>
 										<input type="number" class="calculator-block__input-input count-window-2" min="1" max="100" step="0.2">
 									</div>
 									<img src="img/calculator/window2.png" alt="Окно" class="calculator-window__item-img">
 									<div class="absolute-15">
-										<label for="#" class="calculator-input__label-label">
+										<label  class="calculator-input__label-label">
 											Высота:
 										</label>
 										<input type="number" class="calculator-block__input-input height-window-2"  min="1" max="100" step="0.2">
 									</div>
 									<div class="absolute-16">
-										<label for="#" class="calculator-input__label-label">
+										<label  class="calculator-input__label-label">
 											Длина:
 										</label>
 										<input type="number" class="calculator-block__input-input lenght-window-2"  min="1" max="100" step="0.2">
@@ -366,20 +363,20 @@
 								</div>
 								<div class="calculator-window__item">
 									<div class="position-count-window-3">
-										<label for="#" class="calculator-input__label-label">
+										<label  class="calculator-input__label-label">
 											Количество окон:
 										</label>
 										<input type="number" class="calculator-block__input-input count-window-3" min="1" max="100" step="0.2">
 									</div>
 									<img src="img/calculator/window3.png" alt="Окно" class="calculator-window__item-img">
 									<div class="absolute-17">
-										<label for="#" class="calculator-input__label-label">
+										<label  class="calculator-input__label-label">
 											Высота:
 										</label>
 										<input type="number" class="calculator-block__input-input height-window-3"  min="1" max="100" step="0.2">
 									</div>
 									<div class="absolute-18">
-										<label for="#" class="calculator-input__label-label">
+										<label  class="calculator-input__label-label">
 											Длина:
 										</label>
 										<input type="number" class="calculator-block__input-input lenght-window-3"  min="1" max="100" step="0.2">
@@ -581,7 +578,7 @@
 								<td class="table__cell-title" ></td>
 								<td class="table__cell-title"></td>
 								<td class="table__cell-title">Всего</td>
-								<td class="table__cell-title"id="count-all"></td>
+								<td class="table__cell-title" id="count-all"></td>
 								<td class="table__cell-title"></td>
 								<td class="table__cell-title"></td>
 								<td class="table__cell-title"></td>
@@ -621,27 +618,27 @@
 			<nav class="main-menu footer__menu">
 				<ul class="menu-list menu__list footer__menu-list">
 					<li class="menu-list__item footer__menu-item">
-						<a href="#" class="menu-list__link footer__menu-link">
+						<a href="index.html" class="menu-list__link footer__menu-link">
 							Главная
 						</a>
 					</li>
 					<li class="menu-list__item footer__menu-item">
-						<a href="#" class="menu-list__link footer__menu-link">
+						<a href="catalog-price.html" class="menu-list__link footer__menu-link">
 							Каталог
 						</a>
 					</li>
 					<li class="menu-list__item footer__menu-item">
-						<a href="#" class="menu-list__link footer__menu-link">
+						<a href="calculator.html" class="menu-list__link footer__menu-link">
 							Калькулятор
 						</a>
 					</li>
 					<li class="menu-list__item footer__menu-item">
-						<a href="#" class="menu-list__link footer__menu-link">
+						<a href="answers.html" class="menu-list__link footer__menu-link">
 							Вопрос-ответ
 						</a>
 					</li>
 					<li class="menu-list__item footer__menu-item">
-						<a href="#" class="menu-list__link footer__menu-link">
+						<a href="index.html#contacs" class="menu-list__link footer__menu-link">
 							Контакты
 						</a>
 					</li>
