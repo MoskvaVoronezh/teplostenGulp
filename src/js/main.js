@@ -171,16 +171,16 @@ $(document).ready(function () {
 			},
 		},
 		submitHandler: function(form) {
-			console.log(form);
 			$.ajax({
 				type: 'POST',
 				url: "mail.php",
 				data: $("#main-form").serialize()
 			}).done(function () {
-				$(".modal-forms").css("display", "none");
-				$(".modal-forms-title").html("Спасибо за заявку, мы вам перезвоним");
+				console.log('success');	
+				parent.$.fancybox.close();	
 			}).fail(function () {
-				console.log("error submit Form");
+				console.log('error');
+	
 			});
 			return false;
 		}

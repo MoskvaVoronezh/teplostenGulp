@@ -191,6 +191,14 @@
 			max-width: 100%;
 		}
 	}
+	&-forms {
+		&__success {
+			display: none;
+		}
+		&__error {
+			display: none;
+		}
+	}
 }
 
 .db {
