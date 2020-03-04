@@ -8,24 +8,26 @@
 	<link rel="shortcut icon" href="http://teplosten-sib.ru/favicon.ico">
 	<title>Калькулятор</title>
 	<link rel="stylesheet" href="css/main.css">
+	<!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(21594790, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/21594790" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+</head>
 <body style="overflow-x: auto;">	
 	<header class="header" id="top">
 		<div class="container">
 			<div class="header-top header__top">
 				<div class="header__logo">
-					<a href="index.html"><img src="img/header/logo.png" alt="logo teplosten" class="header__img"></a>
+					<a href="index.html"><img src="img/header/logo.png" alt="Теплостен-Сибирь" class="header__img"></a>
 				</div>
 				<div class="header__info">
 					<div class="info-block">
 						<div class="info-block__number">
-							<img class="info-block__phone-img" src="img/header/phone.svg" alt="phone">
-							<a class="info-block__phone" href="tel:304-83-22">
-								304-83-22							
+							<img class="info-block__phone-img" src="img/header/phone.svg" alt="Телефон">
+							<a class="info-block__phone" href="tel:8-383-304-83-22">
+								8-383-304-83-22				
 							</a>
 							<ul class="info-list">
 								<li class="info-list__item">
-									<a class="info-list__item-link" href="tel:8-383-304-83-22">
-										8-383-304-83-22
+									<a class="info-list__item-link" href="tel:8(38341)5-83-22">
+										8(38341)5-83-22	
 									</a>
 								</li>
 								<li class="info-list__item">
@@ -37,8 +39,8 @@
 							<img src="img/header/current.svg" alt="current" class="info-block__phone-current">
 						</div>
 						<div class="info-block__btn">
-							<a data-fancybox data-src="#modal-forms" href="javascript:;" class="info-block__button">
-								<img class="info-block__button-img" src="img/header/phoneActive.svg" alt="phone">
+							<a href="#modal-forms"  class="info-block__button link-modal">
+								<img class="info-block__button-img" src="img/header/phoneActive.svg" alt="Телефон">
 								Обратный звонок
 							</a>
 						</div>
@@ -50,17 +52,47 @@
 					</div>
 				</div>
 			</div>
+			<div class="header-bottom header__bottom">
+				<div class="info-block header__bottom-info">
+					<div class="info-block__number header__bottom-number">
+						<a class="info-block__phone" href="tel:8-383-304-83-22">
+							8-383-304-83-22				
+						</a>
+						<ul class="info-list header__bottom-list">
+							<li class="info-list__item">
+								<a class="info-list__item-link" href="tel:8(38341)5-83-22">
+									8(38341)5-83-22	
+								</a>
+							</li>
+							<li class="info-list__item">
+								<a class="info-list__item-link" href="tel:8-913-911-14-32">
+									8-913-911-14-32
+								</a>
+							</li>
+						</ul>
+						<img src="img/header/current.svg" alt="current" class="info-block__phone-current">
+					</div>
+				</div>
+			</div>
 			<div id="modal-forms" class="modal-forms" style="display: none;">
 				<h2 class="modal-forms-title">
 					Заказать обратный звонок
 				</h2>
-				<form action="#" class="modal-forms">
-					<input type="text" class="modal-forms__input" placeholder="Ваше Имя">
-					<input type="email" class="modal-forms__input" placeholder="E-mail">
-					<input type="tel" class="modal-forms__input" placeholder="+7 (___)-___-__-__">
-					<span class="modal-forms__subtitle">Мы перезвоним вам в течение рабочего дня.</span>
-					<div class="modal-forms-btn">
-						<button type="submit" class="modal-forms__submit">Отправить</button>
+				<form class="modal-forms" id="main-form" method="POST">
+					<div class="modal-forms__wrap">
+						<input type="text" class="modal-forms__input name" placeholder="Ваше Имя" name="user_name">
+						<input type="email" class="modal-forms__input email" placeholder="E-mail" name="user_email">
+						<input type="tel" class="modal-forms__input phone" placeholder="+7 (___)-___-__-__" name="user_phone">
+						<span class="modal-forms__subtitle">Мы перезвоним вам в течение рабочего дня.</span>
+						<div class="modal-forms-btn">
+							<button type="submit" class="modal-forms__submit" >Отправить</button>
+						</div>
+					</div>
+					<div class="modal-forms__success modal-forms-title">
+						Заявка отправлена!
+					</div>
+					<div class="modal-forms__error modal-forms-title">
+						Что-то пошло не так!
 					</div>
 				</form>
 			</div>
@@ -86,7 +118,7 @@
 								</li>
 								<li class="menu-list__item-dropdown__item">
 									<a href="catalog-price.html#standard" class="menu-list__link">
-										CТАНДАРТНЫЕ БЛОКИ
+										 CТАНДАРТНЫЕ БЛОКИ
 									</a>
 								</li>
 								<li class="menu-list__item-dropdown__item">
@@ -116,7 +148,7 @@
 								</li>
 								<li class="menu-list__item-dropdown__item">
 									<a href="catalog-price.html#foam" class="menu-list__link">
-										ПЕНА МОНТАЖНАЯ КРОВЛЯ
+										ПЕНА МОНТАЖНАЯ КРОВЛЯ 
 									</a>
 								</li>
 								<li class="menu-list__item-dropdown__item">
@@ -124,7 +156,7 @@
 										КРОВЛЯ ВОЛНАКОЛОР
 									</a>
 								</li>
-							</ul>
+							</ul>					
 						</li>
 						<li class="menu-list__item">
 							<a href="calculator.html" class="menu-list__link">
@@ -137,13 +169,13 @@
 							</a>
 						</li>
 						<li class="menu-list__item">
-							<a href="index.html#contacs" class="menu-list__link">
+							<a href="#contacs" class="menu-list__link">
 								Контакты
 							</a>
 						</li>
 					</ul>
 				</nav>
-			</div>
+			</div>		
 		</div>
 	</header>
 	<main class="main">

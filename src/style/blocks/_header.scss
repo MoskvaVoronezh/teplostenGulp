@@ -5,6 +5,12 @@
 		align-items: center;
 		padding: 10px 0;
 	}
+	&__bottom {
+		display: none;
+		@media screen and (max-width: 991px) {
+			display: block;
+		}
+	}
 	&__menu {
 		background-color: $primary;
 		&_active {
@@ -212,7 +218,6 @@
 		}
 	}
 }
-
 @media (max-width: 768px) {
 	.header {
 		&__menu {
@@ -221,6 +226,11 @@
 	}
 	.info {
 		&-block {
+			&__number {
+				&.header__bottom-number {
+					display: block;
+				}
+			}
 			&__button {
 				&-img {
 					display: none;
@@ -229,6 +239,22 @@
 			&__btn {
 				margin-left: 0;
 				margin-right: 20px;
+			}
+			&__phone {
+				margin-left: 0;
+				font-size: 18px;
+			}
+		}
+		&-list {
+			&.header__bottom-list {
+				top: 32px;
+				.info-list__item {
+					text-align: left;
+					margin-bottom: 3px;
+					.info-list__item-link{
+						font-size: 18px;
+					}
+				}
 			}
 		}
 	}
