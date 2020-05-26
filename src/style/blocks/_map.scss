@@ -42,12 +42,24 @@
 			text-decoration: none;
 		}
 	}
+	&__info {
+		display: none;
+	}
 }
 
 @media (max-width: 768px) {
 	.map {
 		&-block {
 			display: none;
+			&__button {
+				margin-bottom: 40px;
+			}
+		}
+		&__info {
+			display: block;
+		}
+		&__title {
+			margin-bottom: 30px;
 		}
 	}
 }
