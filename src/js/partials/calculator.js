@@ -169,12 +169,12 @@ $(document).ready(function () {
 			//------------ПОЛОВИНЧАТЫЙ БЛОК ---------------------------------------
 			//блок половинчатый
 			var blockHalf = ((doorHeight * doorCount) / 0.2) + ((windowHeight * windowCount) / 0.2);
-			$('#count-blockHalf').html(blockHalf);
+			$('#count-blockHalf').html(Math.floor(blockHalf));
 			var blockHalfMetr = +(blockHalf * 0.012).toFixed(2)
 			$('#metres-blockHalf').html(blockHalfMetr);
 
 			var priceBlockHalf = +(+$('#price-blockHalf').text() * blockHalf);
-			$('#total-blockHalf').html(priceBlockHalf);
+			$('#total-blockHalf').html(Math.floor(priceBlockHalf));
 			console.log("блок половинчатый: " + blockHalf);
 
 			//------------ПОЛОВИНЧАТЫЙ БЛОК Закончился---------------------------------------
