@@ -168,7 +168,7 @@ $(document).ready(function () {
 
 			//------------ПОЛОВИНЧАТЫЙ БЛОК ---------------------------------------
 			//блок половинчатый
-			var blockHalf = ((doorHeight * doorCount) / 0.2) + ((windowHeight * windowCount) / 0.2);
+			var blockHalf = ((doorHeight * doorCount) / 0.2) + ((windowHeight * windowCount) / 0.2) + ((windowHeight2 * windowCount2) / 0.2) + ((windowHeight3 * windowCount3) / 0.2);
 			$('#count-blockHalf').html(Math.floor(blockHalf));
 			var blockHalfMetr = +(blockHalf * 0.012).toFixed(2)
 			$('#metres-blockHalf').html(blockHalfMetr);
@@ -457,7 +457,7 @@ $(document).ready(function () {
 
 	//----------------- ПОЛОВИНЧАТЫЙ БЛОК-----------------------------------------------
 			//блок половинчатый
-			var blockHalfTypeSecond = ((doorHeight * doorCount) / 0.2) + ((windowHeight * windowCount) / 0.2);
+			var blockHalfTypeSecond = ((doorHeight * doorCount) / 0.2) + ((windowHeight * windowCount) / 0.2) + ((windowHeight2 * windowCount2) / 0.2) + ((windowHeight3 * windowCount3) / 0.2);
 			console.log("блок половинчатый: " + blockHalfTypeSecond);
 			$('#count-blockHalf').html(blockHalfTypeSecond);
 			var blockHalfTypeSecondfMetr = +(blockHalfTypeSecond * 0.012).toFixed(2)
