@@ -107,7 +107,7 @@ $(document).ready(function () {
          console.log(totalMetres);
 
          $('#total-metres').html(totalMetres);
-         definitionOfDiscount(width, length, summHeightFloors, totalMetres, blockPoyasnoi, blockYglovoi, blockRyadovoi, blockPolovinchatyi, 0);
+         definitionOfDiscount(totalCount, width, length, summHeightFloors, totalMetres, blockPoyasnoi, blockYglovoi, blockRyadovoi, blockPolovinchatyi, 0);
       }
 
       //блок поясной
@@ -202,24 +202,24 @@ $(document).ready(function () {
       }
 
       //определение скидки
-      function definitionOfDiscount(width, length, summHeightFloors, totalMetres, blockPoyasnoi, blockYglovoi, blockRyadovoi, blockPolovinchatyi, blockYglovoiVnutr) {
+      function definitionOfDiscount(totalCount, width, length, summHeightFloors, totalMetres, blockPoyasnoi, blockYglovoi, blockRyadovoi, blockPolovinchatyi, blockYglovoiVnutr) {
 
          if (totalMetres > 0.45 && totalMetres < 10.44) {
-            establishingDiscount(totalMetres, 1, blockPoyasnoi, blockYglovoi, blockRyadovoi, blockPolovinchatyi, 0);
+            establishingDiscount(totalCount, width, length, summHeightFloors, totalMetres, 1, blockPoyasnoi, blockYglovoi, blockRyadovoi, blockPolovinchatyi, 0);
          } else if (totalMetres >= 10.45 && totalMetres < 20.44) {
-            establishingDiscount(totalMetres, 2, blockPoyasnoi, blockYglovoi, blockRyadovoi, blockPolovinchatyi, 0);
+            establishingDiscount(width, length, summHeightFloors, totalMetres, 2, blockPoyasnoi, blockYglovoi, blockRyadovoi, blockPolovinchatyi, 0);
          } else if (totalMetres >= 20.45 && totalMetres < 30.44) {
-            establishingDiscount(totalMetres, 3, blockPoyasnoi, blockYglovoi, blockRyadovoi, blockPolovinchatyi, 0);
+            establishingDiscount(width, length, summHeightFloors, totalMetres, 3, blockPoyasnoi, blockYglovoi, blockRyadovoi, blockPolovinchatyi, 0);
          } else if (totalMetres >= 30.45 && totalMetres < 40.44) {
-            establishingDiscount(totalMetres, 4, blockPoyasnoi, blockYglovoi, blockRyadovoi, blockPolovinchatyi, 0);
+            establishingDiscount(width, length, summHeightFloors, totalMetres, 4, blockPoyasnoi, blockYglovoi, blockRyadovoi, blockPolovinchatyi, 0);
          } else if (totalMetres >= 40.45) {
-            establishingDiscount(totalMetres, 5, blockPoyasnoi, blockYglovoi, blockRyadovoi, blockPolovinchatyi, 0);
+            establishingDiscount(width, length, summHeightFloors, totalMetres, 5, blockPoyasnoi, blockYglovoi, blockRyadovoi, blockPolovinchatyi, 0);
          }
 
       }
 
       //Установить скидку
-      function establishingDiscount(width, length, summHeightFloors, totalMetres, countSale, blockPoyasnoi, blockYglovoi, blockRyadovoi, blockPolovinchatyi, blockYglovoiVnutr) {
+      function establishingDiscount(totalCount, width, length, summHeightFloors, totalMetres, countSale, blockPoyasnoi, blockYglovoi, blockRyadovoi, blockPolovinchatyi, blockYglovoiVnutr) {
          $('#sale-private').html(countSale + '%');
          $('#sale-blockHalf').html(countSale + '%');
          $('#sale-blockAngular').html(countSale + '%');
@@ -254,19 +254,27 @@ $(document).ready(function () {
          var blockPoyasnoiWithSales = Math.floor(blockPoyasnoiWithoutSales - blockPoyasnoiSale);
          $('#with-sale-blockWaist').html(blockPoyasnoiWithSales);
 
+         var blockYglovoiVnutrWithoutSales;
+         var blockYglovoiVnutrSale;
+         var blockYglovoiVnutrWithSales;
+
          if (blockYglovoiVnutr != 0) {
-            var blockYglovoiVnutrWithoutSales = Math.round(blockYglovoiVnutr * priceBlocks.blockYglovoiVnutreniy);
+            blockYglovoiVnutrWithoutSales = Math.round(blockYglovoiVnutr * priceBlocks.blockYglovoiVnutreniy);
             $('#total-blockWaist').html(blockYglovoiVnutrWithoutSales);
-            var blockYglovoiVnutrSale = Math.round(priceBlocks.blockYglovoiVnutreniy * blockYglovoiVnutr * Number('0.0' + countSale));
+            blockYglovoiVnutrSale = Math.round(priceBlocks.blockYglovoiVnutreniy * blockYglovoiVnutr * Number('0.0' + countSale));
             $('#summ-sale-blockWaist').html(blockYglovoiVnutrSale);
-            var blockYglovoiVnutrWithSales = Math.floor(blockYglovoiVnutrWithoutSales - blockYglovoiVnutrSale);
+            blockYglovoiVnutrWithSales = Math.floor(blockYglovoiVnutrWithoutSales - blockYglovoiVnutrSale);
             $('#with-sale-blockWaist').html(blockYglovoiVnutrWithSales);
+         } else {
+            blockYglovoiVnutrWithoutSales = 0;
+            blockYglovoiVnutrSale = 0;
+            blockYglovoiVnutrWithSales = 0;
          }
 
-         var blocksWithoutSales = Math.floor(blockRyadovoiWithoutSales + blockPolovinchatyiWithoutSales + blockYglovoiWithoutSales + blockPoyasnoiWithoutSales + blockYglovoiVnutr);
+         var blocksWithoutSales = Math.floor(blockRyadovoiWithoutSales + blockPolovinchatyiWithoutSales + blockYglovoiWithoutSales + blockPoyasnoiWithoutSales + blockYglovoiVnutrWithoutSales);
          $('#total-not-sale-price').html(blocksWithoutSales);
 
-         var blockAllSales = Math.floor(blockRyadovoiSale + blockPolovinchatyiSale + blockYglovoiSale + blockPoyasnoiSale + blockYglovoiVnutr);
+         var blockAllSales = Math.floor(blockRyadovoiSale + blockPolovinchatyiSale + blockYglovoiSale + blockPoyasnoiSale + blockYglovoiVnutrSale);
          $('#total-sale-price').html(blockAllSales);
 
          var totalAll = Math.floor(blocksWithoutSales - blockAllSales);
@@ -275,6 +283,12 @@ $(document).ready(function () {
          var priceKlei = klei(totalMetres);
          var pricePena = pena(totalMetres);
          var priceArmatura = armatura(width, length, summHeightFloors);
+         var pricePoddon = poddon(blockRyadovoi, blockPolovinchatyi, blockYglovoi, 0, blockPoyasnoi, priceKlei.count);
+
+         var totalCountMaterials = totalCount + Math.ceil(priceKlei.count + pricePena.count + priceArmatura.count + pricePoddon.count);
+         $('#count-all').html(totalCountMaterials);
+         var totalPriceMaterials = totalAll + Math.ceil(priceKlei.price + pricePena.price + priceArmatura.price + pricePoddon.price);
+         $('#final-price').html(totalPriceMaterials);
 
 
       }
@@ -285,7 +299,10 @@ $(document).ready(function () {
          $('#count-glue').html(countKlei);
          var priceAll = Math.ceil(countKlei * priceBlocks.klei);
          $('#total-price-glue').html(priceAll);
-         return priceAll;
+         return {
+            price: priceAll,
+            count: countKlei
+         };
       }
 
       //Пена
@@ -294,24 +311,36 @@ $(document).ready(function () {
          $('#count-foam').html(countPena);
          var priceAll = Math.ceil(countPena * priceBlocks.pena);
          $('#total-price-foam').html(priceAll);
-         return priceAll;
+         return {
+            price: priceAll,
+            count: countPena
+         };
       }
 
       //арматура
-
       function armatura(width, length, summHeightFloors) {
-         // var countArmatura = Math.ceil((perimetr(width, length) * (summHeightFloors / 0.2)) / 50);
-         alert(width);
-         alert(length);
          var per = perimetr(width, length);
-         alert(per);
-         var countArmatura = (per * (summHeightFloors / 0.2)) / 50;
+         var countArmatura = Math.ceil((per * (summHeightFloors / 0.2)) / 50);
 
-         // var countFittings = Math.ceil((perimetrTypeSecond * ((floorHeightFirstTypeSecond + floorHeightSecondTypeSecond + floorHeightThirdTypeSecond) / 0.2)) / 50)
          $('#count-fittings').html(countArmatura);
          var priceAll = Math.ceil(countArmatura * priceBlocks.armatura);
          $('#total-price-fittings').html(priceAll);
-         
+
+         return {
+            price: priceAll,
+            count: countArmatura
+         }; 
+      }
+
+      function poddon(blockRyadovoi, blockPolovinchatyi, blockYglovoi, blockYglovoiVnutr, blockPoyasnoi, klei) {
+         var countPoddon = Math.ceil((blockRyadovoi / 54) + (blockPolovinchatyi / 90) + (blockYglovoi / 30) + (blockYglovoiVnutr / 30) + (blockPoyasnoi / 72) + (klei / 50));
+         $('#count-pallet').html(countPoddon);
+         var priceAll = Math.ceil(countPoddon * priceBlocks.poddon);
+         $('#total-price-pallet').html(priceAll);
+         return {
+            price: priceAll,
+            count: countPoddon
+         };
       }
 
    });
