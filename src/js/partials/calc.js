@@ -108,12 +108,36 @@ $(document).ready(function () {
 
          $('#total-metres').html(totalMetres);
          definitionOfDiscount(totalCount, width, length, summHeightFloors, totalMetres, blockPoyasnoi, blockYglovoi, blockRyadovoi, blockPolovinchatyi, 0);
+      } else if (houseType === 'type-2') {
+         var lengthHouse1 = +$('#lenght--2').val();
+         var lengthHouse2 = +$('#lenght--3').val();
+         var widthHouse1 = +$('#width--2').val();
+         var widthHouse2 = +$('#width--3').val();
+         var heigtFloor1 = +$('#height-floor-1-2').val();
+         var heigtFloor2 = +$('#height-floor-2-2').val();
+         var heigtFloor3 = +$('#height-floor-3-2').val();
+         var summHeightFloors = heigtFloor1 + heigtFloor2 + heigtFloor3;
+
+         console.log(lengthHouse1);
+         console.log(lengthHouse2);
+
+         var width = Number(widthHouse1) + Number(widthHouse2);
+         var length = Number(lengthHouse1) + Number(lengthHouse2);
+
+         var blockYglovoi = Math.floor(blockYglovoi(heigtFloor1, heigtFloor2, heigtFloor3, 5));
+         console.log('Угловой наружный: ' + blockYglovoi);
+         var blockPoyasnoi = Math.ceil(blockPoyasnoi(4.2, width, length, floorCount));
+         console.log('Блок поясной: ' + blockPoyasnoi);
+         var blockRyadovoi = blockRyadovoiTypeSecond(width, length, summHeightFloors, blockPoyasnoi);
+         console.log('Блок рядовой: ' + blockRyadovoi);
+         var blockPolovinchatyi = blockPolovinchatyi(doorHeight, doorCount, windowHeight, windowCount, windowHeight2, windowCount2, windowHeight3, windowCount3)
+         console.log('Блок половинчатый: ' + blockPolovinchatyi);
       }
 
       //блок поясной
       function blockPoyasnoi(coefficient, width, length, floorCount) {
          var per = perimetr(width, length);
-         console.log(per);
+         console.log('per: ' + per);
          var blockPoyasnoi = ((per - Number(coefficient)) / 0.4) * Number(floorCount);
          return blockPoyasnoi;
       }
@@ -121,6 +145,7 @@ $(document).ready(function () {
       //блок угловой
       function blockYglovoi(heigtFloor1, heigtFloor2, heigtFloor3, coefficient) {
          var allHeightFloor = Math.round(Number(heigtFloor1) + Number(heigtFloor2) + Number(heigtFloor3));
+         console.log(allHeightFloor);
          var blockYglovoi = allHeightFloor / 0.2 * Number(coefficient);
          return blockYglovoi;
       }
@@ -171,6 +196,13 @@ $(document).ready(function () {
          return Math.round(doorsAll + window1 + window2 + window3);
       }
 
+      function blockRyadovoiTypeSecond(width, length, summHeightFloors, blockPoyasnoi) {
+         console.log(summHeightFloors);
+         var per = perimetr(width, length);
+         var res = Math.ceil(((per - 4.2) / 0.4) * (summHeightFloors / 0.2));
+         return res - blockPoyasnoi;
+      }
+
       //двери
       function doors(doorLength, doorHeight, doorCount) {
          var doors;
@@ -207,13 +239,13 @@ $(document).ready(function () {
          if (totalMetres > 0.45 && totalMetres < 10.44) {
             establishingDiscount(totalCount, width, length, summHeightFloors, totalMetres, 1, blockPoyasnoi, blockYglovoi, blockRyadovoi, blockPolovinchatyi, 0);
          } else if (totalMetres >= 10.45 && totalMetres < 20.44) {
-            establishingDiscount(width, length, summHeightFloors, totalMetres, 2, blockPoyasnoi, blockYglovoi, blockRyadovoi, blockPolovinchatyi, 0);
+            establishingDiscount(width, length, summHeightFloors, totalMetres, 2, blockPoyasnoi, blockYglovoi, blockRyadovoi, blockPolovinchatyi, blockYglovoiVnutr);
          } else if (totalMetres >= 20.45 && totalMetres < 30.44) {
-            establishingDiscount(width, length, summHeightFloors, totalMetres, 3, blockPoyasnoi, blockYglovoi, blockRyadovoi, blockPolovinchatyi, 0);
+            establishingDiscount(width, length, summHeightFloors, totalMetres, 3, blockPoyasnoi, blockYglovoi, blockRyadovoi, blockPolovinchatyi, blockYglovoiVnutr);
          } else if (totalMetres >= 30.45 && totalMetres < 40.44) {
-            establishingDiscount(width, length, summHeightFloors, totalMetres, 4, blockPoyasnoi, blockYglovoi, blockRyadovoi, blockPolovinchatyi, 0);
+            establishingDiscount(width, length, summHeightFloors, totalMetres, 4, blockPoyasnoi, blockYglovoi, blockRyadovoi, blockPolovinchatyi, blockYglovoiVnutr);
          } else if (totalMetres >= 40.45) {
-            establishingDiscount(width, length, summHeightFloors, totalMetres, 5, blockPoyasnoi, blockYglovoi, blockRyadovoi, blockPolovinchatyi, 0);
+            establishingDiscount(width, length, summHeightFloors, totalMetres, 5, blockPoyasnoi, blockYglovoi, blockRyadovoi, blockPolovinchatyi, blockYglovoiVnutr);
          }
 
       }
