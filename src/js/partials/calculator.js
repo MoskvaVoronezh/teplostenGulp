@@ -122,18 +122,22 @@ $(document).ready(function () {
          var width = Number(widthHouse1) + Number(widthHouse2);
          var length = Number(lengthHouse1) + Number(lengthHouse2);
 
-         var blockYglovoi = Math.floor(blockYglovoi(heigtFloor1, heigtFloor2, heigtFloor3, 5));
+         var blockYglovoi = +Math.floor(blockYglovoi(heigtFloor1, heigtFloor2, heigtFloor3, 5));
+         console.log(heigtFloor1);
+         console.log(heigtFloor2);
+         console.log(heigtFloor3);
          console.log('Угловой наружный: ' + blockYglovoi);
-         var blockPoyasnoi = Math.ceil(blockPoyasnoi(4.2, width, length, floorCount));
+         var blockPoyasnoi = +Math.ceil(blockPoyasnoi(4.2, width, length, floorCount));
          console.log('Блок поясной: ' + blockPoyasnoi);
-         var blockRyadovoi = Math.ceil(blockRyadovoiTypeSecond(width, length, summHeightFloors, blockPoyasnoi, doorLenght, doorHeight, windowHeight, windowLenght, windowHeight2, windowLenght2, windowHeight3, windowLenght3));
+         var blockRyadovoi = +Math.ceil(blockRyadovoiTypeSecond(width, length, summHeightFloors, blockPoyasnoi, doorLenght, doorHeight, windowHeight, windowLenght, windowHeight2, windowLenght2, windowHeight3, windowLenght3));
          console.log('Блок рядовой: ' + blockRyadovoi);
-         var blockPolovinchatyi = Math.ceil(blockPolovinchatyi(doorHeight, doorCount, windowHeight, windowCount, windowHeight2, windowCount2, windowHeight3, windowCount3));
+         var blockPolovinchatyi = +Math.ceil(blockPolovinchatyi(doorHeight, doorCount, windowHeight, windowCount, windowHeight2, windowCount2, windowHeight3, windowCount3));
          console.log('Блок половинчатый: ' + blockPolovinchatyi);
          var resultblock = blockYglovoiVnutr(summHeightFloors, blockYglovoi);
-         blockYglovoi = resultblock.blockYglovoiNarug;
+         console.log('resultblock: ' + resultblock);
+         blockYglovoi = +resultblock.narug;
          console.log('Угловой наружный: ' + blockYglovoi);
-         var blockYglovoiVnutr = resultblock.blockYglovoiVnutr;
+         var blockYglovoiVnutr = +resultblock.vnutr;
          console.log('Блок угловой внутренний: ' + blockYglovoiVnutr);
 
          //Общее количество блоков
@@ -179,7 +183,7 @@ $(document).ready(function () {
       //блок угловой
       function blockYglovoi(heigtFloor1, heigtFloor2, heigtFloor3, coefficient) {
          var allHeightFloor = Math.round(Number(heigtFloor1) + Number(heigtFloor2) + Number(heigtFloor3));
-         console.log(allHeightFloor);
+         console.log('allHeightFloor: ' + allHeightFloor);
          var blockYglovoi = allHeightFloor / 0.2 * Number(coefficient);
          return blockYglovoi;
       }
@@ -258,6 +262,7 @@ $(document).ready(function () {
 
       function blockYglovoiVnutr(summHeightFloor, blockYglovoiNarug) {
          var blockYglovoiVnutr = Math.ceil((summHeightFloor / 0.2) * 1);
+         console.log('blockYglovoiVnutr : ' + blockYglovoiVnutr);
          var roofChecked = $('.roof:checked').val();
          var roofHeight = +$('.roof-height').val();
 
@@ -266,9 +271,14 @@ $(document).ready(function () {
             blockYglovoiNarug = blockYglovoiNarug + Math.floor(roofHeight / 0.2);
          }
 
+         console.log({
+            vnutr: blockYglovoiVnutr,
+            narug: blockYglovoiNarug
+         })
+
          return {
-            blockYglovoiVnutr: blockYglovoiVnutr,
-            blockYglovoiNarug: blockYglovoiNarug
+            vnutr: blockYglovoiVnutr,
+            narug: blockYglovoiNarug
          };
       }
 
