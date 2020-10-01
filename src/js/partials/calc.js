@@ -128,10 +128,16 @@ $(document).ready(function () {
          console.log('Угловой наружный: ' + blockYglovoi);
          var blockPoyasnoi = Math.ceil(blockPoyasnoi(4.2, width, length, floorCount));
          console.log('Блок поясной: ' + blockPoyasnoi);
-         var blockRyadovoi = blockRyadovoiTypeSecond(width, length, summHeightFloors, blockPoyasnoi);
+         var blockRyadovoi = Math.ceil(blockRyadovoiTypeSecond(width, length, summHeightFloors, blockPoyasnoi, doorLenght, doorHeight, windowHeight, windowLenght, windowHeight2, windowLenght2, windowHeight3, windowLenght3));
          console.log('Блок рядовой: ' + blockRyadovoi);
-         var blockPolovinchatyi = blockPolovinchatyi(doorHeight, doorCount, windowHeight, windowCount, windowHeight2, windowCount2, windowHeight3, windowCount3)
+         var blockPolovinchatyi = Math.ceil(blockPolovinchatyi(doorHeight, doorCount, windowHeight, windowCount, windowHeight2, windowCount2, windowHeight3, windowCount3));
          console.log('Блок половинчатый: ' + blockPolovinchatyi);
+         var resultblock = blockYglovoiVnutr(summHeightFloors, blockYglovoi);
+         blockYglovoi = resultblock.blockYglovoiNarug;
+         console.log('Угловой наружный: ' + blockYglovoi);
+         var blockYglovoiVnutr = resultblock.blockYglovoiVnutr;
+
+         console.log('Блок угловой внутренний: ' + blockYglovoiVnutr);
       }
 
       //блок поясной
@@ -196,11 +202,45 @@ $(document).ready(function () {
          return Math.round(doorsAll + window1 + window2 + window3);
       }
 
-      function blockRyadovoiTypeSecond(width, length, summHeightFloors, blockPoyasnoi) {
+      //рядовой для 2 типа дома
+      function blockRyadovoiTypeSecond(width, length, summHeightFloors, blockPoyasnoi, doorLenght, doorHeight, windowHeight, windowLenght, windowHeight2, windowLenght2, windowHeight3, windowLenght3) {
          console.log(summHeightFloors);
          var per = perimetr(width, length);
          var res = Math.ceil(((per - 4.2) / 0.4) * (summHeightFloors / 0.2));
-         return res - blockPoyasnoi;
+         var roofChecked = +$('.roof:checked').val();
+         
+         var blockRyadovoi = res - blockPoyasnoi;
+         var doors = Math.ceil(((doorLenght + 0.2) * doorHeight * 12.5));
+         var window1 = Math.ceil(((windowLenght + 0.2) * windowHeight * 12.5));
+         var window2 = Math.ceil(((windowLenght2 + 0.2) * windowHeight2 * 12.5));
+         var window3 = Math.ceil(((windowLenght3 + 0.2) * windowHeight3 * 12.5));
+
+         blockRyadovoi = blockRyadovoi - doors - window1 - window2 - window3;
+
+         if (roofChecked === 'type-1') {
+            var roofHeight = +$('.roof-height').val();
+            var roofLenght = +$('.roof-lenght').val();
+
+            blockRyadovoi = Math.ceil(blockRyadovoi + (roofHeight * roofLenght * 12.5));
+         }
+         
+         return blockRyadovoi;
+      }
+
+      function blockYglovoiVnutr(summHeightFloor, blockYglovoiNarug) {
+         var blockYglovoiVnutr = Math.ceil((summHeightFloor / 0.2) * 1);
+         var roofChecked = +$('.roof:checked').val();
+         var roofHeight = +$('.roof-height').val();
+
+         if (roofChecked === 'roof-1') {
+            blockYglovoiVnutr = Math.floor(roofHeight / 0.2) + blockYglovoiVnutr;
+            blockYglovoiNarug = blockYglovoiNarug + Math.floor(roofHeight / 0.2);
+         } 
+
+         return {
+            blockYglovoiVnutr: blockYglovoiVnutr,
+            blockYglovoiNarug: blockYglovoiNarug
+         };
       }
 
       //двери
