@@ -136,8 +136,38 @@ $(document).ready(function () {
          blockYglovoi = resultblock.blockYglovoiNarug;
          console.log('Угловой наружный: ' + blockYglovoi);
          var blockYglovoiVnutr = resultblock.blockYglovoiVnutr;
-
          console.log('Блок угловой внутренний: ' + blockYglovoiVnutr);
+
+         //Общее количество блоков
+         var totalCount = blockPoyasnoi + blockYglovoi + blockRyadovoi + blockPolovinchatyi + blockYglovoiVnutr;
+
+         //Вывод в таблицу количества блоков
+         $('#count-private').html(blockRyadovoi);
+         $('#count-blockHalf').html(blockPolovinchatyi);
+         $('#count-blockAngular').html(blockYglovoi);
+         $('#count-blockInterior').html(blockYglovoiVnutr);
+         $('#count-blockWaist').html(blockPoyasnoi);
+         $('#total-counts').html(totalCount);
+
+         var m3blockPoyasnoi = Number((blockPoyasnoi * 0.014).toFixed(2));
+         var m3blockYglovoi = Number((blockYglovoi * 0.03).toFixed(2));
+         var m3blockRyadovoi = Number((blockRyadovoi * 0.024).toFixed(2));
+         var m3blockPolovinchatyi = Number((blockPolovinchatyi * 0.012).toFixed(2));
+         var m3blockYglovoiVnutr = Number((blockYglovoiVnutr * 0.03).toFixed(2));
+
+         //Вывод в таблицу количества куб.метров
+
+         $('#metres-private').html(m3blockRyadovoi);
+         $('#metres-blockHalf').html(m3blockPolovinchatyi);
+         $('#metres-blockAngular').html(m3blockYglovoi);
+         $('#metres-blockWaist').html(m3blockPoyasnoi);
+         $('#metres-blockInterior').html(m3blockYglovoiVnutr);
+
+         var totalMetres = Number(m3blockPoyasnoi + m3blockYglovoi + m3blockRyadovoi + m3blockPolovinchatyi + m3blockYglovoiVnutr).toFixed(2);
+         console.log(totalMetres);
+
+         $('#total-metres').html(totalMetres);
+         definitionOfDiscount(totalCount, width, length, summHeightFloors, totalMetres, blockPoyasnoi, blockYglovoi, blockRyadovoi, blockPolovinchatyi, blockYglovoiVnutr);
       }
 
       //блок поясной
@@ -275,23 +305,24 @@ $(document).ready(function () {
 
       //определение скидки
       function definitionOfDiscount(totalCount, width, length, summHeightFloors, totalMetres, blockPoyasnoi, blockYglovoi, blockRyadovoi, blockPolovinchatyi, blockYglovoiVnutr) {
-
+         console.log(totalMetres);
          if (totalMetres > 0.45 && totalMetres < 10.44) {
-            establishingDiscount(totalCount, width, length, summHeightFloors, totalMetres, 1, blockPoyasnoi, blockYglovoi, blockRyadovoi, blockPolovinchatyi, 0);
+            establishingDiscount(totalCount, width, length, summHeightFloors, totalMetres, 1, blockPoyasnoi, blockYglovoi, blockRyadovoi, blockPolovinchatyi, blockYglovoiVnutr);
          } else if (totalMetres >= 10.45 && totalMetres < 20.44) {
-            establishingDiscount(width, length, summHeightFloors, totalMetres, 2, blockPoyasnoi, blockYglovoi, blockRyadovoi, blockPolovinchatyi, blockYglovoiVnutr);
+            console.log('сюда?')
+            establishingDiscount(totalCount, width, length, summHeightFloors, totalMetres, 2, blockPoyasnoi, blockYglovoi, blockRyadovoi, blockPolovinchatyi, blockYglovoiVnutr);
          } else if (totalMetres >= 20.45 && totalMetres < 30.44) {
-            establishingDiscount(width, length, summHeightFloors, totalMetres, 3, blockPoyasnoi, blockYglovoi, blockRyadovoi, blockPolovinchatyi, blockYglovoiVnutr);
+            establishingDiscount(totalCount, width, length, summHeightFloors, totalMetres, 3, blockPoyasnoi, blockYglovoi, blockRyadovoi, blockPolovinchatyi, blockYglovoiVnutr);
          } else if (totalMetres >= 30.45 && totalMetres < 40.44) {
-            establishingDiscount(width, length, summHeightFloors, totalMetres, 4, blockPoyasnoi, blockYglovoi, blockRyadovoi, blockPolovinchatyi, blockYglovoiVnutr);
+            establishingDiscount(totalCount, width, length, summHeightFloors, totalMetres, 4, blockPoyasnoi, blockYglovoi, blockRyadovoi, blockPolovinchatyi, blockYglovoiVnutr);
          } else if (totalMetres >= 40.45) {
-            establishingDiscount(width, length, summHeightFloors, totalMetres, 5, blockPoyasnoi, blockYglovoi, blockRyadovoi, blockPolovinchatyi, blockYglovoiVnutr);
+            establishingDiscount(totalCount, width, length, summHeightFloors, totalMetres, 5, blockPoyasnoi, blockYglovoi, blockRyadovoi, blockPolovinchatyi, blockYglovoiVnutr);
          }
-
       }
 
       //Установить скидку
       function establishingDiscount(totalCount, width, length, summHeightFloors, totalMetres, countSale, blockPoyasnoi, blockYglovoi, blockRyadovoi, blockPolovinchatyi, blockYglovoiVnutr) {
+         console.log('countSale' + countSale);
          $('#sale-private').html(countSale + '%');
          $('#sale-blockHalf').html(countSale + '%');
          $('#sale-blockAngular').html(countSale + '%');
@@ -332,11 +363,11 @@ $(document).ready(function () {
 
          if (blockYglovoiVnutr != 0) {
             blockYglovoiVnutrWithoutSales = Math.round(blockYglovoiVnutr * priceBlocks.blockYglovoiVnutreniy);
-            $('#total-blockWaist').html(blockYglovoiVnutrWithoutSales);
+            $('#total-blockInterior').html(blockYglovoiVnutrWithoutSales);
             blockYglovoiVnutrSale = Math.round(priceBlocks.blockYglovoiVnutreniy * blockYglovoiVnutr * Number('0.0' + countSale));
-            $('#summ-sale-blockWaist').html(blockYglovoiVnutrSale);
+            $('#summ-sale-blockInterior').html(blockYglovoiVnutrSale);
             blockYglovoiVnutrWithSales = Math.floor(blockYglovoiVnutrWithoutSales - blockYglovoiVnutrSale);
-            $('#with-sale-blockWaist').html(blockYglovoiVnutrWithSales);
+            $('#with-sale-blockInterior').html(blockYglovoiVnutrWithSales);
          } else {
             blockYglovoiVnutrWithoutSales = 0;
             blockYglovoiVnutrSale = 0;
