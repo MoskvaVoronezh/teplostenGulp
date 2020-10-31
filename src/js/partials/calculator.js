@@ -75,7 +75,7 @@ $(document).ready(function () {
          //Подсчет количества блоков для 1 типа
          var blockPoyasnoi = Math.round(blockPoyasnoi(3.2, width, length, floorCount));
          var blockYglovoi = Math.round(blockYglovoi(heigtFloor1, heigtFloor2, heigtFloor3, 4));
-         var blockRyadovoi = Math.round(blockRyadovoi(width, length, heigtFloor1, heigtFloor2, heigtFloor3, doorHeight, doorLenght, doorCount, windowHeight, windowLenght, windowCount, windowHeight2, windowLenght2, windowCount2, windowHeight3, windowLenght3, windowCount3, blockPoyasnoi));
+         var blockRyadovoi = Math.floor(blockRyadovoi(width, length, heigtFloor1, heigtFloor2, heigtFloor3, doorHeight, doorLenght, doorCount, windowHeight, windowLenght, windowCount, windowHeight2, windowLenght2, windowCount2, windowHeight3, windowLenght3, windowCount3, blockPoyasnoi));
          var blockPolovinchatyi = Math.round(blockPolovinchatyi(doorHeight, doorCount, windowHeight, windowCount, windowHeight2, windowCount2, windowHeight3, windowCount3));
 
          //Общее количество блоков
@@ -175,15 +175,13 @@ $(document).ready(function () {
       //блок поясной
       function blockPoyasnoi(coefficient, width, length, floorCount) {
          var per = perimetr(width, length);
-         console.log('per: ' + per);
          var blockPoyasnoi = ((per - Number(coefficient)) / 0.4) * Number(floorCount);
          return blockPoyasnoi;
       }
 
       //блок угловой
       function blockYglovoi(heigtFloor1, heigtFloor2, heigtFloor3, coefficient) {
-         var allHeightFloor = Math.round(Number(heigtFloor1) + Number(heigtFloor2) + Number(heigtFloor3));
-         console.log('allHeightFloor: ' + allHeightFloor);
+         var allHeightFloor = Number(heigtFloor1) + Number(heigtFloor2) + Number(heigtFloor3);
          var blockYglovoi = allHeightFloor / 0.2 * Number(coefficient);
          return blockYglovoi;
       }
@@ -194,16 +192,15 @@ $(document).ready(function () {
          doorHeight, doorLenght, doorCount,
          windowHeight, windowLenght, windowCount,
          windowHeight2, windowLenght2, windowCount2,
-         windowLenght3, windowHeight3, windowCount3, block
+         windowHeight3, windowLenght3, windowCount3, block
       ) {
          var per = perimetr(width, length);
-
          var summHeight = Number(heigtFloor1) + Number(heigtFloor2) + Number(heigtFloor3);
          var blockRyadovoi = Math.round(((per - 3.2) / 0.4) * (summHeight / 0.2)) - block;
-         var doorsAll = Math.round(doors(doorLenght, doorHeight, doorCount));
-         var window1 = Math.round(window(windowLenght, windowHeight, windowCount));
-         var window2 = Math.round(window(windowLenght2, windowHeight2, windowCount2));
-         var window3 = Math.round(window(windowLenght3, windowHeight3, windowCount3));
+         var doorsAll = Math.floor(doors(doorLenght, doorHeight, doorCount));
+         var window1 = Math.floor(window(windowLenght, windowHeight, windowCount));
+         var window2 = Math.floor(window(windowLenght2, windowHeight2, windowCount2));
+         var window3 = Math.floor(window(windowLenght3, windowHeight3, windowCount3));
 
          var res = blockRyadovoi - (doorsAll + window1 + window2 + window3);
          var resWithRoof = 0;
