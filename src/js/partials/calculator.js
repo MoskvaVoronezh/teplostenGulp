@@ -446,10 +446,10 @@ $(document).ready(function () {
       function poddon(blockRyadovoi, blockPolovinchatyi, blockYglovoi, blockYglovoiVnutr, blockPoyasnoi, klei) {
          var countPoddon = Math.ceil((blockRyadovoi / 54) + (blockPolovinchatyi / 90) + (blockYglovoi / 30) + (blockYglovoiVnutr / 30) + (blockPoyasnoi / 72) + (klei / 50));
          $('#count-pallet').html(countPoddon);
-         var priceAll = Math.ceil(countPoddon * priceBlocks.poddon);
-         $('#total-price-pallet').html(priceAll);
+         // var priceAll = Math.ceil(countPoddon * priceBlocks.poddon);
+         // $('#total-price-pallet').html(priceAll);
          return {
-            price: priceAll,
+            price: 0,
             count: countPoddon
          };
       }
