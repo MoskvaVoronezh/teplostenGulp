@@ -6,7 +6,7 @@ $(document).ready(function () {
       blockYglovoiNarugniy: 530,
       blockYglovoiVnutreniy: 530,
       blockPoyasnoi: 215,
-      klei: 355,
+      klei: 250,
       pena: 355,
       poddon: 300,
       armatura: 475
