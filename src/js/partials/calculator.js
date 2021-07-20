@@ -5,7 +5,7 @@ $(document).ready(function () {
       blockPolovinchatyi: 225,
       blockYglovoiNarugniy: 650,
       blockYglovoiVnutreniy: 650,
-      blockPoyasnoi: 210,
+      blockPoyasnoi: 265,
       klei: 270,
       pena: 390,
       poddon: 300,
@@ -88,6 +88,8 @@ $(document).ready(function () {
          $('#count-blockInterior').html('-');
          $('#count-blockWaist').html(blockPoyasnoi);
          $('#total-counts').html(totalCount);
+
+         console.log('blockPoyasnoi', blockPoyasnoi);
 
          var m3blockPoyasnoi = Number((blockPoyasnoi * 0.014).toFixed(2));
          var m3blockYglovoi = Number((blockYglovoi * 0.03).toFixed(2));
@@ -330,7 +332,7 @@ $(document).ready(function () {
 
       //Установить скидку
       function establishingDiscount(totalCount, width, length, summHeightFloors, totalMetres, countSale, blockPoyasnoi, blockYglovoi, blockRyadovoi, blockPolovinchatyi, blockYglovoiVnutr) {
-         console.log('countSale' + countSale);
+         console.log('countSale ' + countSale);
          $('#sale-private').html(countSale + '%');
          $('#sale-blockHalf').html(countSale + '%');
          $('#sale-blockAngular').html(countSale + '%');
@@ -357,8 +359,9 @@ $(document).ready(function () {
          $('#summ-sale-blockAngular').html(blockYglovoiSale);
          var blockYglovoiWithSales = Math.floor(blockYglovoiWithoutSales - blockYglovoiSale);
          $('#with-sale-blockAngular').html(blockYglovoiWithSales);
-
+         console.log('общее кол: ' , Math.round(blockPoyasnoi * priceBlocks.blockPoyasnoi));
          var blockPoyasnoiWithoutSales = Math.round(blockPoyasnoi * priceBlocks.blockPoyasnoi);
+         console.log('blockPoyasnoiWithoutSales: ', blockPoyasnoiWithoutSales);
          $('#total-blockWaist').html(blockPoyasnoiWithoutSales);
          var blockPoyasnoiSale = Math.round(priceBlocks.blockPoyasnoi * blockPoyasnoi * Number('0.0' + countSale));
          $('#summ-sale-blockWaist').html(blockPoyasnoiSale);
