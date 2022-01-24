@@ -108,6 +108,15 @@ $(document).ready(function () {
 		loop       : true
 	});
 
+	$('[data-fancybox="gallery-9"]').fancybox({
+		// Options will go here
+		slideShow  : true,
+		fullScreen : true,
+		thumbs     : true,
+		closeBtn   : true,
+		loop       : true
+	});
+
 	$('.link-modal').fancybox({
 		type: 'inline',
 		// afterLoad: function () {
