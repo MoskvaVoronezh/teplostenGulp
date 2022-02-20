@@ -1,14 +1,14 @@
 $(document).ready(function () {
    //Цены на блоки
    var priceBlocks = {
-      blockRyadovoi: 350,
-      blockPolovinchatyi: 240,
-      blockYglovoiNarugniy: 690,
-      blockYglovoiVnutreniy: 690,
-      blockPoyasnoi: 225,
-      klei: 270,
-      pena: 390,
-      poddon: 300,
+      blockRyadovoi: 400,
+      blockPolovinchatyi: 275,
+      blockYglovoiNarugniy: 790,
+      blockYglovoiVnutreniy: 790,
+      blockPoyasnoi: 255,
+      klei: 360,
+      pena: 420,
+      poddon: 0,
       armatura: 475
    };
    // var absouluteFloor1 = $(".absoulute-floor-1");
