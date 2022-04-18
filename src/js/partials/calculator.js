@@ -9,7 +9,7 @@ $(document).ready(function () {
       klei: 380,
       pena: 1100,
       poddon: 0,
-      armatura: 475
+      armatura: 2000
    };
    // var absouluteFloor1 = $(".absoulute-floor-1");
    var absouluteFloor2 = $(".absoulute-floor-2");
