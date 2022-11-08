@@ -69,6 +69,19 @@ $(document).ready(function () {
          var heigtFloor2 = +$('#heigt-floor-2').val();
          var heigtFloor3 = +$('#heigt-floor-3').val();
 
+         if (
+             width === 0 && length === 0 && heigtFloor1 === 0 && heigtFloor2 === 0 && heigtFloor3 === 0
+         ) {
+            var roofChecked = $('.roof:checked').val();
+            if (roofChecked === 'roof-1') {
+               var roofHeight = +$('.roof-height').val();
+               var roofLenght = +$('.roof-lenght').val();
+               var resultBlockRydovoi = withRoof(roofHeight, roofLenght);
+               $('#count-private').html(resultBlockRydovoi);
+               return false;
+            }
+         }
+
          var summHeightFloors = heigtFloor1 + heigtFloor2 + heigtFloor3;
          console.log(summHeightFloors);
 
@@ -108,7 +121,8 @@ $(document).ready(function () {
 
          $('#total-metres').html(totalMetres);
          definitionOfDiscount(totalCount, width, length, summHeightFloors, totalMetres, blockPoyasnoi, blockYglovoi, blockRyadovoi, blockPolovinchatyi, 0);
-      } else if (houseType === 'type-2') {
+      }
+      else if (houseType === 'type-2') {
          var lengthHouse1 = +$('#lenght--2').val();
          var lengthHouse2 = +$('#lenght--3').val();
          var widthHouse1 = +$('#width--2').val();
@@ -456,6 +470,17 @@ $(document).ready(function () {
             count: countPoddon
          };
       }
+
+      // function fronton() {
+      //    var roofChecked = $('.roof:checked').val();
+      //    if (roofChecked === 'roof-1') {
+      //          var roofHeight = +$('.roof-height').val();
+      //          var roofLenght = +$('.roof-lenght').val();
+      //          console.log(roofHeight, roofLenght);
+      //          var blockPoyasnoy710 = roofHeight / 2 * roofLenght / 0.08;
+      //          $('#count-blockWaist').html(blockPoyasnoy710);
+      //       }
+      //    }
 
    });
 
