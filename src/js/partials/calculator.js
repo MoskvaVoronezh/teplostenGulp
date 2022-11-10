@@ -5,7 +5,7 @@ $(document).ready(function () {
       blockPolovinchatyi: 295,
       blockYglovoiNarugniy: 850,
       blockYglovoiVnutreniy: 850,
-      blockPoyasnoi: 275,
+      blockPoyasnoi: 345,
       klei: 380,
       pena: 1100,
       poddon: 0,
@@ -76,7 +76,8 @@ $(document).ready(function () {
             if (roofChecked === 'roof-1') {
                var roofHeight = +$('.roof-height').val();
                var roofLenght = +$('.roof-lenght').val();
-               var resultBlockRydovoi = withRoof(roofHeight, roofLenght);
+               // var resultBlockRydovoi = withRoof(roofHeight, roofLenght);
+               var resultBlockRydovoi = Math.ceil(roofLenght / 2 * roofHeight / 0.08);
                $('#count-private').html(resultBlockRydovoi);
                return false;
             }
