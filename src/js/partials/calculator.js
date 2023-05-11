@@ -1,7 +1,7 @@
 $(document).ready(function () {
    //Цены на блоки
    var priceBlocks = {
-      blockRyadovoi: 430,
+      blockRyadovoi: 450,
       blockPolovinchatyi: 295,
       blockYglovoiNarugniy: 850,
       blockYglovoiVnutreniy: 850,
