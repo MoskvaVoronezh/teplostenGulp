@@ -6,10 +6,10 @@ $(document).ready(function () {
       blockYglovoiNarugniy: 850,
       blockYglovoiVnutreniy: 850,
       blockPoyasnoi: 345,
-      klei: 380,
-      pena: 1100,
+      klei: 400,
+      pena: 600,
       poddon: 0,
-      armatura: 2000
+      armatura: 1150
    };
    // var absouluteFloor1 = $(".absoulute-floor-1");
    var absouluteFloor2 = $(".absoulute-floor-2");
