@@ -149,6 +149,19 @@ $(document).ready(function () {
 			
 	});
 
+	$('.construction-houses').each(function (idx, item) {
+		console.log(idx, item);
+		// $(item).has(`.block-${idx + 1}`).fancybox({
+		// 	slideShow  : true,
+		// 	fullScreen : true,
+		// 	thumbs     : true,
+		// 	closeBtn   : true,
+		// 	loop       : true
+		// })
+	})
+
+
+
 	
 
 	$('#main-form').submit(function (e) {
@@ -194,7 +207,6 @@ $(document).ready(function () {
 			return false;
 		}
 	});
-		
 });
 
 

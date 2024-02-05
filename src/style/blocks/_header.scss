@@ -71,6 +71,24 @@
 				vertical-align: middle;
 			}
 		}
+		&__time {
+			margin-right: 30px;
+			font-size: 16px;
+			font-weight: bold;
+			@media screen and (max-width: 1199px) {
+				display: none;
+			}
+		}
+		&__work-time {
+			grid-area: work-time;
+			text-align: right;
+		}
+		&__work {
+			grid-area: work;
+		}
+		&__weekend {
+			grid-area: weekend;
+		}
 	}
 	&-list {
 		list-style: none;
@@ -104,7 +122,7 @@
 		&__link {
 			color: #fff;
 			@include regular; 
-			font-size: 24px;
+			font-size: 20px;
 			text-decoration: none;
 			text-transform: uppercase;
 			&:visited {
