@@ -1,5 +1,7 @@
+@use "../variables";
+
 .footer {
-	background-color: $primary;
+	background-color: variables.$primary;
 	&__menu {
 		padding-top: 13px;
 		padding-bottom: 13px;
@@ -30,7 +32,7 @@
 .footer-top__btn {
 	position: absolute;
 	right: 0;
-	top: calc(50%-22px);
+	top: calc(50% - 22px);
 }
 
 .btn-top {

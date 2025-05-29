@@ -1,3 +1,6 @@
+@use "../fonts";
+@use "../variables";
+
 .header {
 	&__top {
 		display: flex;
@@ -12,7 +15,7 @@
 		}
 	}
 	&__menu {
-		background-color: $primary;
+		background-color: variables.$primary;
 		&_active {
 			display: flex!important;
 		}
@@ -31,7 +34,7 @@
 		&__phone {
 			text-decoration: none;
 			color: #000;
-			@include regular;
+			@include fonts.regular;
 			font-size: 24px;
 			position: relative;
 			max-width: 263px;
@@ -53,10 +56,10 @@
 			border: none;
 			padding: 12px 12px 12px 9px;
 			color: #fff;
-			@include regular;
+			@include fonts.regular;
 			text-align: center;
 			font-size: 24px;
-			background-color: $primary;
+			background-color: variables.$primary;
 			border-radius: 5px;
 			text-transform: uppercase;
 			text-decoration: none;
@@ -121,7 +124,7 @@
 		position: relative;
 		&__link {
 			color: #fff;
-			@include regular; 
+			@include fonts.regular; 
 			font-size: 20px;
 			text-decoration: none;
 			text-transform: uppercase;
@@ -151,7 +154,7 @@
 				min-width: 250px;
 				&__item {
 					padding: 7px 0;
-					background-color: $primary;
+					background-color: variables.$primary;
 					border-bottom: 1px solid #fff;
 					&:first-child {
 						border-top: 1px solid #fff;
@@ -198,7 +201,7 @@
 		display: block;
 		height: 3px;
 		width: 40px;
-		background-color: $primary;
+		background-color: variables.$primary;
 		position: relative;
 		transition: 0.2s;
 		&_active {
@@ -216,7 +219,7 @@
 			width: 40px;
 			position: absolute;
 			display: block;
-			background-color: $primary;
+			background-color: variables.$primary;
 		}
 		&:before {
 			transform: translateY(-10px);

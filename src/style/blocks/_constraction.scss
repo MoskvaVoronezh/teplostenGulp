@@ -1,3 +1,5 @@
+@use "../variables";
+
 .construction {
 	background: url("../img/constraction-image.jpg") right no-repeat;
 	background-position-y: 130px;
@@ -8,7 +10,7 @@
 	}
 	&-block {
 		&__span {
-			background-color: $ellipse;
+			background-color: variables.$ellipse;
 		}
 	}
 
@@ -21,7 +23,7 @@
 		align-items: center;
 		margin-bottom: 30px;
 		&__span {
-			background-color: $ellipse;
+			background-color: variables.$ellipse;
 			border-radius: 50%;
 			color: #fff;
 			width: 25px;

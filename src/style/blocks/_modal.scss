@@ -1,3 +1,6 @@
+@use "../fonts";
+@use "../variables";
+
 .modal {
 	display: flex;
 	justify-content: center;
@@ -11,7 +14,7 @@
 		margin-bottom: 40px;
 		font-size: 18px;
 		text-transform: uppercase;
-		color: $primary;
+		color: variables.$primary;
 	}
 	&-form {
 		&-wrap {
@@ -38,10 +41,10 @@
 	&__span {
 		margin-top: 6px;
 		margin-bottom: 20px;
-		@include light;
+		@include fonts.light;
 	}
 	&__submit {
-		background-color: $primary;
+		background-color: variables.$primary;
 		color: #fff;
 		text-transform: uppercase;
 		font-size: 22px;
@@ -68,7 +71,7 @@
 			left: 50%;
 			margin-left: -15px;
 			height: 3px;
-			background-color: $primary;
+			background-color: variables.$primary;
 			width: 30px;
 			display: block;
 			transform: rotate(45deg);
@@ -83,7 +86,7 @@
 				left: 50%;
 				margin-left: -15px;
 				transform: rotate(90deg);
-				background-color: $primary;
+				background-color: variables.$primary;
 			}
 		}
 	}
@@ -94,9 +97,9 @@
 		justify-content: center;
 		flex-direction: column;
 		&-title {	
-			@include medium;
+			@include fonts.medium;
 			font-size: 24px;
-			color: $primary;
+			color: variables.$primary;
 			text-align: center;
 			text-transform: uppercase;
 			margin-bottom: 30px;
@@ -116,7 +119,7 @@
 			&::placeholder {
 				color: rgba(0,0,0,0.7);
 				font-size: 18px;
-				@include light;
+				@include fonts.light;
 			}
 			&:first-child {
 				margin-top: 0;
@@ -124,7 +127,7 @@
 		}
 		&__subtitle {
 			color: #000;
-			@include light;
+			@include fonts.light;
 			font-size: 18px;
 			text-align: center;
 			display: block;
@@ -133,7 +136,7 @@
 		&__submit {
 			text-transform: uppercase;
 			color: #fff;
-			background-color: $primary;
+			background-color: variables.$primary;
 			padding: 15px 12px;
 			width: 100%;
 			max-width: 169px;

@@ -1,3 +1,5 @@
+@use "../fonts";
+
 .invoices {
 	&__title {
 		margin-top: 70px;
@@ -22,11 +24,11 @@
 		margin-bottom: 30px;
 		font-size: 24px;
 		max-width: 210px;
-		@include medium;
+		@include fonts.medium;
 		}
 		&__text {
 			max-width: 210px;
-			@include light;
+			@include fonts.light;
 			font-size: 18px;
 			text-align: center;
 		}

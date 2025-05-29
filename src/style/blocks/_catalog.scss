@@ -1,3 +1,6 @@
+@use "../fonts";
+@use "../variables";
+
 .catalog {
 	&-title {
 		&-wrap {			
@@ -9,8 +12,8 @@
 		&__main {
 			text-align: left;
 			font-size: 30px;
-			@include medium;
-			color: $primary;
+			@include fonts.medium;
+			color: variables.$primary;
 			text-transform: uppercase;
 			font-weight: 700;
 			margin-bottom: 35px;
@@ -32,7 +35,7 @@
 	&-wrap {
 		&__link {
 			text-decoration: none;
-			color: $primary;
+			color: variables.$primary;
 		}
 		&-block {
 			display: flex;
@@ -67,7 +70,7 @@
 				margin-top: 20px;
 				margin-bottom: 30px;
 				font-size: 24px;
-				color: $primary;
+				color: variables.$primary;
 			}
 			&-text {
 				max-width: 290px;
@@ -82,7 +85,7 @@
 				text-align: center;
 				color: #6E1210;
 				position: relative;
-				@include medium;
+				@include fonts.medium;
 				&:after {
 					content: "";
 					display: block;	
@@ -100,9 +103,9 @@
 		&__title {
 			margin-top: 40px;
 			text-align: center;
-			@include medium;
+			@include fonts.medium;
 			font-size: 24px;
-			color: $primary;
+			color: variables.$primary;
 			width: 100%;
 			position: relative;
 			text-transform: uppercase;
@@ -111,7 +114,7 @@
 				position: absolute;
 				bottom: -10px;
 				display: block;
-				background-color: $primary;
+				background-color: variables.$primary;
 				height: 1px;
 				width: 20%;
 				left: 40%;
@@ -123,8 +126,8 @@
 		margin-top: 20px;
 		display: block;
 		text-align: center;
-		color: $primary;
-		@include medium;
+		color: variables.$primary;
+		@include fonts.medium;
 		text-transform: uppercase;
 		font-size: 18px;
 		position: relative;
@@ -160,10 +163,10 @@
 			border: 5px solid rgba(#A0211E, 0.27);
 			border-left: none;
 			&-text {
-				@include light;
+				@include fonts.light;
 				font-size: 18px;
 				&__title {
-					@include regular;
+					@include fonts.regular;
 					font-size: 18px;
 					color: #000;
 					font-weight: 700;

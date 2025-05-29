@@ -1,9 +1,12 @@
+@use "fonts";
+@use "variables";
+
 .section {
 	&__title {
 		text-align: center;
-		@include medium;
+		@include fonts.medium;
 		font-size: 36px;
 		text-transform: uppercase;
-		color: $primary;
+		color: variables.$primary;
 	}
 }

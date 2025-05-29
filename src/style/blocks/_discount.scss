@@ -1,3 +1,6 @@
+@use "../fonts";
+@use "../variables";
+
 .discount {
 	&-block {
 		margin-top: 36px;
@@ -6,7 +9,7 @@
 		justify-content: center;
 		padding-bottom: 70px;
 		&__item {
-			border-right: 3px solid $primary;
+			border-right: 3px solid variables.$primary;
 			text-align: left;
 			padding-left: 10px;
 			padding-right: 20px;
@@ -23,15 +26,15 @@
 		}
 		&__percent {
 			font-size: 144px;
-			color: $primary;
+			color: variables.$primary;
 		}
 		&__text {
-			@include light;
+			@include fonts.light;
 			font-size: 30px;
 			margin-bottom: 10px;
 		}
 		&__span {
-			@include light;
+			@include fonts.light;
 			font-size: 14px;
 		}
 	}
@@ -51,8 +54,8 @@
 	border: 2px solid transparent;
 	&:hover {
 		background-color: #fff;
-		color: $primary;
-		border: 2px solid $primary;
+		color: variables.$primary;
+		border: 2px solid variables.$primary;
 	}
 }
 

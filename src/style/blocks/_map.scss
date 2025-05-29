@@ -1,3 +1,5 @@
+@use "../variables";
+
 .map {
 	&__wrap {
 		position: relative;
@@ -15,7 +17,7 @@
 		padding: 20px;
 		max-width: 300px;
 		&__title {
-			color: $primary;
+			color: variables.$primary;
 			font-size: 24px;
 			margin-bottom: 17px;
 		}
@@ -33,7 +35,7 @@
 			display: block;
 		}
 		&__button {
-			background-color: $primary;
+			background-color: variables.$primary;
 			color: #fff;
 			border-radius: 5px;
 			text-transform: uppercase;

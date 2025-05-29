@@ -1,7 +1,10 @@
+@use "../fonts";
+@use "../variables";
+
 .red-line {
 	height: 50px;
 	width: 100%;
-	background-color: $primary;
+	background-color: variables.$primary;
 }
 
 .price {
@@ -17,7 +20,7 @@
 		&__title {
 			text-align: center;
 			font-size: 24px;
-			color: $primary;
+			color: variables.$primary;
 			margin-bottom: 20px;
 		}
 		&__size {
@@ -35,13 +38,13 @@
 }
 
 .price__number {
-	border: 2px solid $primary;
+	border: 2px solid variables.$primary;
 	border-radius: 5px;
 	padding: 10px 0;
 	width: 160px;
-	color: $primary;
+	color: variables.$primary;
 	font-size: 36px;
-	@include medium;
+	@include fonts.medium;
 }
 
 @media (max-width: 991px) {

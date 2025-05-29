@@ -1,3 +1,5 @@
+@use "../fonts";
+
 .house {
 	background: url("../img/house/house-bg.png") center no-repeat;
 	background-size: cover;
@@ -8,7 +10,7 @@
 	}
 	&__text {
 		max-width: 460px;
-		@include light;
+		@include fonts.light;
 		text-align: center;
 		font-size: 30px;
 		color: #000;

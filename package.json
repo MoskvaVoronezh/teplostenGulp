@@ -13,14 +13,14 @@
 				"gulp-clean-css": "^4.3.0",
 				"gulp-imagemin": "^6.2.0",
 				"gulp-rigger": "^0.5.8",
-				"gulp-sass": "^4.1.1",
+				"gulp-sass": "^6.0.1",
 				"gulp-sourcemaps": "^2.6.5",
 				"gulp-uglify": "^3.0.2",
 				"gulp-watch": "^5.0.1",
 				"imagemin-pngquant": "^8.0.0",
 				"jquery-validation": "^1.19.3",
-				"node-sass": "^4.14.1",
-				"rimraf": "^3.0.2"
+				"rimraf": "^3.0.2",
+				"sass": "^1.89.0"
 		},
 		"devDependencies": {
 				"fancybox": "^3.0.1",

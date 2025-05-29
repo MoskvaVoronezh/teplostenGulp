@@ -1,11 +1,14 @@
+@use "../fonts";
+@use "../variables";
+
 .section {
 	&-features {
-		background-color: $primary;
+		background-color: variables.$primary;
 		transform: translate3d(0,0,0);
 		padding-bottom: 50px;
 		&__title {
 			padding-top: 45px;
-			@include medium;
+			@include fonts.medium;
 			text-transform: uppercase;
 			color: #fff;
 			font-size: 36px;
@@ -39,7 +42,7 @@
 			max-width: 165px;
 			display: block;
 			font-size: 18px;
-			@include light;
+			@include fonts.light;
 			color: #fff;
 		}
 	}
